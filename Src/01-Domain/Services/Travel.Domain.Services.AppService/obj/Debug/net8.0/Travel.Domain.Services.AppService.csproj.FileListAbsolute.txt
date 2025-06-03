@@ -1,0 +1,15 @@
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\bin\Debug\net8.0\Travel.Domain.Services.AppService.deps.json
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\bin\Debug\net8.0\Travel.Domain.Services.AppService.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\bin\Debug\net8.0\Travel.Domain.Services.AppService.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.AssemblyInfoInputs.cache
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.AssemblyInfo.cs
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.csproj.CoreCompileInputs.cache
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\refint\Travel.Domain.Services.AppService.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\ref\Travel.Domain.Services.AppService.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\bin\Debug\net8.0\Travel.Domain.Core.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\bin\Debug\net8.0\Travel.Domain.Core.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.Domain.Services.AppService.csproj.AssemblyReference.cache
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services.AppService\obj\Debug\net8.0\Travel.D.C1DD990A.Up2Date

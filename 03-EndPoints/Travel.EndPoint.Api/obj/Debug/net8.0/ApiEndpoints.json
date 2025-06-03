@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.CheckListController",
+    "Method": "GetAllCheckLists",
+    "RelativePath": "api/CheckList/GetAllCheckLists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
+    "Method": "AddTrip",
+    "RelativePath": "api/Trip/AddTrip",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Travel.EndPoint.Api.Models.TripModels.AddTripModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
+    "Method": "GetUsersTrips",
+    "RelativePath": "api/Trip/UsersTrips",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
