@@ -16,11 +16,11 @@ public class CheckListConfiguration : IEntityTypeConfiguration<CheckList>
     {
         builder.HasData(new List<CheckList>()
         {
-            new() { Id = 1, ChekListType = CheckListEnums.Common, TripType = TripEnums.Cultural },
-            new() { Id = 2, ChekListType = CheckListEnums.Specific, TripType = TripEnums.Nature },
-            new() { Id = 3, ChekListType = CheckListEnums.Common, TripType = TripEnums.Pilgrimage },
-            new() { Id = 4, ChekListType = CheckListEnums.Specific, TripType = TripEnums.Adventure },
-            new() { Id = 5, ChekListType = CheckListEnums.Common, TripType = TripEnums.Relaxation },
+            new() { Id = 1, ChekListType ="A",TripType = TripEnums.Cultural },
+            new() { Id = 2, ChekListType ="B", TripType = TripEnums.Nature },
+            new() { Id = 3, ChekListType ="C",TripType = TripEnums.Pilgrimage },
+            new() { Id = 4, ChekListType ="D", TripType = TripEnums.Adventure },
+            new() { Id = 5, ChekListType ="F",TripType = TripEnums.Relaxation },
         });
     }
 }

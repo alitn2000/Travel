@@ -20,4 +20,5 @@ public class UserRepository : IUserRepository
 
     public async Task<bool> ChekUSerExistById(int userId, CancellationToken cancellationToken)
         => await _context.Users.AsNoTracking().AnyAsync(u => u.Id == userId, cancellationToken);
+   
 }

@@ -15,5 +15,7 @@ public class TripConfiguration : IEntityTypeConfiguration<Trip>
     public void Configure(EntityTypeBuilder<Trip> builder)
     {
         builder.HasKey(t => t.Id);
+        builder.Property(t => t.Destination)
+            .HasMaxLength(30);
     }
 }

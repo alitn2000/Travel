@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
@@ -31,7 +32,11 @@ builder.Services.AddScoped<ITripAppService, TripAppService>();
 builder.Services.AddScoped<IUserAppService, UserAppService>();
 builder.Services.AddScoped<ICheckListTripAppService, CheckListTripAppService>();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(op =>
+    {
+        op.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

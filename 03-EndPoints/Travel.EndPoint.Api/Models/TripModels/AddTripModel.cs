@@ -15,6 +15,4 @@ public class AddTripModel
     public TripEnums TripType { get; set; }
     [Required(ErrorMessage = "user id is required")]
     public int UserId { get; set; }
-    [Required(ErrorMessage = "check list id is required")]
-    public int CheckListIdForCheckListTrip { get; set; }
 }

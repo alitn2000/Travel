@@ -12,7 +12,129 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListListsDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListListsDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListListsDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CheckList/AddCheckList": {
+      "post": {
+        "tags": [
+          "CheckList"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCheckListDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCheckListDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCheckListDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddCheckListDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddCheckListDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddCheckListDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CheckList/UpdateCheckList": {
+      "patch": {
+        "tags": [
+          "CheckList"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCheckListDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCheckListDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCheckListDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCheckListDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCheckListDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCheckListDto"
+                }
+              }
+            }
           }
         }
       }
@@ -43,7 +165,148 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCheckListTripDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCheckListTripDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCheckListTripDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CheckListTrip/GetAllCheckListTrips": {
+      "get": {
+        "tags": [
+          "CheckListTrip"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListTripListDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListTripListDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListTripListDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CheckListTrip/AddCheckListTripToTrip": {
+      "post": {
+        "tags": [
+          "CheckListTrip"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCheckListToTripDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCheckListToTripDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCheckListToTripDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddCheckListToTripDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddCheckListToTripDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddCheckListToTripDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CheckListTrip/GetAllIsCheckedLists": {
+      "get": {
+        "tags": [
+          "CheckListTrip"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListTripListDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListTripListDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CheckListTripListDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -147,9 +410,43 @@
   },
   "components": {
     "schemas": {
+      "AddCheckListDto": {
+        "required": [
+          "chekListType",
+          "tripType"
+        ],
+        "type": "object",
+        "properties": {
+          "chekListType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "tripType": {
+            "$ref": "#/components/schemas/TripEnums"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddCheckListToTripDto": {
+        "type": "object",
+        "properties": {
+          "tripId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checkListIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AddTripModel": {
         "required": [
-          "checkListIdForCheckListTrip",
           "destination",
           "end",
           "start",
@@ -176,10 +473,6 @@
           "userId": {
             "type": "integer",
             "format": "int32"
-          },
-          "checkListIdForCheckListTrip": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -192,7 +485,8 @@
             "format": "int32"
           },
           "chekListType": {
-            "$ref": "#/components/schemas/CheckListEnums"
+            "type": "string",
+            "nullable": true
           },
           "tripType": {
             "$ref": "#/components/schemas/TripEnums"
@@ -207,13 +501,35 @@
         },
         "additionalProperties": false
       },
-      "CheckListEnums": {
-        "enum": [
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
+      "CheckListIsCheckedDto": {
+        "type": "object",
+        "properties": {
+          "checkListId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isChecked": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CheckListListsDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chekListType": {
+            "type": "string",
+            "nullable": true
+          },
+          "tripType": {
+            "$ref": "#/components/schemas/TripEnums"
+          }
+        },
+        "additionalProperties": false
       },
       "CheckListTrip": {
         "type": "object",
@@ -238,6 +554,27 @@
           },
           "checkList": {
             "$ref": "#/components/schemas/CheckList"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CheckListTripListDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isChecked": {
+            "type": "boolean"
+          },
+          "tripId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checkListId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -290,38 +627,59 @@
           },
           "user": {
             "$ref": "#/components/schemas/User"
-          },
-          "checkListIdForCheckListTrip": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
       },
       "TripEnums": {
         "enum": [
-          1,
-          2,
-          3,
-          4,
-          5
+          "Nature",
+          "Pilgrimage",
+          "Adventure",
+          "Cultural",
+          "Relaxation"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
+      },
+      "UpdateCheckListDto": {
+        "required": [
+          "chekListType",
+          "id",
+          "tripType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chekListType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "tripType": {
+            "$ref": "#/components/schemas/TripEnums"
+          }
+        },
+        "additionalProperties": false
       },
       "UpdateCheckListTripDto": {
         "type": "object",
         "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "tripId": {
             "type": "integer",
             "format": "int32"
           },
-          "checkListId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "isChecked": {
-            "type": "boolean"
+          "checkLists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CheckListIsCheckedDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

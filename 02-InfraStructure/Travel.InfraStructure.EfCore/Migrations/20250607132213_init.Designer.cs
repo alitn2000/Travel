@@ -12,7 +12,7 @@ using Travel.InfraStructure.EfCore.Common;
 namespace Travel.InfraStructure.EfCore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250607052001_init")]
+    [Migration("20250607132213_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -33,8 +33,9 @@ namespace Travel.InfraStructure.EfCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ChekListType")
-                        .HasColumnType("int");
+                    b.Property<string>("ChekListType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TripType")
                         .HasColumnType("int");
@@ -47,31 +48,31 @@ namespace Travel.InfraStructure.EfCore.Migrations
                         new
                         {
                             Id = 1,
-                            ChekListType = 1,
+                            ChekListType = "A",
                             TripType = 4
                         },
                         new
                         {
                             Id = 2,
-                            ChekListType = 2,
+                            ChekListType = "B",
                             TripType = 1
                         },
                         new
                         {
                             Id = 3,
-                            ChekListType = 1,
+                            ChekListType = "C",
                             TripType = 2
                         },
                         new
                         {
                             Id = 4,
-                            ChekListType = 2,
+                            ChekListType = "D",
                             TripType = 3
                         },
                         new
                         {
                             Id = 5,
-                            ChekListType = 1,
+                            ChekListType = "F",
                             TripType = 5
                         });
                 });
@@ -110,12 +111,10 @@ namespace Travel.InfraStructure.EfCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CheckListIdForCheckListTrip")
-                        .HasColumnType("int");
-
                     b.Property<string>("Destination")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<DateTime>("End")
                         .HasColumnType("datetime2");
@@ -150,7 +149,8 @@ namespace Travel.InfraStructure.EfCore.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Password")
                         .IsRequired()

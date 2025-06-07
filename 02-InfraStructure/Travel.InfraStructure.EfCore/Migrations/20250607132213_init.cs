@@ -19,7 +19,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ChekListType = table.Column<int>(type: "int", nullable: false),
+                    ChekListType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TripType = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -33,7 +33,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -48,12 +48,11 @@ namespace Travel.InfraStructure.EfCore.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Destination = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Destination = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Start = table.Column<DateTime>(type: "datetime2", nullable: false),
                     End = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TripType = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    CheckListIdForCheckListTrip = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -98,11 +97,11 @@ namespace Travel.InfraStructure.EfCore.Migrations
                 columns: new[] { "Id", "ChekListType", "TripType" },
                 values: new object[,]
                 {
-                    { 1, 1, 4 },
-                    { 2, 2, 1 },
-                    { 3, 1, 2 },
-                    { 4, 2, 3 },
-                    { 5, 1, 5 }
+                    { 1, "A", 4 },
+                    { 2, "B", 1 },
+                    { 3, "C", 2 },
+                    { 4, "D", 3 },
+                    { 5, "F", 5 }
                 });
 
             migrationBuilder.InsertData(

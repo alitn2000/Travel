@@ -13,11 +13,6 @@ public class CheckListTripConfiguration : IEntityTypeConfiguration<CheckListTrip
 {
     public void Configure(EntityTypeBuilder<CheckListTrip> builder)
     {
-        builder.HasData(new List<CheckListTrip>()
-        {
-            new() { Id = 1, CheckListId = 1, TripId = 1 },
-            new() { Id = 2, CheckListId = 2, TripId = 2 },
-            new() { Id = 3, CheckListId = 3, TripId = 3 },
-        });
+        builder.HasKey(ct => ct.Id);
     }
 }

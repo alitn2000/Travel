@@ -22,6 +22,11 @@ public class TripController : ControllerBase
     [HttpPost("AddTrip")]
     public async Task<ActionResult<Result>> AddTrip(AddTripModel model, CancellationToken cancellationToken)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
         var trip = new Trip()
         {
             Destination = model.Destination,
@@ -29,7 +34,6 @@ public class TripController : ControllerBase
             Start = model.Start,
             TripType = model.TripType,
             UserId = model.UserId,
-            CheckListIdForCheckListTrip = model.CheckListIdForCheckListTrip
 
         };
 

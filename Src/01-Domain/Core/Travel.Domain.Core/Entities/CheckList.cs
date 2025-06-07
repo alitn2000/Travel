@@ -10,7 +10,7 @@ namespace Travel.Domain.Core.Entities;
 public class CheckList
 {
     public int Id { get; set; }
-    public CheckListEnums ChekListType { get; set; }
+    public string ChekListType { get; set; }
     public TripEnums TripType { get; set; }
 
     public List<CheckListTrip> CheckListTrips { get; set; }

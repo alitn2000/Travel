@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
+using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
 
 namespace Travel.Domain.Service;
@@ -34,15 +35,26 @@ public class TripService : ITripService
         if(!typeResult)
             return new Result(false, "Trip type does not exist.");
 
-        var checkListResult = await _checkListService.CheckCheckListExist(trip.CheckListIdForCheckListTrip, cancellationToken);
+        //var checkListResult = await _checkListService.CheckCheckListExist(trip.CheckListIdForCheckListTrip, cancellationToken);
 
-        if(!checkListResult)
-            return new Result(false, "CheckList does not exist.");
+        //if(!checkListResult)
+        //    return new Result(false, "CheckList does not exist.");
 
         var addResult = await _tripRepository.AddTrip(trip, cancellationToken);
         return new Result(true, "Trip added successfully");
     }
 
-    public Task<List<Trip>> GetUsersTripsById(int userId, CancellationToken cancellationToken)
-        => _tripRepository.GetUsersTripsById(userId, cancellationToken);
+    public async Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken)
+        => await _tripRepository.CheckTripExist(tripId, cancellationToken);
+
+    public Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken)
+        => _tripRepository.CheckUsersHaveTripById(userId, tripId, cancellationToken);
+
+    public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken)
+        => await _tripRepository.GetUsersTripsById(userId, cancellationToken);
+
+    public async Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
+    {
+        
+    }
 }

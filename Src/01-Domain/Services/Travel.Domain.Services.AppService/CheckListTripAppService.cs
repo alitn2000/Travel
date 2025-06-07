@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.Contracts.Services;
-using Travel.Domain.Core.DTOs;
+using Travel.Domain.Core.DTOs.CheckListTripDtos;
+using Travel.Domain.Core.Entities;
 
 namespace Travel.Domain.Services.AppService;
 
@@ -19,6 +20,15 @@ public class CheckListTripAppService : ICheckListTripAppService
         _checkListTripService = checkListTripService;
     }
 
-    public Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
-        => _checkListTripService.UpdateIsChecked(dto, cancellationToken);
+    public async Task<Result> AddCheckListTrip(AddCheckListToTripDto dto, CancellationToken cancellationToken)
+        => await _checkListTripService.AddCheckListTrip(dto, cancellationToken);
+
+    public async Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken)
+        => await _checkListTripService.GetAllCheckListTrips(cancellationToken);
+
+    public async Task<List<CheckListTripListDto>> GetAllIsCheckedLists(CancellationToken cancellationToken)
+        => await _checkListTripService.GetAllIsCheckedLists(cancellationToken);
+
+    public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
+        => await _checkListTripService.UpdateIsChecked(dto, cancellationToken);
 }
