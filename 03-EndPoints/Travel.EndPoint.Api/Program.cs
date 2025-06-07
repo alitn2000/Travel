@@ -16,17 +16,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ICheckListRepository, CheckListRepository>();
 builder.Services.AddScoped<ITripRepository, TripRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICheckListTripRepository, CheckListTripRepository>();
 
 //services
 builder.Services.AddScoped<ICheckListService, CheckListService>();
 builder.Services.AddScoped<ITripService, TripService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICheckListTripService, CheckListTripService>();
 
 
 // appservices
 builder.Services.AddScoped<ICheckListAppService, CheckListAppService>();
 builder.Services.AddScoped<ITripAppService, TripAppService>();
 builder.Services.AddScoped<IUserAppService, UserAppService>();
+builder.Services.AddScoped<ICheckListTripAppService, CheckListTripAppService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

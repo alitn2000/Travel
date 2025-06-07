@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.Entities;
 using Travel.EndPoint.Api.Models.TripModels;
@@ -19,7 +20,7 @@ public class TripController : ControllerBase
         _tripAppService = tripAppService;
     }
     [HttpPost("AddTrip")]
-    public async Task<IActionResult> AddTrip(AddTripModel model, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> AddTrip(AddTripModel model, CancellationToken cancellationToken)
     {
         var trip = new Trip()
         {
@@ -27,7 +28,9 @@ public class TripController : ControllerBase
             End = model.End,
             Start = model.Start,
             TripType = model.TripType,
-            UserId = model.UserId
+            UserId = model.UserId,
+            CheckListIdForCheckListTrip = model.CheckListIdForCheckListTrip
+
         };
 
         var result = await _tripAppService.AddTrip(trip,cancellationToken );
@@ -39,7 +42,7 @@ public class TripController : ControllerBase
     }
 
     [HttpGet("UsersTrips")]
-    public async Task<IActionResult> GetUsersTrips(int userId, CancellationToken cancellationToken)
+    public async Task<ActionResult<List<Trip>>> GetUsersTrips(int userId, CancellationToken cancellationToken)
     {
         var trips = await _tripAppService.GetUsersTripsById(userId, cancellationToken);
         if (!trips.Any())

@@ -150,3 +150,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\De
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.Domain.Services.AppService.dll
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.Domain.Services.AppService.pdb
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.Domain.Service.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\obj\Debug\net8.0\Travel.EndPoint.Api.sourcelink.json

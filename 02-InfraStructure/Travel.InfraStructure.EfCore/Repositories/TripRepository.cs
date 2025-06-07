@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Entities;
 using Travel.Domain.Core.Enums;
@@ -23,11 +24,27 @@ public class TripRepository : ITripRepository
     public async Task<bool> AddTrip(Trip trip, CancellationToken cancellationToken)
     {
         await _context.Trips.AddAsync(trip, cancellationToken);
+       var res =  await _context.SaveChangesAsync(cancellationToken); //eslah
+
+        if (res == 0)
+            return false;
+
+        var checklistTrip = new CheckListTrip
+        {
+            TripId = trip.Id, 
+            CheckListId = trip.CheckListIdForCheckListTrip,
+            IsChecked = false
+        };
+        await _context.CheckListTrips.AddAsync(checklistTrip, cancellationToken);
         return await _context.SaveChangesAsync(cancellationToken) > 0;
+
+        
     }
 
-    public async Task<bool> CheckTripTypeExist(TripEnums type, CancellationToken cancellationToken)
-        => await _context.Trips.AsNoTracking().AnyAsync(t => t.TripType == type, cancellationToken);
+    public bool CheckTripTypeExist(TripEnums type)
+    {
+        return Enum.IsDefined(typeof(TripEnums), type);
+    }
 
     public async Task<List<Trip>> GetUsersTripsById(int userId,CancellationToken cancellationToken)
         => await _context.Trips.Where(t => t.UserId == userId).ToListAsync(cancellationToken);

@@ -12,7 +12,7 @@ using Travel.InfraStructure.EfCore.Common;
 namespace Travel.InfraStructure.EfCore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250603091830_init")]
+    [Migration("20250607052001_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -110,6 +110,9 @@ namespace Travel.InfraStructure.EfCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CheckListIdForCheckListTrip")
+                        .HasColumnType("int");
+
                     b.Property<string>("Destination")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -131,35 +134,6 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Trips");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Destination = "tehran",
-                            End = new DateTime(2025, 5, 9, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            Start = new DateTime(2025, 5, 6, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            TripType = 4,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Destination = "ardabil",
-                            End = new DateTime(2025, 5, 9, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            Start = new DateTime(2025, 5, 6, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            TripType = 1,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Destination = "mashhad",
-                            End = new DateTime(2025, 5, 9, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            Start = new DateTime(2025, 5, 6, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            TripType = 2,
-                            UserId = 3
-                        });
                 });
 
             modelBuilder.Entity("Travel.Domain.Core.Entities.User", b =>

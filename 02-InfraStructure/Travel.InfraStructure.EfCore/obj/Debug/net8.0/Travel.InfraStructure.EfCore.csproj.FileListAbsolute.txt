@@ -15,3 +15,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.pdb
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.genruntimeconfig.cache
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\ref\Travel.InfraStructure.EfCore.dll
+C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.sourcelink.json

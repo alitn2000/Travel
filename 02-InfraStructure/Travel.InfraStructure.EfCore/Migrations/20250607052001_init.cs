@@ -52,7 +52,8 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     Start = table.Column<DateTime>(type: "datetime2", nullable: false),
                     End = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TripType = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CheckListIdForCheckListTrip = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -112,16 +113,6 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     { 1, "test1@gmail.com", "name1", "123" },
                     { 2, "test2@gmail.com", "name2", "123" },
                     { 3, "test3@gmail.com", "name3", "123" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Trips",
-                columns: new[] { "Id", "Destination", "End", "Start", "TripType", "UserId" },
-                values: new object[,]
-                {
-                    { 1, "tehran", new DateTime(2025, 5, 9, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 6, 12, 0, 0, 0, DateTimeKind.Unspecified), 4, 1 },
-                    { 2, "ardabil", new DateTime(2025, 5, 9, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 6, 12, 0, 0, 0, DateTimeKind.Unspecified), 1, 2 },
-                    { 3, "mashhad", new DateTime(2025, 5, 9, 12, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2025, 5, 6, 12, 0, 0, 0, DateTimeKind.Unspecified), 2, 3 }
                 });
 
             migrationBuilder.CreateIndex(

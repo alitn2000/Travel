@@ -18,4 +18,6 @@ public class Trip
     public List<CheckListTrip> CheckListTrips { get; set; }
     public int UserId { get; set; }
     public User User { get; set; }
+
+    public int CheckListIdForCheckListTrip { get; set; }
 }

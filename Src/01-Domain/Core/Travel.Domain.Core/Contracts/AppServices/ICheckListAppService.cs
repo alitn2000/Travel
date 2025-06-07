@@ -10,4 +10,5 @@ namespace Travel.Domain.Core.Contracts.AppServices;
 public interface ICheckListAppService
 {
     Task<List<CheckList>> GetAllCheckListsAsync(CancellationToken cancellationToken);
+    Task<bool> CheckCheckListExist(int checkListId, CancellationToken cancellationToken);
 }

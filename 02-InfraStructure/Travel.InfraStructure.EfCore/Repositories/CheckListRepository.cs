@@ -21,4 +21,8 @@ public class CheckListRepository : ICheckListRepository
 
     public async Task<List<CheckList>> GetAllCheckListsAsync(CancellationToken cancellationToken)
         => await _context.CheckLists.ToListAsync(cancellationToken);
+
+    public async Task<bool> CheckCheckListExist(int checkListId, CancellationToken cancellationToken)
+       =>  await _context.CheckLists.AsNoTracking().AnyAsync(c => c.Id == checkListId, cancellationToken);
+    
 }

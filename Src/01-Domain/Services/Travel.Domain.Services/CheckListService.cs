@@ -18,6 +18,9 @@ namespace Travel.Domain.Service
             _checkListRepository = checkListRepository;
         }
 
+        public async Task<bool> CheckCheckListExist(int checkListId, CancellationToken cancellationToken)
+            => await _checkListRepository.CheckCheckListExist(checkListId, cancellationToken);
+
         public async Task<List<CheckList>> GetAllCheckListsAsync(CancellationToken cancellationToken)
             =>await _checkListRepository.GetAllCheckListsAsync(cancellationToken);
         

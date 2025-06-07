@@ -11,6 +11,6 @@ namespace Travel.Domain.Core.Contracts.Repositories;
 public interface ITripRepository
 {
     Task<bool> AddTrip(Trip trip, CancellationToken cancellationToken);
-    Task<bool> CheckTripTypeExist(TripEnums type, CancellationToken cancellationToken);
+    bool CheckTripTypeExist(TripEnums type);
     Task<List<Trip>> GetUsersTripsById(int userId, CancellationToken cancellationToken);
 }

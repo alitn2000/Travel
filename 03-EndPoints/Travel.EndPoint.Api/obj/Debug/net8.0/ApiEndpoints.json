@@ -10,6 +10,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.CheckListTripController",
+    "Method": "UpdateIsChecked",
+    "RelativePath": "api/CheckListTrip/UpdateIsChecked",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Travel.Domain.Core.DTOs.UpdateCheckListTripDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
     "Method": "AddTrip",
     "RelativePath": "api/Trip/AddTrip",
@@ -23,7 +39,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
@@ -39,6 +65,16 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Travel.Domain.Core.Entities.Trip, Travel.Domain.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

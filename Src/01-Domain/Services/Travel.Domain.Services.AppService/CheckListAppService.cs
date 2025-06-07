@@ -18,6 +18,9 @@ namespace Travel.Domain.Services.AppService
             _checkListService = checkListService;
         }
 
+        public async Task<bool> CheckCheckListExist(int checkListId, CancellationToken cancellationToken)
+            => await _checkListService.CheckCheckListExist(checkListId, cancellationToken);
+
         public async Task<List<CheckList>> GetAllCheckListsAsync(CancellationToken cancellationToken)
             => await _checkListService.GetAllCheckListsAsync(cancellationToken);
 

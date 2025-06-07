@@ -14,11 +14,13 @@ public class TripService : ITripService
 {
     private readonly ITripRepository _tripRepository;
     private readonly IUserService _userService;
+    private readonly ICheckListService _checkListService;
 
-    public TripService(ITripRepository tripRepository, IUserService userService)
+    public TripService(ITripRepository tripRepository, IUserService userService, ICheckListService checkListService)
     {
         _tripRepository = tripRepository;
         _userService = userService;
+        _checkListService = checkListService;
     }
 
 
@@ -28,9 +30,14 @@ public class TripService : ITripService
         if (!result.Flag)
             return result;
 
-        var typeResult = await _tripRepository.CheckTripTypeExist(trip.TripType, cancellationToken);
+        var typeResult =  _tripRepository.CheckTripTypeExist(trip.TripType);
         if(!typeResult)
             return new Result(false, "Trip type does not exist.");
+
+        var checkListResult = await _checkListService.CheckCheckListExist(trip.CheckListIdForCheckListTrip, cancellationToken);
+
+        if(!checkListResult)
+            return new Result(false, "CheckList does not exist.");
 
         var addResult = await _tripRepository.AddTrip(trip, cancellationToken);
         return new Result(true, "Trip added successfully");

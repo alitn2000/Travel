@@ -10,5 +10,6 @@ namespace Travel.Domain.Core.Contracts.Repositories;
  public interface ICheckListRepository
 {
     Task<List<CheckList>> GetAllCheckListsAsync(CancellationToken cancellationToken);
+    Task<bool> CheckCheckListExist(int checkListId, CancellationToken cancellationToken);
 
 }

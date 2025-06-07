@@ -15,3 +15,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Se
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services\bin\Debug\net8.0\Travel.Domain.Core.pdb
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services\obj\Debug\net8.0\Travel.Domain.Service.csproj.AssemblyReference.cache
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services\obj\Debug\net8.0\Travel.D.0F7A9C62.Up2Date
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Services\Travel.Domain.Services\obj\Debug\net8.0\Travel.Domain.Service.sourcelink.json

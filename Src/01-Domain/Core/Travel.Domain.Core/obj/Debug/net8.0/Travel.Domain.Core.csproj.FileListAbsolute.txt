@@ -9,3 +9,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\o
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\refint\Travel.Domain.Core.dll
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.pdb
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\ref\Travel.Domain.Core.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.sourcelink.json
