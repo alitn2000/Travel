@@ -19,4 +19,5 @@ public interface ITripRepository
     Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken);
     Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken);
     Task<Trip?> GetTripById(int tripId, CancellationToken cancellationToken);
+    Task UpdateStatus(Trip trip, StatusEnum status, CancellationToken cancellationToken);
 }

@@ -1,10 +1,16 @@
 using Microsoft.EntityFrameworkCore;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Spi;
 using System.Text.Json.Serialization;
 using Travel.Domain.Core.Contracts.AppServices;
+using Travel.Domain.Core.Contracts.Jobs;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Service;
 using Travel.Domain.Services.AppService;
+using Travel.EndPoint.TravelJob;
+using Travel.EndPoint.TravelJob.Test;
 using Travel.InfraStructure.EfCore.Common;
 using Travel.InfraStructure.EfCore.Repositories;
 
@@ -32,6 +38,15 @@ builder.Services.AddScoped<ITripAppService, TripAppService>();
 builder.Services.AddScoped<IUserAppService, UserAppService>();
 builder.Services.AddScoped<ICheckListTripAppService, CheckListTripAppService>();
 
+//builder.Services.AddHostedService<QuartzHostedService>();
+builder.Services.AddSingleton<IJobFactory, JobFactory>();
+builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+
+builder.Services.AddScoped<StartTripJob>();
+builder.Services.AddScoped<EndTripJob>();
+builder.Services.AddScoped<TripJobScheduler>();
+//builder.Services.AddScoped<ITripJobScheduler, TripJobScheduler>();
+
 builder.Services.AddControllers()
     .AddJsonOptions(op =>
     {
@@ -46,6 +61,8 @@ var Connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(Connection));
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

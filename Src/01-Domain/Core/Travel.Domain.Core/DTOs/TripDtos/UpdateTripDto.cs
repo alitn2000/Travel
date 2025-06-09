@@ -10,6 +10,7 @@ namespace Travel.Domain.Core.DTOs.TripDtos;
 
 public class UpdateTripDto
 {
+    [Required(ErrorMessage = "trip id is required")]
     public int Id { get; set; }
 
     [Required(ErrorMessage = "destination name is required")]

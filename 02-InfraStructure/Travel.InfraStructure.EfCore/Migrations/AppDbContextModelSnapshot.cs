@@ -119,6 +119,9 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<DateTime>("Start")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<int>("TripType")
                         .HasColumnType("int");
 

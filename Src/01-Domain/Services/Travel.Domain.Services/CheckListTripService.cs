@@ -23,8 +23,8 @@ public class CheckListTripService : ICheckListTripService
         _tripRepository = tripRepository;
     }
 
-    public Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken)
-        => _checkListTripRepository.GetAllCheckListTrips(cancellationToken);
+    public async Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken)
+        => await _checkListTripRepository.GetAllCheckListTrips(cancellationToken);
 
     public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
     {

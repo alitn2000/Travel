@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
+using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
 using Travel.EndPoint.Api.Models.TripModels;
 
@@ -46,7 +47,7 @@ public class TripController : ControllerBase
     }
 
     [HttpGet("UsersTrips")]
-    public async Task<ActionResult<List<Trip>>> GetUsersTrips(int userId, CancellationToken cancellationToken)
+    public async Task<ActionResult<List<GetUsersTripDto>>> GetUsersTrips(int userId, CancellationToken cancellationToken)
     {
         var trips = await _tripAppService.GetUsersTripsById(userId, cancellationToken);
         if (!trips.Any())
@@ -54,5 +55,20 @@ public class TripController : ControllerBase
             return NotFound("No trips found for this user.");
         }
         return Ok(trips);
+    }
+
+    [HttpPatch("UpdateTrip")]
+    public async Task<ActionResult<UpdateTripDto>> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        var result = await _tripAppService.UpdateTrip(dto, cancellationToken);
+
+        if (!result.Flag)
+            return BadRequest(result.Message);
+
+        return Ok(result.Message);
     }
 }

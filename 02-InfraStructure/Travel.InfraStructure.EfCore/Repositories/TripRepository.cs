@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
+using Travel.Domain.Core.Contracts.Jobs;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
@@ -16,7 +17,6 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class TripRepository : ITripRepository
 {
     private readonly AppDbContext _context;
-
     public TripRepository(AppDbContext context)
     {
         _context = context;
@@ -25,8 +25,10 @@ public class TripRepository : ITripRepository
     public async Task<bool> AddTrip(Trip trip, CancellationToken cancellationToken)
     {
         await _context.Trips.AddAsync(trip, cancellationToken);
-        return await _context.SaveChangesAsync(cancellationToken) > 0;
-    
+       
+       var f = await _context.SaveChangesAsync(cancellationToken) ;
+        return f>0;
+
     }
 
     public bool CheckTripTypeExist(TripEnums type)
@@ -74,4 +76,10 @@ public class TripRepository : ITripRepository
     public async Task<Trip?> GetTripById(int tripId, CancellationToken cancellationToken)
         =>await _context.Trips.FirstOrDefaultAsync(t => t.Id == tripId, cancellationToken); 
 
+   public async Task UpdateStatus(Trip trip,  StatusEnum status, CancellationToken cancellationToken)
+    {
+        trip.Status = status;
+        await _context.SaveChangesAsync(cancellationToken);
+       // await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
+    }
 }

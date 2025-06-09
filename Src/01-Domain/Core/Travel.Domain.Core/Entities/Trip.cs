@@ -14,6 +14,7 @@ public class Trip
     public DateTime Start { get; set; }
     public DateTime End { get; set; }
     public TripEnums  TripType { get; set; }
+    public StatusEnum Status { get; set; } = StatusEnum.Pending;
 
     public List<CheckListTrip> CheckListTrips { get; set; }
     public int UserId { get; set; }

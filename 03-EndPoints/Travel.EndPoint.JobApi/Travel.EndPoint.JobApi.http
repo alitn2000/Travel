@@ -1,0 +1,6 @@
+@Travel.EndPoint.JobApi_HostAddress = http://localhost:5193
+
+GET {{Travel.EndPoint.JobApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -15,5 +15,6 @@ namespace Travel.Domain.Core.Contracts.Services
         Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken);
         Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken);
         Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken);
+        Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken);
     }
 }

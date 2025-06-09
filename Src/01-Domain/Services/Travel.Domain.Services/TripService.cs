@@ -55,6 +55,29 @@ public class TripService : ITripService
 
     public async Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
     {
-        
+        var userResult = await _userService.CheckUserExistById(dto.UserId, cancellationToken);
+
+        if (!userResult.Flag)
+            return userResult;
+
+        var typeResult = _tripRepository.CheckTripTypeExist(dto.TripType);
+
+        if (!typeResult)
+            return new Result(false, "Trip type does not exist.");
+
+        var userCheckResult = await _tripRepository.CheckUsersHaveTripById(dto.UserId, dto.Id, cancellationToken);
+
+        if (!userCheckResult)
+            return new Result(false, "User does not have this trip.");
+
+        if (dto.Start < DateTime.UtcNow)
+            return new Result(false, "start date is in the past!!!");
+
+        if (dto.Start >= dto.End)
+            return new Result(false, "start date most be befor end date!!!");
+
+        var result = await _tripRepository.UpdateTrip(dto, cancellationToken);
+
+        return result;
     }
 }

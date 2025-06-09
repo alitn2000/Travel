@@ -382,7 +382,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Trip"
+                    "$ref": "#/components/schemas/GetUsersTripDto"
                   }
                 }
               },
@@ -390,7 +390,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Trip"
+                    "$ref": "#/components/schemas/GetUsersTripDto"
                   }
                 }
               },
@@ -398,8 +398,56 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Trip"
+                    "$ref": "#/components/schemas/GetUsersTripDto"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Trip/UpdateTrip": {
+      "patch": {
+        "tags": [
+          "Trip"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTripDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTripDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTripDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTripDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTripDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTripDto"
                 }
               }
             }
@@ -477,30 +525,6 @@
         },
         "additionalProperties": false
       },
-      "CheckList": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "chekListType": {
-            "type": "string",
-            "nullable": true
-          },
-          "tripType": {
-            "$ref": "#/components/schemas/TripEnums"
-          },
-          "checkListTrips": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CheckListTrip"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "CheckListIsCheckedDto": {
         "type": "object",
         "properties": {
@@ -531,33 +555,6 @@
         },
         "additionalProperties": false
       },
-      "CheckListTrip": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "isChecked": {
-            "type": "boolean"
-          },
-          "tripId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "trip": {
-            "$ref": "#/components/schemas/Trip"
-          },
-          "checkListId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "checkList": {
-            "$ref": "#/components/schemas/CheckList"
-          }
-        },
-        "additionalProperties": false
-      },
       "CheckListTripListDto": {
         "type": "object",
         "properties": {
@@ -579,20 +576,7 @@
         },
         "additionalProperties": false
       },
-      "Result": {
-        "type": "object",
-        "properties": {
-          "flag": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Trip": {
+      "GetUsersTripDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -613,20 +597,19 @@
           },
           "tripType": {
             "$ref": "#/components/schemas/TripEnums"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Result": {
+        "type": "object",
+        "properties": {
+          "flag": {
+            "type": "boolean"
           },
-          "checkListTrips": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CheckListTrip"
-            },
+          "message": {
+            "type": "string",
             "nullable": true
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
           }
         },
         "additionalProperties": false
@@ -684,24 +667,38 @@
         },
         "additionalProperties": false
       },
-      "User": {
+      "UpdateTripDto": {
+        "required": [
+          "destination",
+          "end",
+          "id",
+          "start",
+          "tripType"
+        ],
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "format": "int32"
           },
-          "name": {
-            "type": "string",
-            "nullable": true
+          "destination": {
+            "minLength": 1,
+            "type": "string"
           },
-          "email": {
+          "start": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
-          "password": {
+          "end": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
+          },
+          "tripType": {
+            "$ref": "#/components/schemas/TripEnums"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

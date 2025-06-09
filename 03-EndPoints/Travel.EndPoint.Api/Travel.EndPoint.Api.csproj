@@ -21,6 +21,7 @@
     <ProjectReference Include="..\..\Src\01-Domain\Core\Travel.Domain.Core\Travel.Domain.Core.csproj" />
     <ProjectReference Include="..\..\Src\01-Domain\Services\Travel.Domain.Services.AppService\Travel.Domain.Services.AppService.csproj" />
     <ProjectReference Include="..\..\Src\01-Domain\Services\Travel.Domain.Services\Travel.Domain.Service.csproj" />
+    <ProjectReference Include="..\Travel.EndPoint.TravelJob\Travel.EndPoint.TravelJob.csproj" />
   </ItemGroup>
 
 </Project>

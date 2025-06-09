@@ -13,5 +13,6 @@ namespace Travel.Domain.Core.Contracts.AppServices
     {
         Task<Result> AddTrip(Trip trip, CancellationToken cancellationToken);
         Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken);
+        Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken);
     }
 }
