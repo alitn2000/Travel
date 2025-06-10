@@ -85,118 +85,14 @@
         }
       }
     },
-    "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj": {
+    "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Jobs\\Travel.EndPoints.Jobs\\Travel.EndPoints.Jobs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
-        "projectName": "Travel.EndPoint.Api",
-        "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
+        "projectUniqueName": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Jobs\\Travel.EndPoints.Jobs\\Travel.EndPoints.Jobs.csproj",
+        "projectName": "Travel.EndPoints.Jobs",
+        "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Jobs\\Travel.EndPoints.Jobs\\Travel.EndPoints.Jobs.csproj",
         "packagesPath": "C:\\Users\\a.tahmasebi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\a.tahmasebi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj": {
-                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj"
-              },
-              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.TravelJob\\Travel.EndPoint.TravelJob.csproj": {
-                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.TravelJob\\Travel.EndPoint.TravelJob.csproj"
-              },
-              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj"
-              },
-              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\Travel.Domain.Services.AppService.csproj": {
-                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\Travel.Domain.Services.AppService.csproj"
-              },
-              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj": {
-                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.16, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.16, )"
-            },
-            "Scalar.AspNetCore": {
-              "target": "Package",
-              "version": "[2.4.7, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.6.2, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.TravelJob\\Travel.EndPoint.TravelJob.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.TravelJob\\Travel.EndPoint.TravelJob.csproj",
-        "projectName": "Travel.EndPoint.TravelJob",
-        "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.TravelJob\\Travel.EndPoint.TravelJob.csproj",
-        "packagesPath": "C:\\Users\\a.tahmasebi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.TravelJob\\obj\\",
+        "outputPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Jobs\\Travel.EndPoints.Jobs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -263,6 +159,122 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
+        "projectName": "Travel.EndPoint.Api",
+        "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
+        "packagesPath": "C:\\Users\\a.tahmasebi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.tahmasebi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj": {
+                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj"
+              },
+              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Jobs\\Travel.EndPoints.Jobs\\Travel.EndPoints.Jobs.csproj": {
+                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Jobs\\Travel.EndPoints.Jobs\\Travel.EndPoints.Jobs.csproj"
+              },
+              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj"
+              },
+              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\Travel.Domain.Services.AppService.csproj": {
+                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\Travel.Domain.Services.AppService.csproj"
+              },
+              "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj": {
+                "projectPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "Quartz.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.4.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

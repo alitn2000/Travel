@@ -182,5 +182,8 @@ C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\De
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.EndPoint.TravelJob.dll
-C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.EndPoint.TravelJob.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.EndPoints.Jobs.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.EndPoints.Jobs.pdb

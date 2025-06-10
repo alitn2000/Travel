@@ -1,10 +1,42 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Travel.EndPoint.Api",
-    "version": "1.0"
+    "title": "Travel API",
+    "description": "API for managing travel trips and related services.",
+    "version": "v1"
   },
   "paths": {
+    "/api/Auth/Login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CheckList/GetAllCheckLists": {
       "get": {
         "tags": [
@@ -601,6 +633,19 @@
         },
         "additionalProperties": false
       },
+      "LoginDto": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "Result": {
         "type": "object",
         "properties": {
@@ -673,7 +718,8 @@
           "end",
           "id",
           "start",
-          "tripType"
+          "tripType",
+          "userId"
         ],
         "type": "object",
         "properties": {
@@ -703,6 +749,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter 'Bearer' [space] and then your valid token.\r\nExample: Bearer eyJhbGciOiJIUzI1NiIs...",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

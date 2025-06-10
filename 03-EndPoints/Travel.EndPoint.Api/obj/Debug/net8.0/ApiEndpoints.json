@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Travel.Domain.Core.DTOs.Login.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Travel.EndPoint.Api.Controllers.CheckListController",
     "Method": "AddCheckList",
     "RelativePath": "api/CheckList/AddCheckList",

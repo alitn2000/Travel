@@ -26,7 +26,6 @@ public class UpdateTripDto
 
     [Required(ErrorMessage = "trip type is required")]
     public TripEnums TripType { get; set; }
+    [Required(ErrorMessage = "User Id is required")]
     public int UserId { get; set; }
-    
-    
 }

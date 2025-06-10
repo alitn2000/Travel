@@ -35,10 +35,14 @@ public class TripService : ITripService
         if(!typeResult)
             return new Result(false, "Trip type does not exist.");
 
-        //var checkListResult = await _checkListService.CheckCheckListExist(trip.CheckListIdForCheckListTrip, cancellationToken);
+        var userTrips = await _tripRepository.GetUsersTripsById(trip.UserId, cancellationToken);
 
-        //if(!checkListResult)
-        //    return new Result(false, "CheckList does not exist.");
+        foreach (var t in userTrips)
+        {
+            
+            if (trip.Start <= t.End && trip.End >= t.Start)
+                return new Result(false, "You already have a trip at this time.");
+        }
 
         var addResult = await _tripRepository.AddTrip(trip, cancellationToken);
         return new Result(true, "Trip added successfully");

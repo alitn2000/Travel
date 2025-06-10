@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.CheckListTripDtos;
 
 namespace Travel.EndPoint.Api.Controllers;
-
+[Authorize(Roles ="User")]
 [Route("api/[controller]")]
 [ApiController]
 public class CheckListTripController : ControllerBase

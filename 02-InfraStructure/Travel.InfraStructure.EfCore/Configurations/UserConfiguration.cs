@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Enums;
 
 namespace Travel.InfraStructure.EfCore.Configurations;
 
@@ -14,15 +15,14 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         
-        builder.Property(u => u.Name)
-            .HasMaxLength(30)
-            .IsRequired();
+        //builder.HasCheckConstraint("CK_UserName_Format",
+        //    "[UserNameType] = 1 AND [UserName] LIKE '+989[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]' AND");
 
         builder.HasData(new List<User>()
         {
-            new() { Id = 1, Name = "name1", Email = "test1@gmail.com", Password = "123"},
-            new() { Id = 2, Name = "name2", Email = "test2@gmail.com", Password = "123"},
-            new() { Id = 3, Name = "name3", Email = "test3@gmail.com", Password = "123"}
+            new() { Id = 1, UserName = "+989102123542", UserNameType = UserNameEnum.Mobile },
+            new() { Id = 2, UserName = "test@gmail.com", UserNameType = UserNameEnum.Email},
+            new() { Id = 3, UserName = "+989102123543", UserNameType = UserNameEnum.Mobile},
         });
       
     }
