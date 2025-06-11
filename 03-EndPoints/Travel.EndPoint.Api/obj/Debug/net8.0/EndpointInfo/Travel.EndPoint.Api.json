@@ -635,13 +635,16 @@
       },
       "LoginDto": {
         "required": [
-          "email"
+          "userName"
         ],
         "type": "object",
         "properties": {
-          "email": {
+          "userName": {
             "minLength": 1,
             "type": "string"
+          },
+          "userNameType": {
+            "$ref": "#/components/schemas/UserNameEnum"
           }
         },
         "additionalProperties": false
@@ -748,6 +751,13 @@
           }
         },
         "additionalProperties": false
+      },
+      "UserNameEnum": {
+        "enum": [
+          "Mobile",
+          "Email"
+        ],
+        "type": "string"
       }
     },
     "securitySchemes": {

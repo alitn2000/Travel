@@ -187,3 +187,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\De
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.EndPoints.Jobs.dll
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\Travel.EndPoints.Jobs.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\bin\Debug\net8.0\FluentValidation.dll

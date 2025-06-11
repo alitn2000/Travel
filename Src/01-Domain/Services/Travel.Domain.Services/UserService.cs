@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,12 @@ public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
     private readonly IConfiguration _configuration;
-    public UserService(IUserRepository userRepository, IConfiguration configuration)
+    private readonly IOTPService _otpService;
+    public UserService(IUserRepository userRepository, IConfiguration configuration, IOTPService otpService)
     {
         _userRepository = userRepository;
         _configuration = configuration;
+        _otpService = otpService;
     }
 
     public async Task<Result> CheckUserExistById(int userId, CancellationToken cancellationToken)
@@ -34,16 +37,31 @@ public class UserService : IUserService
         return new Result(false, "User Not Exist");
     }
 
-    public async Task<string> Login(LoginDto dto, CancellationToken cancellationToken)
+    public async Task<Result> Login(LoginDto dto, CancellationToken cancellationToken)
     {
-        var result = await _userRepository.Login(dto, cancellationToken);
+        
+        if (!await _userRepository.CheckUserExistByUserName(dto, cancellationToken))
+        {
+            if(!await _userRepository.RegisterUser(dto.UserName, dto.UserNameType, cancellationToken))
+                return new Result(false, "User Registration Failed");
+        }
+        
+        var OTP = _otpService.GenerateOtp();
+        _otpService.StoreOtp(dto.UserName, OTP, TimeSpan.FromMinutes(3));
 
-        if (result)
-            return GenerateToken(dto);
+        return new Result(true, "Your Login Code: " + OTP);
 
-        return "Invalid username or password";
     }
 
+    public async Task<Result> GetToken()
+    {
+        var vaild = _otpService.ValidateOtp(userName, otp);
+
+        if (!vaild)
+            return new Result(false, "Invalid OTP or OTP expired.");
+
+        
+    }
 
     public string GenerateToken(LoginDto dto)
     {
@@ -51,7 +69,7 @@ public class UserService : IUserService
         var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         var claims = new[]
         {
-        new Claim(ClaimTypes.NameIdentifier, dto.Email),  
+        new Claim(ClaimTypes.Name, dto.UserName),  
         //new Claim(ClaimTypes.Email, dto.Email),
         //new Claim(ClaimTypes.Role, "User")                
     };
@@ -66,4 +84,6 @@ public class UserService : IUserService
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
+
+
 }

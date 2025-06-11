@@ -21,5 +21,7 @@ public class UserLoginModelValidator : AbstractValidator<UserLoginModel>
             RuleFor(x => x.UserName)
                 .EmailAddress().WithMessage("Email Is Invalid!!!");
         });
+
+        
     }
 }

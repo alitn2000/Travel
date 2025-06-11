@@ -1,25 +1,3 @@
-//using Microsoft.AspNetCore.Authentication.JwtBearer;
-//using Microsoft.EntityFrameworkCore;
-//using Microsoft.IdentityModel.Tokens;
-//using Microsoft.OpenApi.Models;
-//using Quartz;
-//using Quartz.Impl;
-//using Quartz.Spi;
-//using System.Text;
-//using System.Text.Json.Serialization;
-//using Travel.Domain.Core.Contracts.AppServices;
-//using Travel.Domain.Core.Contracts.Jobs;
-//using Travel.Domain.Core.Contracts.Repositories;
-//using Travel.Domain.Core.Contracts.Services;
-//using Travel.Domain.Service;
-//using Travel.Domain.Services.AppService;
-//using Travel.EndPoint.Api.Jobs;
-//using Travel.EndPoint.TravelJob;
-//using Travel.EndPoints.Jobs.TripJobs;
-//using Travel.InfraStructure.EfCore.Common;
-//using Travel.InfraStructure.EfCore.Repositories;
-
-
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -36,9 +14,11 @@ using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Service;
 using Travel.Domain.Services.AppService;
 using Travel.EndPoint.Api.Jobs;
+using Travel.EndPoint.Api.Models.UserModels;
 using Travel.EndPoints.Jobs.TripJobs;
 using Travel.InfraStructure.EfCore.Common;
 using Travel.InfraStructure.EfCore.Repositories;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,11 +50,14 @@ builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 builder.Services.AddHostedService<TripRecoveryService>();
 
 
+// fluent validation
+
 builder.Services.AddControllers()
     .AddJsonOptions(op =>
     {
         op.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 

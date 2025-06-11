@@ -5,7 +5,7 @@ using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.CheckListTripDtos;
 
 namespace Travel.EndPoint.Api.Controllers;
-[Authorize(Roles ="User")]
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class CheckListTripController : ControllerBase

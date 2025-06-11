@@ -11,5 +11,5 @@ namespace Travel.Domain.Core.Contracts.AppServices;
 public interface IUserAppService
 {
     Task<Result> CheckUserExistById(int userId, CancellationToken cancellationToken);
-    Task<string> Login(LoginDto dto, CancellationToken cancellationToken);
+    Task<Result> Login(LoginDto dto, CancellationToken cancellationToken);
 }

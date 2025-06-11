@@ -26,11 +26,11 @@ public class AuthController : ControllerBase
     [HttpPost("Login")]
     public async Task<IActionResult> Login(LoginDto dto, CancellationToken cancellationToken)
     {
-        var token = await _userAppService.Login(dto, cancellationToken);
+        var tokenResult = await _userAppService.Login(dto, cancellationToken);
 
-        if (token == "Invalid username or password")
+        if (!tokenResult.Flag)
             return Unauthorized();
 
-        return Ok(new { Token = token });
+        return Ok(new { Token = tokenResult.Message });
     }
 }

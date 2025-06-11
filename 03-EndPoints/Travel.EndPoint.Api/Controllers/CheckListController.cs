@@ -6,7 +6,7 @@ using Travel.Domain.Core.DTOs.CheckListDtos;
 using Travel.Domain.Core.Entities;
 
 namespace Travel.EndPoint.Api.Controllers;
-[Authorize(Roles ="User")]
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class CheckListController : ControllerBase

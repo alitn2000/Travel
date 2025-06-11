@@ -23,4 +23,5 @@ public class AppDbContext :DbContext
     public DbSet<Trip> Trips { get; set; }
     public DbSet<CheckList> CheckLists { get; set; }
     public DbSet<CheckListTrip> CheckListTrips { get; set; }
+    public DbSet<Profile> Profiles { get; set; }
 }

@@ -14,9 +14,10 @@ public class ProfileConfiguration : IEntityTypeConfiguration<Profile>
 {
     public void Configure(EntityTypeBuilder<Profile> builder)
     {
-        builder.HasOne(u => u.User)
-               .WithOne(u => u.Profile)
-               .HasForeignKey<Profile>(u => u.UserId);
+        builder.HasOne(p => p.User)
+        .WithOne(u => u.Profile)
+        .HasForeignKey<Profile>(p => p.UserId)
+        .IsRequired();
 
 
         builder.Property(p => p.FirstName).HasMaxLength(15).IsRequired(false);

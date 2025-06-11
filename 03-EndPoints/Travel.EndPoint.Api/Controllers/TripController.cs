@@ -9,7 +9,7 @@ using Travel.EndPoint.Api.Models.TripModels;
 
 namespace Travel.EndPoint.Api.Controllers;
 
-[Authorize(Roles = "User")]
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class TripController : ControllerBase
