@@ -19,6 +19,8 @@ using Travel.EndPoints.Jobs.TripJobs;
 using Travel.InfraStructure.EfCore.Common;
 using Travel.InfraStructure.EfCore.Repositories;
 using FluentValidation;
+using Microsoft.AspNetCore.Identity;
+using Travel.EndPoint.Api.Validations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,22 +37,29 @@ builder.Services.AddScoped<ICheckListService, CheckListService>();
 builder.Services.AddScoped<ITripService, TripService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICheckListTripService, CheckListTripService>();
+builder.Services.AddScoped<IOTPService, OTPService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 // appservices
 builder.Services.AddScoped<ICheckListAppService, CheckListAppService>();
 builder.Services.AddScoped<ITripAppService, TripAppService>();
 builder.Services.AddScoped<IUserAppService, UserAppService>();
 builder.Services.AddScoped<ICheckListTripAppService, CheckListTripAppService>();
 // jobs
-builder.Services.AddScoped<Travel.EndPoints.Jobs.TripJobs.StartTripJob>();
-builder.Services.AddScoped<Travel.EndPoints.Jobs.TripJobs.EndTripJob>();
+builder.Services.AddScoped<StartTripJob>();
+builder.Services.AddScoped<EndTripJob>();
 builder.Services.AddSingleton<IJobFactory, JobFactory>();
 builder.Services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
 builder.Services.AddScoped<ITripJobScheduler,TripJobScheduler>();
 builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 builder.Services.AddHostedService<TripRecoveryService>();
 
+// cache
+builder.Services.AddMemoryCache();
 
 // fluent validation
+
+builder.Services.AddScoped<IValidator<UserLoginModel>, UserLoginModelValidator>();
+
 
 builder.Services.AddControllers()
     .AddJsonOptions(op =>

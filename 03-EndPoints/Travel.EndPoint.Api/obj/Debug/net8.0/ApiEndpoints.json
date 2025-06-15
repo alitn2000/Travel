@@ -8,8 +8,24 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "model",
+        "Type": "Travel.EndPoint.Api.Models.UserModels.UserLoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.AuthController",
+    "Method": "VerifyOTP",
+    "RelativePath": "api/Auth/VerifyOTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
         "Name": "dto",
-        "Type": "Travel.Domain.Core.DTOs.Login.LoginDto",
+        "Type": "Travel.Domain.Core.DTOs.Login.GetTokenDto",
         "IsRequired": true
       }
     ],

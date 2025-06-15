@@ -53,23 +53,25 @@ public class UserService : IUserService
 
     }
 
-    public async Task<Result> GetToken()
+    public  Result GetToken(GetTokenDto dto)
     {
-        var vaild = _otpService.ValidateOtp(userName, otp);
+        var vaild = _otpService.ValidateOtp(dto.UserName, dto.OTP);
 
         if (!vaild)
             return new Result(false, "Invalid OTP or OTP expired.");
 
-        
+       var token = GenerateToken(dto.UserName);
+        return new Result(true, "token = " + token);
+
     }
 
-    public string GenerateToken(LoginDto dto)
+    public string GenerateToken(string userName)
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         var claims = new[]
         {
-        new Claim(ClaimTypes.Name, dto.UserName),  
+        new Claim(ClaimTypes.Name, userName),  
         //new Claim(ClaimTypes.Email, dto.Email),
         //new Claim(ClaimTypes.Role, "User")                
     };

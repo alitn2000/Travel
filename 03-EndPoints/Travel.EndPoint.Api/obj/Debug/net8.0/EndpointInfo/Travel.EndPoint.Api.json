@@ -15,17 +15,48 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/UserLoginModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/UserLoginModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/UserLoginModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/VerifyOTP": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetTokenDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetTokenDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetTokenDto"
               }
             }
           }
@@ -608,6 +639,24 @@
         },
         "additionalProperties": false
       },
+      "GetTokenDto": {
+        "required": [
+          "otp",
+          "userName"
+        ],
+        "type": "object",
+        "properties": {
+          "userName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "otp": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "GetUsersTripDto": {
         "type": "object",
         "properties": {
@@ -629,22 +678,6 @@
           },
           "tripType": {
             "$ref": "#/components/schemas/TripEnums"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginDto": {
-        "required": [
-          "userName"
-        ],
-        "type": "object",
-        "properties": {
-          "userName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "userNameType": {
-            "$ref": "#/components/schemas/UserNameEnum"
           }
         },
         "additionalProperties": false
@@ -748,6 +781,19 @@
           "userId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserLoginModel": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userNameType": {
+            "$ref": "#/components/schemas/UserNameEnum"
           }
         },
         "additionalProperties": false
