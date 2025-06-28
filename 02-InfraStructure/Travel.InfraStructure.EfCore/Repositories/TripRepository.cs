@@ -33,26 +33,28 @@ public class TripRepository : ITripRepository
 
     public bool CheckTripTypeExist(TripEnums type)
     {
-        return Enum.IsDefined(typeof(TripEnums), type);
+        return Enum.IsDefined(typeof(TripEnums), type);     //jasho avaz kon
     }
 
     public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId,CancellationToken cancellationToken)
-        => await _context.Trips.Where(t => t.UserId == userId)
-        .Select(t => new GetUsersTripDto
-        {
-            Id = t.Id,
-            Destination = t.Destination,
-            Start = t.Start,
-            End = t.End,
-            TripType = t.TripType
-        })
-        .ToListAsync(cancellationToken);
+        => await _context.UserTrips
+    .Where(t => t.UserId == userId)
+    .Include(t => t.Trip)
+    .Select(t => new GetUsersTripDto
+    {
+        Id = t.Trip.Id,
+        Destination = t.Trip.Destination,
+        Start = t.Trip.Start,
+        End = t.Trip.End,
+        TripType = t.Trip.TripType
+    })
+    .ToListAsync(cancellationToken);
 
     public async Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken)
         => await _context.Trips.AsNoTracking().AnyAsync(t => t.Id == tripId, cancellationToken);
 
     public async Task<bool> CheckUsersHaveTripById(int userId, int tripId ,CancellationToken cancellationToken)
-        => await _context.Trips
+        => await _context.UserTrips
         .AsNoTracking()
             .AnyAsync(c => c.UserId == userId && c.Id == tripId, cancellationToken);
 
@@ -67,7 +69,7 @@ public class TripRepository : ITripRepository
         existTrip.Start = dto.Start;
         existTrip.End = dto.End;
         existTrip.TripType = dto.TripType;
-        existTrip.UserId = dto.UserId;
+        
         await _context.SaveChangesAsync(cancellationToken);
 
         return new Result(true, "Trip updated successfully!!!");

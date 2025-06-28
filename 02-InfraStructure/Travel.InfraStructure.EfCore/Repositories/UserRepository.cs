@@ -62,4 +62,14 @@ public class UserRepository : IUserRepository
         return await _context.SaveChangesAsync(cancellationToken) > 0;
     }
 
+    public async Task<int> GetUserIdByUserName(string userName, CancellationToken cancellationToken)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == userName, cancellationToken);
+
+        if (user == null)
+            return 0;
+        return user.Id;
+       
+    }
+
 }

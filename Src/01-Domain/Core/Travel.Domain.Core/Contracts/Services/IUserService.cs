@@ -12,6 +12,6 @@ public interface IUserService
 {
     Task<Result> CheckUserExistById(int userId, CancellationToken cancellationToken);
     Task<Result> Login(LoginDto dto, CancellationToken cancellationToken);
-    string GenerateToken(string userName);
-    Result GetToken(GetTokenDto dto);
+    Task<string> GenerateToken(string userName, CancellationToken cancellationToken);
+    Task<Result> GetToken(GetTokenDto dto, CancellationToken cancellationToken);
 }

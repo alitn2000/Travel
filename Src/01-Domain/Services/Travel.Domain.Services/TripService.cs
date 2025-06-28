@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,35 +17,69 @@ public class TripService : ITripService
     private readonly ITripRepository _tripRepository;
     private readonly IUserService _userService;
     private readonly ICheckListService _checkListService;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly IUserTripRepository _userTripRepository;
 
-    public TripService(ITripRepository tripRepository, IUserService userService, ICheckListService checkListService)
+    public TripService(ITripRepository tripRepository,
+        IUserService userService,
+        ICheckListService checkListService,
+        IHttpContextAccessor httpContextAccessor,
+        IUserTripRepository userTripRepository)
     {
         _tripRepository = tripRepository;
         _userService = userService;
         _checkListService = checkListService;
+        _httpContextAccessor = httpContextAccessor;
+        _userTripRepository = userTripRepository;
     }
 
 
-    public async Task<Result> AddTrip(Trip trip, CancellationToken cancellationToken)
+    public async Task<Result> AddTrip(AddTripDto dto, CancellationToken cancellationToken)
     {
-        var result = await _userService.CheckUserExistById(trip.UserId, cancellationToken);
+        var user = _httpContextAccessor.HttpContext.User;
+        var userId = int.Parse(user.FindFirst("Id").Value);
+
+        if (user == null)
+            return new Result(false, "user not logged in!!!");
+        var trip = new Trip()
+        {
+            Destination = dto.Destination,
+            End = dto.End,
+            Start = dto.Start,
+            TripType = dto.TripType,
+
+
+        };
+
+
+        var result = await _userService.CheckUserExistById(userId, cancellationToken);
         if (!result.Flag)
             return result;
 
-        var typeResult =  _tripRepository.CheckTripTypeExist(trip.TripType);
-        if(!typeResult)
+        var typeResult = _tripRepository.CheckTripTypeExist(trip.TripType);
+        if (!typeResult)
             return new Result(false, "Trip type does not exist.");
 
-        var userTrips = await _tripRepository.GetUsersTripsById(trip.UserId, cancellationToken);
+        var userTrips = await _tripRepository.GetUsersTripsById(userId, cancellationToken);
 
         foreach (var t in userTrips)
         {
-            
+
             if (trip.Start <= t.End && trip.End >= t.Start)
                 return new Result(false, "You already have a trip at this time.");
         }
 
         var addResult = await _tripRepository.AddTrip(trip, cancellationToken);
+        var userTrip = new UserTrip()
+        {
+            UserId = userId,
+            TripId = trip.Id,
+            IsOwner = true
+        };
+        var userTripResult = await _userTripRepository.AddUserTrip(userTrip, cancellationToken);
+        if (!userTripResult)
+            return new Result(false, "trip not addded!!!");
+
         return new Result(true, "Trip added successfully");
     }
 
@@ -84,4 +119,32 @@ public class TripService : ITripService
 
         return result;
     }
+
+    public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
+    {
+
+        if(!dto.UsersId.Any())
+            return new Result(false, "No new users to add.");
+
+        var user = _httpContextAccessor.HttpContext.User;
+        if (user == null)
+            return new Result(false, "user not logged in!!!");
+
+        var userId = int.Parse(user.FindFirst("Id").Value);
+
+        if (!await _userTripRepository.CheckUserIsOwner(userId, dto.TripId, cancellationToken))
+            return new Result(false, "only the owner of trip can add users");
+
+        var trip = await _tripRepository.GetTripById(dto.TripId, cancellationToken);
+        if (trip == null)
+            return new Result(false, "trip not found !!!");
+
+        foreach (var trips in dto)
+        {
+            _tripRepository.AddTrip()
+        }
+
+
+    }
+
 }

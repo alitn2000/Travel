@@ -14,4 +14,5 @@ public interface IUserRepository
     Task<bool> Login(LoginDto dto, CancellationToken cancellationToken);
     Task<bool> CheckUserExistByUserName(LoginDto dto, CancellationToken cancellationToken);
     Task<bool> RegisterUser(string userName, UserNameEnum userNameEnum, CancellationToken cancellationToken);
+    Task<int> GetUserIdByUserName(string userName, CancellationToken cancellationToken);
 }

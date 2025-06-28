@@ -14,4 +14,5 @@ public class GetUsersTripDto
     public DateTime Start { get; set; }
     public DateTime End { get; set; }
     public TripEnums TripType { get; set; }
+    public int UserId { get; set; }
 }

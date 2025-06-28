@@ -11,7 +11,7 @@ namespace Travel.Domain.Core.Contracts.Services
 {
     public interface ITripService
     {
-        Task<Result> AddTrip(Trip trip, CancellationToken cancellationToken);
+        Task<Result> AddTrip(AddTripDto trip, CancellationToken cancellationToken);
         Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken);
         Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken);
         Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken);

@@ -1,11 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Travel.Domain.Core.Enums;
 
-namespace Travel.EndPoint.Api.Models.TripModels;
+namespace Travel.Domain.Core.DTOs.TripDtos;
 
-public class AddTripModel
+public class AddTripDtoWithId
 {
-    [Required(ErrorMessage ="destintion is required")]
+    [Required(ErrorMessage = "destintion is required")]
     public string Destination { get; set; }
     [Required(ErrorMessage = "start date is required")]
     public DateTime Start { get; set; }

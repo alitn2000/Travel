@@ -11,10 +11,12 @@ namespace Travel.Domain.Service;
 public class OTPService : IOTPService
 {
     private readonly IMemoryCache _memoryCache;
+    private readonly IEmailService _emailService;
 
-    public OTPService(IMemoryCache memoryCache)
+    public OTPService(IMemoryCache memoryCache, IEmailService emailService)
     {
         _memoryCache = memoryCache;
+        _emailService = emailService;
     }
 
     public string GenerateOtp()
@@ -24,11 +26,13 @@ public class OTPService : IOTPService
         return otp;
     }
 
-    public void StoreOtp(string key, string otp, TimeSpan timeSpan)
+    public async Task StoreOtpAndSendEmail(string email, string otp, TimeSpan timeSpan)
     {
-        _memoryCache.Set(key, otp, timeSpan);
-        var subject = "OTP Code registeration";
-        var body = $"Your OTP code is: {otp}. It will expire in {timeSpan.TotalMinutes} minutes.";
+        _memoryCache.Set(email, otp, timeSpan);
+        //var subject = "OTP Code registeration";
+        //var body = $"Your OTP code is: <b>{otp}</b>. It will expire in {timeSpan.TotalMinutes} minutes.";
+        //await _emailService.SendEmail(email, subject, body);
+       
     }
 
     public bool ValidateOtp(string key, string otp)

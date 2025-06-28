@@ -374,6 +374,37 @@
         }
       }
     },
+    "/api/Profile/UpdateProfile": {
+      "patch": {
+        "tags": [
+          "Profile"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Trip/AddTrip": {
       "post": {
         "tags": [
@@ -383,17 +414,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddTripModel"
+                "$ref": "#/components/schemas/AddTripDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddTripModel"
+                "$ref": "#/components/schemas/AddTripDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddTripModel"
+                "$ref": "#/components/schemas/AddTripDto"
               }
             }
           }
@@ -556,16 +587,20 @@
         },
         "additionalProperties": false
       },
-      "AddTripModel": {
+      "AddTripDto": {
         "required": [
           "destination",
           "end",
+          "id",
           "start",
-          "tripType",
-          "userId"
+          "tripType"
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "destination": {
             "minLength": 1,
             "type": "string"
@@ -580,10 +615,6 @@
           },
           "tripType": {
             "$ref": "#/components/schemas/TripEnums"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -639,6 +670,13 @@
         },
         "additionalProperties": false
       },
+      "GenderEnum": {
+        "enum": [
+          "Male",
+          "Female"
+        ],
+        "type": "string"
+      },
       "GetTokenDto": {
         "required": [
           "otp",
@@ -678,6 +716,10 @@
           },
           "tripType": {
             "$ref": "#/components/schemas/TripEnums"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -730,10 +772,6 @@
       "UpdateCheckListTripDto": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "tripId": {
             "type": "integer",
             "format": "int32"
@@ -743,6 +781,32 @@
             "items": {
               "$ref": "#/components/schemas/CheckListIsCheckedDto"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateProfileDto": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "gender": {
+            "$ref": "#/components/schemas/GenderEnum"
+          },
+          "address": {
+            "type": "string",
             "nullable": true
           }
         },

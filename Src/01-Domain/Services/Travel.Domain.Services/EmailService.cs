@@ -21,18 +21,18 @@ public class EmailService : IEmailService
 
     public async Task SendEmail(string reciever, string subject, string body)
     {
-        var smtpClient = new SmtpClient(_configuration["Email:Smtp"])
+        var smtpClient = new SmtpClient(_configuration["Email:SmtpServer"])
         {
-            Port = int.Parse(_configuration["Email:Port"]),
+            Port = int.Parse(_configuration["Email:SmtpPort"]),
             Credentials = new NetworkCredential(
-                _configuration["Email:Username"],
+                _configuration["Email:UserName"],
                 _configuration["Email:Password"]),
             EnableSsl = true
         };
 
         var mailMessage = new MailMessage
         {
-            From = new MailAddress(_configuration["Email:From"]),
+            From = new MailAddress(_configuration["Email:SenderEmail"], _configuration["Email:SenderName"]),
             Subject = subject,
             Body = body,
             IsBodyHtml = true,

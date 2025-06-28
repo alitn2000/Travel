@@ -196,6 +196,22 @@
     ]
   },
   {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Profile/UpdateProfile",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Travel.Domain.Core.DTOs.Profile.UpdateProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
     "Method": "AddTrip",
     "RelativePath": "api/Trip/AddTrip",
@@ -204,8 +220,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "Travel.EndPoint.Api.Models.TripModels.AddTripModel",
+        "Name": "dto",
+        "Type": "Travel.Domain.Core.DTOs.TripDtos.AddTripDto",
         "IsRequired": true
       }
     ],

@@ -16,8 +16,8 @@ public class Trip
     public TripEnums  TripType { get; set; }
     public StatusEnum Status { get; set; } = StatusEnum.Pending;
 
-    public List<CheckListTrip> CheckListTrips { get; set; }
-    public int UserId { get; set; }
-    public User User { get; set; }
+    public List<CheckListTrip> CheckListTrips { get; set; } 
+    public List<UserTrip> USerTrips { get; set; } = new List<UserTrip>();
+
 
 }

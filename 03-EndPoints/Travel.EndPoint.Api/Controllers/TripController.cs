@@ -5,7 +5,6 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
-using Travel.EndPoint.Api.Models.TripModels;
 
 namespace Travel.EndPoint.Api.Controllers;
 
@@ -23,24 +22,16 @@ public class TripController : ControllerBase
         _tripAppService = tripAppService;
     }
     [HttpPost("AddTrip")]
-    public async Task<ActionResult<Result>> AddTrip(AddTripModel model, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> AddTrip(AddTripDto dto, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        var trip = new Trip()
-        {
-            Destination = model.Destination,
-            End = model.End,
-            Start = model.Start,
-            TripType = model.TripType,
-            UserId = model.UserId,
+      
 
-        };
-
-        var result = await _tripAppService.AddTrip(trip,cancellationToken );
+        var result = await _tripAppService.AddTrip(dto, cancellationToken );
 
         if(result.Flag)
             return Ok("Trip added successfully.");
@@ -72,5 +63,11 @@ public class TripController : ControllerBase
             return BadRequest(result.Message);
 
         return Ok(result.Message);
+    }
+
+    [HttpPatch]
+    public async Task<ActionResult<AddUsersToTripDto>> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
+    {
+
     }
 }

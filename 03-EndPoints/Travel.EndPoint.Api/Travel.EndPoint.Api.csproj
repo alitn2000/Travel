@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Jobs\Travel.EndPoints.Jobs\Travel.EndPoints.Jobs.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\TripModels\" />
+  </ItemGroup>
+
 </Project>

@@ -23,7 +23,7 @@ public class TripAppService : ITripAppService
         _tripJobScheduler = tripJobScheduler;
     }
 
-    public async Task<Result> AddTrip(Trip trip, CancellationToken cancellationToken)
+    public async Task<Result> AddTrip(AddTripDto trip, CancellationToken cancellationToken)
     {
         var result = await _tripService.AddTrip(trip, cancellationToken);
 

@@ -32,6 +32,8 @@ builder.Services.AddScoped<ICheckListRepository, CheckListRepository>();
 builder.Services.AddScoped<ITripRepository, TripRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICheckListTripRepository, CheckListTripRepository>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IUserTripRepository, UserTripRepository>();
 //services
 builder.Services.AddScoped<ICheckListService, CheckListService>();
 builder.Services.AddScoped<ITripService, TripService>();
@@ -39,11 +41,13 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICheckListTripService, CheckListTripService>();
 builder.Services.AddScoped<IOTPService, OTPService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
 // appservices
 builder.Services.AddScoped<ICheckListAppService, CheckListAppService>();
 builder.Services.AddScoped<ITripAppService, TripAppService>();
 builder.Services.AddScoped<IUserAppService, UserAppService>();
 builder.Services.AddScoped<ICheckListTripAppService, CheckListTripAppService>();
+builder.Services.AddScoped<IProfileAppService, ProfileAppService>();
 // jobs
 builder.Services.AddScoped<StartTripJob>();
 builder.Services.AddScoped<EndTripJob>();
@@ -55,6 +59,8 @@ builder.Services.AddHostedService<TripRecoveryService>();
 
 // cache
 builder.Services.AddMemoryCache();
+// httpcontext
+builder.Services.AddHttpContextAccessor();
 
 // fluent validation
 

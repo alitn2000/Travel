@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,15 @@ public class CheckListTripService : ICheckListTripService
 {
     private readonly ICheckListTripRepository _checkListTripRepository;
     private readonly ITripRepository _tripRepository;
+    private readonly IHttpContextAccessor _contextAccessor;
+    private readonly IUserTripRepository _userTripRepository;
 
-    public CheckListTripService(ICheckListTripRepository checkListTripRepository, ITripRepository tripRepository)
+    public CheckListTripService(ICheckListTripRepository checkListTripRepository, ITripRepository tripRepository, IHttpContextAccessor contextAccessor, IUserTripRepository userTripRepository)
     {
         _checkListTripRepository = checkListTripRepository;
         _tripRepository = tripRepository;
+        _contextAccessor = contextAccessor;
+        _userTripRepository = userTripRepository;
     }
 
     public async Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken)
@@ -28,7 +33,15 @@ public class CheckListTripService : ICheckListTripService
 
     public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
     {
-        var tripResult = await _tripRepository.CheckUsersHaveTripById(dto.UserId, dto.TripId, cancellationToken);
+        var user = _contextAccessor.HttpContext.User;
+        if (user == null)
+            return new Result(false, "user not logged in!!!");
+
+        var userId = int.Parse( user.FindFirst("Id").Value);
+
+       
+
+        var tripResult = await _tripRepository.CheckUsersHaveTripById(userId, dto.TripId, cancellationToken);
         if(!tripResult)
             return new Result(false, "Trip does not exist.");
 
@@ -41,9 +54,20 @@ public class CheckListTripService : ICheckListTripService
 
     public async Task<Result> AddCheckListTrip(AddCheckListToTripDto dto, CancellationToken cancellationToken)
     {
+        var user = _contextAccessor?.HttpContext.User;
+        if (user == null)
+            return new Result(false, "user not logged in!!!");
+
+        var userId = int.Parse( user.FindFirst("Id").Value);
+
         var result = await _tripRepository.CheckTripExist(dto.TripId, cancellationToken);
         if (!result)
             return new Result(false, "Trip does not exist.");
+
+        var ownerCheck = await _userTripRepository.CheckUserIsOwner(userId, dto.TripId, cancellationToken);
+
+        if (!ownerCheck)
+            return new Result(false, "only the owner of trip can add check lists!!!");
 
         var addResult = await _checkListTripRepository.AddCheckListTrip(dto, cancellationToken);
         if (!addResult)

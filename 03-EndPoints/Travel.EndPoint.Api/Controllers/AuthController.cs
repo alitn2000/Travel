@@ -53,13 +53,13 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("VerifyOTP")]
-    public ActionResult VerifyOTP(GetTokenDto dto)
+    public async Task<ActionResult> VerifyOTP(GetTokenDto dto, CancellationToken cancellationToken)
     {
         if(!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
-        var result =  _userAppService.GetToken(dto);
+        var result =  await _userAppService.GetToken(dto, cancellationToken);
         if (!result.Flag)
             return BadRequest(result.Message);
         return Ok(result.Message);

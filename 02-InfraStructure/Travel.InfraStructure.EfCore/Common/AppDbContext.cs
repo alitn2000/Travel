@@ -17,6 +17,7 @@ public class AppDbContext :DbContext
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new TripConfiguration());
         modelBuilder.ApplyConfiguration(new CheckListConfiguration());
+        modelBuilder.ApplyConfiguration(new ProfileConfiguration());
     }
 
     public DbSet<User> Users { get; set; }
@@ -24,4 +25,5 @@ public class AppDbContext :DbContext
     public DbSet<CheckList> CheckLists { get; set; }
     public DbSet<CheckListTrip> CheckListTrips { get; set; }
     public DbSet<Profile> Profiles { get; set; }
+    public DbSet<UserTrip> UserTrips { get; set; }
 }

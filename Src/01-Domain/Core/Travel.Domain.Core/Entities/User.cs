@@ -13,7 +13,8 @@ public class User
     public string UserName { get; set; }
     public UserNameEnum UserNameType { get; set; }
 
-    public Profile Profile { get; set; }
-    List<Trip> Trips { get; set; } = new List<Trip>();
 
+    public Profile Profile { get; set; }
+    List<UserTrip> UserTrips { get; set; } = new List<UserTrip>();
+    
 }

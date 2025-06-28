@@ -3,32 +3,108 @@
   "WorkspaceRootPath": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\tripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\tripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\addtripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\addtripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iusertriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iusertriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\usertriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\usertriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\triprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\triprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\adduserstotripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\adduserstotripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\checklisttripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\checklisttripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\checklisttriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\checklisttriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\entities\\usertrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\entities\\usertrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\getuserstripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\getuserstripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\tripconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\tripconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\checklisttripconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\checklisttripconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\common\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\common\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\profileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\profileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\checklistconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\checklistconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\entities\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\entities\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628104411_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628104411_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,60 +119,60 @@
       "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\appservices\\iuserappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F1BFD76-827E-40FD-9792-878249E73C31}|Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\Travel.Domain.Services.AppService.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services.appservice\\tripappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F1BFD76-827E-40FD-9792-878249E73C31}|Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\Travel.Domain.Services.AppService.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services.appservice\\tripappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\login\\gettokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\login\\gettokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\extentions\\modelvalidationextension .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\extentions\\modelvalidationextension .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\validations\\userloginmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\validations\\userloginmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\models\\usermodels\\userloginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\models\\usermodels\\userloginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\checklisttripdtos\\updatechecklisttripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\checklisttripdtos\\updatechecklisttripdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\checklistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\checklistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\travel.endpoint.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\travel.endpoint.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\services\\itripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\services\\itripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\enums\\usernameenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\enums\\usernameenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\appservices\\itripappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\appservices\\itripappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\enums\\tripenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\enums\\tripenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\addtripdtowithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\tripdtos\\addtripdtowithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\login\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\login\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iotpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iotpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\otpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\profile\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\profile\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\dtos\\profile\\updateprofiledtowithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\dtos\\profile\\updateprofiledtowithid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\baseuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\baseuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\03-endpoints\\travel.endpoint.api\\controllers\\checklisttripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -107,52 +183,12 @@
       "RelativeMoniker": "D:0:0:{4557F1C6-D9E1-CD5F-5BB5-2F0D77EF110F}|03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj|solutionrelative:03-endpoints\\travel.endpoint.api\\controllers\\checklistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\contracts\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\common\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\common\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\services\\travel.domain.services\\checklisttripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CC5773B-E43C-4854-B8DE-96E29066A287}|Src\\01-Domain\\Services\\Travel.Domain.Services\\Travel.Domain.Service.csproj|solutionrelative:src\\01-domain\\services\\travel.domain.services\\checklisttripservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\profileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\profileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611092356_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611092356_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\entities\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\entities\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\repositories\\triprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\repositories\\triprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\src\\01-domain\\core\\travel.domain.core\\enums\\genderenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{535335A1-0117-4755-BE6D-FBAEE8BE4741}|Src\\01-Domain\\Core\\Travel.Domain.Core\\Travel.Domain.Core.csproj|solutionrelative:src\\01-domain\\core\\travel.domain.core\\enums\\genderenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|c:\\users\\a.tahmasebi\\source\\repos\\travel\\02-infrastructure\\travel.infrastructure.efcore\\migrations\\20250611093309_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F829743C-21FB-7E8B-27C1-EBEFE986FC9B}|02-InfraStructure\\Travel.InfraStructure.EfCore\\Travel.InfraStructure.EfCore.csproj|solutionrelative:02-infrastructure\\travel.infrastructure.efcore\\migrations\\20250611093309_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628072303_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628072303_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -162,8 +198,177 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 47,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddUsersToTripDto.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddUsersToTripDto.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddUsersToTripDto.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddUsersToTripDto.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddUsersToTripDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T13:11:30.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserTripRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserTripRepository.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserTripRepository.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserTripRepository.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserTripRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:52:45.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserTripRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserTripRepository.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserTripRepository.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserTripRepository.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserTripRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:49:47.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:01:47.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProfileConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:00:32.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CheckListTripConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListTripConfiguration.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListTripConfiguration.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListTripConfiguration.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListTripConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:00:28.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CheckListConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListConfiguration.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListConfiguration.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListConfiguration.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\CheckListConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T11:00:27.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TripConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\TripConfiguration.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\TripConfiguration.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\TripConfiguration.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\TripConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:48:16.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserTrip.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\UserTrip.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\UserTrip.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\UserTrip.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\UserTrip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:47:17.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20250628104411_init.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628104411_init.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628104411_init.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628104411_init.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628104411_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:44:11.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:43:33.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Trip.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Trip.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Trip.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Trip.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Trip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:41:17.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:40:52.325Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -174,461 +379,445 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\appsettings.json",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-15T10:07:25.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IEmailService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IEmailService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T09:28:57.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwCkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T09:28:05.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GetTokenDto.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\GetTokenDto.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\GetTokenDto.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\GetTokenDto.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\GetTokenDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T08:38:31.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CheckListService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T07:26:03.186Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ModelValidationExtension .cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Extentions\\ModelValidationExtension .cs",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Extentions\\ModelValidationExtension .cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Extentions\\ModelValidationExtension .cs",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Extentions\\ModelValidationExtension .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T07:22:45.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "TripEnums.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\TripEnums.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\TripEnums.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\TripEnums.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\TripEnums.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T06:51:52.575Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserLoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Models\\UserModels\\UserLoginModel.cs",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Models\\UserModels\\UserLoginModel.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Models\\UserModels\\UserLoginModel.cs",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Models\\UserModels\\UserLoginModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:27:57.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IOTPService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IOTPService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IOTPService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IOTPService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IOTPService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T11:55:16.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OTPService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAawB4AAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T11:54:19.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TripController.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:40:32.549Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CheckListTripController.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:40:25.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CheckListController.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:40:14.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "20250611093309_init.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611093309_init.cs",
-              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611093309_init.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611093309_init.cs",
-              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611093309_init.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:33:09.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
-              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Common\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:31:42.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CheckListTripService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:26:52.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TripService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:26:51.98Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "20250611092356_init.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611092356_init.cs",
-              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611092356_init.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611092356_init.cs",
-              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250611092356_init.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:23:56.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 26,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAD4v0AAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAD4vzcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:41:30.517Z"
+              "WhenOpened": "2025-06-28T10:20:03.48Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 28,
               "Title": "IUserAppService.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\IUserAppService.cs",
               "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\IUserAppService.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\IUserAppService.cs",
               "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\IUserAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:41:12.403Z"
+              "WhenOpened": "2025-06-28T10:19:34.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 27,
               "Title": "UserAppService.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\UserAppService.cs",
               "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\UserAppService.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\UserAppService.cs",
               "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\UserAppService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAlwAwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:41:00.248Z"
+              "WhenOpened": "2025-06-28T10:18:54.768Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAlAAAAAAAAAA==",
+              "DocumentIndex": 30,
+              "Title": "IProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IProfileService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IProfileService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IProfileService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:39:43.503Z"
+              "WhenOpened": "2025-06-28T10:13:43.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UpdateCheckListTripDto.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\CheckListTripDtos\\UpdateCheckListTripDto.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\CheckListTripDtos\\UpdateCheckListTripDto.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\CheckListTripDtos\\UpdateCheckListTripDto.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\CheckListTripDtos\\UpdateCheckListTripDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:08:57.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ITripService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\ITripService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\ITripService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\ITripService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\ITripService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:58:36.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ITripAppService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\ITripAppService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\ITripAppService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\ITripAppService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\AppServices\\ITripAppService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:39:01.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AddTripDtoWithId.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDtoWithId.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDtoWithId.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDtoWithId.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDtoWithId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:37:51.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddTripDto.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDto.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDto.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDto.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\AddTripDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:37:02.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TripAppService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\TripAppService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\TripAppService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\TripAppService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services.AppService\\TripAppService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:36:07.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetUsersTripDto.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\GetUsersTripDto.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\GetUsersTripDto.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\GetUsersTripDto.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\TripDtos\\GetUsersTripDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:34:29.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IProfileRepository.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IProfileRepository.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IProfileRepository.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:32:38.153Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "CheckListService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:31:57.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CheckListTripService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\CheckListTripService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwEkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:31:56.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\EmailService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:30:32.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OTPService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\OTPService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:30:29.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\ProfileService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\ProfileService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\ProfileService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:13:11.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TripController.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
+              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
+              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\TripController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwEQAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:11:15.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\ProfileRepository.cs",
               "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\ProfileRepository.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\ProfileRepository.cs",
               "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\ProfileRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:38:10.159Z"
+              "WhenOpened": "2025-06-28T09:00:43.136Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "TripRepository.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
-              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
-              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 41,
+              "Title": "UpdateProfileDtoWithId.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDtoWithId.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDtoWithId.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDtoWithId.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDtoWithId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:34:58.015Z"
+              "WhenOpened": "2025-06-28T08:58:48.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAARAAAAAAAAAA==",
+              "DocumentIndex": 42,
+              "Title": "BaseUser.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\BaseUser.cs",
+              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\BaseUser.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\BaseUser.cs",
+              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\BaseUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T07:59:46.115Z"
+              "WhenOpened": "2025-06-28T08:43:30.96Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 40,
+              "Title": "UpdateProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDto.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDto.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDto.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Profile\\UpdateProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:39:07.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:26:34.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CheckListTripController.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
+              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
+              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListTripController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:26:33.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CheckListController.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
+              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
+              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Controllers\\CheckListController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:26:31.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Program.cs",
               "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Program.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Program.cs",
               "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAWwCgAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T07:38:25.534Z",
+              "WhenOpened": "2025-06-28T08:26:22.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
+              "Title": "TripRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\TripRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwCMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:26:03.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:18:51.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Contracts\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:08:28.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CheckListTripRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\CheckListTripRepository.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\CheckListTripRepository.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\CheckListTripRepository.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\CheckListTripRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAiwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T07:23:14.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAtwD4AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T07:32:40.564Z"
+              "WhenOpened": "2025-06-28T08:05:20.587Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\UserService.cs",
               "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\UserService.cs",
               "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\UserService.cs",
               "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\UserService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAkwDgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowE0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T07:28:23.685Z"
+              "WhenOpened": "2025-06-28T08:00:19.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserLoginModelValidator.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Validations\\UserLoginModelValidator.cs",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Validations\\UserLoginModelValidator.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Validations\\UserLoginModelValidator.cs",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Validations\\UserLoginModelValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TripService.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
+              "RelativeDocumentMoniker": "Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
+              "RelativeToolTip": "Src\\01-Domain\\Services\\Travel.Domain.Services\\TripService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAmwIsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T13:24:03.17Z"
+              "WhenOpened": "2025-06-28T08:00:15.349Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Travel.EndPoint.Api.csproj",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
-              "RelativeDocumentMoniker": "03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
-              "RelativeToolTip": "03-EndPoints\\Travel.EndPoint.Api\\Travel.EndPoint.Api.csproj",
+              "DocumentIndex": 46,
+              "Title": "20250628072303_init.cs",
+              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628072303_init.cs",
+              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628072303_init.cs",
+              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628072303_init.cs",
+              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Migrations\\20250628072303_init.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-10T13:13:46.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\LoginDto.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T13:06:17.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
-              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\UserConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T12:00:45.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ProfileConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
-              "RelativeDocumentMoniker": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
-              "RelativeToolTip": "02-InfraStructure\\Travel.InfraStructure.EfCore\\Configurations\\ProfileConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:57:46.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "GenderEnum.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\GenderEnum.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\GenderEnum.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\GenderEnum.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\GenderEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:49:34.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Profile.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Profile.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Profile.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Profile.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\Profile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:48:01.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\UserDto.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\UserDto.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\UserDto.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\DTOs\\Login\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:45:27.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserNameEnum.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\UserNameEnum.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\UserNameEnum.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\UserNameEnum.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Enums\\UserNameEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:44:27.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\a.tahmasebi\\source\\repos\\Travel\\Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
-              "RelativeToolTip": "Src\\01-Domain\\Core\\Travel.Domain.Core\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:43:24.287Z"
+              "WhenOpened": "2025-06-28T07:23:03.67Z",
+              "EditorCaption": ""
             }
           ]
         }

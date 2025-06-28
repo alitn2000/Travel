@@ -22,8 +22,8 @@ public class UserAppService : IUserAppService
     public async Task<Result> CheckUserExistById(int userId, CancellationToken cancellationToken)
         => await _userService.CheckUserExistById(userId, cancellationToken);
 
-    public  Result GetToken(GetTokenDto dto)
-        =>  _userService.GetToken(dto);
+    public  async Task<Result> GetToken(GetTokenDto dto, CancellationToken cancellationToken)
+        => await  _userService.GetToken(dto, cancellationToken);
 
     public async Task<Result> Login(LoginDto dto,CancellationToken cancellationToken)
         => await _userService.Login(dto,cancellationToken);

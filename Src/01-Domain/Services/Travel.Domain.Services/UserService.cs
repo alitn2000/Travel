@@ -47,31 +47,35 @@ public class UserService : IUserService
         }
         
         var OTP = _otpService.GenerateOtp();
-        _otpService.StoreOtp(dto.UserName, OTP, TimeSpan.FromMinutes(3));
+        await _otpService.StoreOtpAndSendEmail(dto.UserName, OTP, TimeSpan.FromMinutes(3));
 
         return new Result(true, "Your Login Code: " + OTP);
 
     }
 
-    public  Result GetToken(GetTokenDto dto)
+    public async Task<Result> GetToken(GetTokenDto dto, CancellationToken cancellationToken)
     {
         var vaild = _otpService.ValidateOtp(dto.UserName, dto.OTP);
 
         if (!vaild)
             return new Result(false, "Invalid OTP or OTP expired.");
 
-       var token = GenerateToken(dto.UserName);
+       var token = await GenerateToken(dto.UserName,cancellationToken);
         return new Result(true, "token = " + token);
 
     }
 
-    public string GenerateToken(string userName)
+    public async Task<string> GenerateToken(string userName, CancellationToken cancellationToken)
     {
+        var id = await _userRepository.GetUserIdByUserName(userName, cancellationToken);
+        if (id == 0)
+            return "user not found";
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         var claims = new[]
         {
-        new Claim(ClaimTypes.Name, userName),  
+        new Claim(ClaimTypes.Name, userName),
+        new Claim("Id",id.ToString())
         //new Claim(ClaimTypes.Email, dto.Email),
         //new Claim(ClaimTypes.Role, "User")                
     };
