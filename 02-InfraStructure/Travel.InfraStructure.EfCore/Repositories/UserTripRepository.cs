@@ -30,24 +30,23 @@ public class UserTripRepository : IUserTripRepository
 
     public async Task<bool> CheckUserIsOwner(int userId, int tripId,CancellationToken cancellationToken)
     {
-        var existUserTrip = await _context.UserTrips.FirstOrDefaultAsync(ut => ut.UserId == userId && ut.TripId == tripId, cancellationToken);
+        var existUserTrip = await _context.UserTrips
+        .FirstOrDefaultAsync(ut => ut.UserId == userId && ut.TripId == tripId, cancellationToken);
 
-        return existUserTrip.IsOwner;
+        return existUserTrip?.IsOwner ?? false;
     }
 
     public async Task<bool> CheckUserTripExist(int userId, int tripId, CancellationToken cancellationToken)
         => await _context.UserTrips.AnyAsync(ut => ut.UserId == userId && ut.TripId == tripId, cancellationToken);
 
-    public async Task<bool> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
+    public async Task<bool> AddUserTrips(List<UserTrip> userTrips, CancellationToken cancellationToken)
     {
-        foreach(var userId in dto.UsersId)
-        {
-            await _context.AddAsync(new UserTrip
-            {
-                UserId = userId,
-                TripId = dto.TripId,
-            }, cancellationToken);
-        }
+        await _context.UserTrips.AddRangeAsync(userTrips, cancellationToken);
         return await _context.SaveChangesAsync(cancellationToken) > 0;
     }
+
+    public async Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken)
+       => await _context.UserTrips
+       .AsNoTracking()
+           .AnyAsync(c => c.UserId == userId && c.TripId == tripId, cancellationToken);
 }

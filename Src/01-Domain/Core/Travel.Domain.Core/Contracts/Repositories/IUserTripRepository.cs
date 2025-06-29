@@ -13,5 +13,6 @@ public interface IUserTripRepository
     Task<bool> AddUserTrip(UserTrip userTrip, CancellationToken cancellationToken);
     Task<bool> CheckUserIsOwner(int userId, int tripId, CancellationToken cancellationToken);
     Task<bool> CheckUserTripExist(int userId, int tripId, CancellationToken cancellationToken);
-    Task<bool> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken);
+    Task<bool> AddUserTrips(List<UserTrip> userTrips, CancellationToken cancellationToken);
+    Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken);
 }

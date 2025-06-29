@@ -548,6 +548,54 @@
           }
         }
       }
+    },
+    "/api/Trip/AddUsersToTrip": {
+      "patch": {
+        "tags": [
+          "Trip"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUsersToTripDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUsersToTripDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddUsersToTripDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddUsersToTripDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddUsersToTripDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddUsersToTripDto"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -591,16 +639,11 @@
         "required": [
           "destination",
           "end",
-          "id",
           "start",
           "tripType"
         ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "destination": {
             "minLength": 1,
             "type": "string"
@@ -615,6 +658,27 @@
           },
           "tripType": {
             "$ref": "#/components/schemas/TripEnums"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddUsersToTripDto": {
+        "required": [
+          "tripId",
+          "usersId"
+        ],
+        "type": "object",
+        "properties": {
+          "tripId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usersId": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         },
         "additionalProperties": false

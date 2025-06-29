@@ -14,5 +14,6 @@ namespace Travel.Domain.Core.Contracts.AppServices
         Task<Result> AddTrip(AddTripDto trip, CancellationToken cancellationToken);
         Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken);
         Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken);
+        Task<Result> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken);
     }
 }

@@ -41,7 +41,7 @@ public class CheckListTripService : ICheckListTripService
 
        
 
-        var tripResult = await _tripRepository.CheckUsersHaveTripById(userId, dto.TripId, cancellationToken);
+        var tripResult = await _userTripRepository.CheckUsersHaveTripById(userId, dto.TripId, cancellationToken);
         if(!tripResult)
             return new Result(false, "Trip does not exist.");
 

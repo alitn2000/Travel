@@ -65,9 +65,18 @@ public class TripController : ControllerBase
         return Ok(result.Message);
     }
 
-    [HttpPatch]
+    [HttpPatch("AddUsersToTrip")]
     public async Task<ActionResult<AddUsersToTripDto>> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        var result = await _tripAppService.AddUsersToTrip(dto, cancellationToken); 
 
+        if (!result.Flag)
+            return BadRequest(result.Message);
+
+        return Ok(result.Message);
     }
 }

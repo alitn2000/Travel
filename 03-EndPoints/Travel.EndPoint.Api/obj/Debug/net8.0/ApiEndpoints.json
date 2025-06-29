@@ -239,6 +239,32 @@
   },
   {
     "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
+    "Method": "AddUsersToTrip",
+    "RelativePath": "api/Trip/AddUsersToTrip",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Travel.Domain.Core.DTOs.TripDtos.AddUsersToTripDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Travel.Domain.Core.DTOs.TripDtos.AddUsersToTripDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
     "Method": "UpdateTrip",
     "RelativePath": "api/Trip/UpdateTrip",
     "HttpMethod": "PATCH",

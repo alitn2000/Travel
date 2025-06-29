@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
+using Travel.Domain.Core.Contracts.Jobs;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.DTOs.TripDtos;
@@ -19,18 +20,20 @@ public class TripService : ITripService
     private readonly ICheckListService _checkListService;
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IUserTripRepository _userTripRepository;
+    private readonly ITripJobScheduler _tripJobScheduler;
 
     public TripService(ITripRepository tripRepository,
         IUserService userService,
         ICheckListService checkListService,
         IHttpContextAccessor httpContextAccessor,
-        IUserTripRepository userTripRepository)
+        IUserTripRepository userTripRepository, ITripJobScheduler tripJobScheduler)
     {
         _tripRepository = tripRepository;
         _userService = userService;
         _checkListService = checkListService;
         _httpContextAccessor = httpContextAccessor;
         _userTripRepository = userTripRepository;
+        _tripJobScheduler = tripJobScheduler;
     }
 
 
@@ -80,6 +83,8 @@ public class TripService : ITripService
         if (!userTripResult)
             return new Result(false, "trip not addded!!!");
 
+        await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
+
         return new Result(true, "Trip added successfully");
     }
 
@@ -123,26 +128,63 @@ public class TripService : ITripService
     public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
     {
 
-        if(!dto.UsersId.Any())
-            return new Result(false, "No new users to add.");
+        if (dto.UsersId == null || !dto.UsersId.Any())
+            return new Result(false, "No users to add.");
 
         var user = _httpContextAccessor.HttpContext.User;
         if (user == null)
-            return new Result(false, "user not logged in!!!");
+            return new Result(false, "User not logged in.");
 
-        var userId = int.Parse(user.FindFirst("Id").Value);
+        var ownerId = int.Parse(user.FindFirst("Id").Value);
 
-        if (!await _userTripRepository.CheckUserIsOwner(userId, dto.TripId, cancellationToken))
-            return new Result(false, "only the owner of trip can add users");
+
+        var isOwner = await _userTripRepository.CheckUserIsOwner(ownerId, dto.TripId, cancellationToken);
+        if (!isOwner)
+            return new Result(false, "Only the trip owner can add users.");
 
         var trip = await _tripRepository.GetTripById(dto.TripId, cancellationToken);
         if (trip == null)
-            return new Result(false, "trip not found !!!");
+            return new Result(false, "Trip not found.");
 
-        foreach (var trips in dto)
+        var addedUsers = new List<UserTrip>();
+
+        foreach (var userId in dto.UsersId.Distinct())
         {
-            _tripRepository.AddTrip()
+
+            var userExists = await _userService.CheckUserExistById(userId, cancellationToken);
+            if (!userExists.Flag)
+                continue;
+
+
+            var userTrips = await _tripRepository.GetUsersTripsById(userId, cancellationToken);
+
+            bool overlap = userTrips.Any(t => trip.Start <= t.End && trip.End >= t.Start);
+
+            if (overlap)
+                continue;
+
+            bool alreadyInTrip = await _tripRepository.CheckUsersHaveTripById(userId, trip.Id, cancellationToken);
+            if (alreadyInTrip)
+                continue;
+
+            addedUsers.Add(new UserTrip
+            {
+                UserId = userId,
+                TripId = trip.Id,
+                IsOwner = false
+            });
         }
+
+        if (!addedUsers.Any())
+            return new Result(false, "none of the users can be added beacause of validations.");
+
+        var addResult = await _userTripRepository.AddUserTrips(addedUsers, cancellationToken);
+
+        if (!addResult)
+            return new Result(false, "Error while adding users to trip.");
+
+        return new Result(true, $"{addedUsers.Count} users added successfully to trip.");
+
 
 
     }

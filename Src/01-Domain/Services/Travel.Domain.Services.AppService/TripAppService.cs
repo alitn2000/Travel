@@ -27,11 +27,6 @@ public class TripAppService : ITripAppService
     {
         var result = await _tripService.AddTrip(trip, cancellationToken);
 
-        if (result.Flag)
-            await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
-
-
-
         return result;
     }
 
@@ -49,4 +44,6 @@ public class TripAppService : ITripAppService
         return result;
     }
 
+    public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken) 
+        => await _tripService.AddUsersToTrip(dto, cancellationToken);
 }

@@ -20,9 +20,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.HasData(new List<User>()
         {
-            new() { Id = 1, UserName = "+989102123542", UserNameType = UserNameEnum.Mobile },
-            new() { Id = 2, UserName = "alitahmasebinia@gmail.com", UserNameType = UserNameEnum.Email},
-            new() { Id = 3, UserName = "+989102123543", UserNameType = UserNameEnum.Mobile},
+            new() { Id = 1, UserName = "test@gmail.com", UserNameType = UserNameEnum.Mobile },
+            new() { Id = 2, UserName = "test2@gmail.com", UserNameType = UserNameEnum.Email},
+            new() { Id = 3, UserName = "alitahmasebinia@gmail.com", UserNameType = UserNameEnum.Mobile},
         });
       
     }

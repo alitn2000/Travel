@@ -24,18 +24,39 @@ public class CheckListTripRepository : ICheckListTripRepository
     public async Task<bool> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
     {
 
-        _context.CheckListTrips.Where(c => c.TripId == dto.TripId).ExecuteDelete<CheckListTrip>();
+        var existingCheckLists = await _context.CheckListTrips
+        .Where(c => c.TripId == dto.TripId)
+        .ToListAsync(cancellationToken);
 
+        var existingMap = existingCheckLists.ToDictionary(x => x.CheckListId, x => x);
 
-        var newCheckListTrips = dto.CheckLists.Select(c => new CheckListTrip
+        var toAdd = new List<CheckListTrip>();
+
+        foreach (var item in dto.CheckLists)
         {
-            TripId = dto.TripId,
-            CheckListId = c.CheckListId,
-            IsChecked = c.IsChecked
-        }).ToList();
+            if (existingMap.TryGetValue(item.CheckListId, out var existing))
+            {
+               
+                if (existing.IsChecked != item.IsChecked)
+                {
+                    existing.IsChecked = item.IsChecked;
+                    _context.CheckListTrips.Update(existing);
+                }
+            }
+            else
+            {
+                
+                toAdd.Add(new CheckListTrip
+                {
+                    TripId = dto.TripId,
+                    CheckListId = item.CheckListId,
+                    IsChecked = item.IsChecked
+                });
+            }
+        }
 
-
-        await _context.CheckListTrips.AddRangeAsync(newCheckListTrips, cancellationToken);
+        if (toAdd.Any())
+            await _context.CheckListTrips.AddRangeAsync(toAdd, cancellationToken);
 
         await _context.SaveChangesAsync(cancellationToken);
         return true;
@@ -53,8 +74,8 @@ public class CheckListTripRepository : ICheckListTripRepository
     {
 
 
-        var existCheckLists = await _context
-            .CheckLists
+      
+        var existCheckLists = await _context.CheckLists
             .Where(c => dto.CheckListIds.Contains(c.Id))
             .Select(c => c.Id)
             .ToListAsync(cancellationToken);
@@ -62,9 +83,21 @@ public class CheckListTripRepository : ICheckListTripRepository
         var notExistCheckLists = dto.CheckListIds.Except(existCheckLists).ToList();
 
         if (notExistCheckLists.Any())
-            return false;
+            return false; 
 
-        var checkListTrips = existCheckLists.Select(checkListId => new CheckListTrip
+        
+        var existingCheckListTripIds = await _context.CheckListTrips
+            .Where(clt => clt.TripId == dto.TripId && dto.CheckListIds.Contains(clt.CheckListId))
+            .Select(clt => clt.CheckListId)
+            .ToListAsync(cancellationToken);
+
+        
+        var newCheckListIds = existCheckLists.Except(existingCheckListTripIds).ToList();
+
+        if (!newCheckListIds.Any())
+            return true; 
+
+        var checkListTrips = newCheckListIds.Select(checkListId => new CheckListTrip
         {
             TripId = dto.TripId,
             CheckListId = checkListId,
