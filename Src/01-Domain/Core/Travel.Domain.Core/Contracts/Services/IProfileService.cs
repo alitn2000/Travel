@@ -10,5 +10,5 @@ namespace Travel.Domain.Core.Contracts.Services;
 
 public interface IProfileService
 {
-    Task<Result> UpdateProfile(UpdateProfileDto dto, CancellationToken cancellationToken);
+    Task<Result> UpdateProfile(UpdateProfileDto dto,int userId, CancellationToken cancellationToken);
 }

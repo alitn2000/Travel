@@ -65,7 +65,7 @@ public class UserService : IUserService
 
     }
 
-    public async Task<string> GenerateToken(string userName, CancellationToken cancellationToken)
+    private async Task<string> GenerateToken(string userName, CancellationToken cancellationToken)
     {
         var id = await _userRepository.GetUserIdByUserName(userName, cancellationToken);
         if (id == 0)

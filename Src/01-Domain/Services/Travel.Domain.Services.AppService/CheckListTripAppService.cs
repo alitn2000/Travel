@@ -20,8 +20,8 @@ public class CheckListTripAppService : ICheckListTripAppService
         _checkListTripService = checkListTripService;
     }
 
-    public async Task<Result> AddCheckListTrip(AddCheckListToTripDto dto, CancellationToken cancellationToken)
-        => await _checkListTripService.AddCheckListTrip(dto, cancellationToken);
+    public async Task<Result> AddCheckListTrip(AddCheckListToTripDto dto,int userId, CancellationToken cancellationToken)
+        => await _checkListTripService.AddCheckListTrip(dto,userId, cancellationToken);
 
     public async Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken)
         => await _checkListTripService.GetAllCheckListTrips(cancellationToken);
@@ -29,6 +29,6 @@ public class CheckListTripAppService : ICheckListTripAppService
     public async Task<List<CheckListTripListDto>> GetAllIsCheckedLists(CancellationToken cancellationToken)
         => await _checkListTripService.GetAllIsCheckedLists(cancellationToken);
 
-    public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
-        => await _checkListTripService.UpdateIsChecked(dto, cancellationToken);
+    public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto,int userId, CancellationToken cancellationToken)
+        => await _checkListTripService.UpdateIsChecked(dto,userId, cancellationToken);
 }

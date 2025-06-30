@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.CheckListTripDtos;
+using Travel.EndPoint.Api.Controllers.Base;
 
 namespace Travel.EndPoint.Api.Controllers;
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
-public class CheckListTripController : ControllerBase
+public class CheckListTripController : BaseController
 {
     private readonly ICheckListTripAppService _checkListTripAppService;
 
@@ -18,9 +19,18 @@ public class CheckListTripController : ControllerBase
     }
 
     [HttpPatch("UpdateIsChecked")]
-    public async Task<ActionResult<UpdateCheckListTripDto>> UpdateIsChecked( UpdateCheckListTripDto dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<UpdateCheckListTripDto>> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
     {
-        var result = await _checkListTripAppService.UpdateIsChecked(dto, cancellationToken);
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        var userId = GetCurrentUserId();
+
+        if (userId == 0)
+            return Unauthorized("User not logged in.");
+
+        var result = await _checkListTripAppService.UpdateIsChecked(dto,userId, cancellationToken);
         if (!result.Flag)
             return BadRequest(result.Message);
 
@@ -44,8 +54,11 @@ public class CheckListTripController : ControllerBase
         {
             return BadRequest(ModelState);
         }
+        var userId = GetCurrentUserId();
+        if (userId == 0)
+            return Unauthorized("User not logged in.");
 
-        var result = await _checkListTripAppService.AddCheckListTrip(dto, cancellationToken);
+        var result = await _checkListTripAppService.AddCheckListTrip(dto,userId, cancellationToken);
         if (!result.Flag)
         {
             return BadRequest(result.Message);

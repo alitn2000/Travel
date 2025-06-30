@@ -12,7 +12,7 @@ using Travel.InfraStructure.EfCore.Common;
 namespace Travel.InfraStructure.EfCore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250629072827_init")]
+    [Migration("20250629101435_init")]
     partial class init
     {
         /// <inheritdoc />

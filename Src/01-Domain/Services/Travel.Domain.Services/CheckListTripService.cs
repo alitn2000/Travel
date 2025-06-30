@@ -17,27 +17,21 @@ public class CheckListTripService : ICheckListTripService
 {
     private readonly ICheckListTripRepository _checkListTripRepository;
     private readonly ITripRepository _tripRepository;
-    private readonly IHttpContextAccessor _contextAccessor;
+  
     private readonly IUserTripRepository _userTripRepository;
 
-    public CheckListTripService(ICheckListTripRepository checkListTripRepository, ITripRepository tripRepository, IHttpContextAccessor contextAccessor, IUserTripRepository userTripRepository)
+    public CheckListTripService(ICheckListTripRepository checkListTripRepository, ITripRepository tripRepository, IUserTripRepository userTripRepository)
     {
         _checkListTripRepository = checkListTripRepository;
         _tripRepository = tripRepository;
-        _contextAccessor = contextAccessor;
         _userTripRepository = userTripRepository;
     }
 
     public async Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken)
         => await _checkListTripRepository.GetAllCheckListTrips(cancellationToken);
 
-    public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto,int userId, CancellationToken cancellationToken)
     {
-        var user = _contextAccessor.HttpContext.User;
-        if (user == null)
-            return new Result(false, "user not logged in!!!");
-
-        var userId = int.Parse( user.FindFirst("Id").Value);
 
        
 
@@ -52,14 +46,8 @@ public class CheckListTripService : ICheckListTripService
         return new Result(true, "ChekListTrip updated successfully!!!");
     }
 
-    public async Task<Result> AddCheckListTrip(AddCheckListToTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> AddCheckListTrip(AddCheckListToTripDto dto,int userId, CancellationToken cancellationToken)
     {
-        var user = _contextAccessor?.HttpContext.User;
-        if (user == null)
-            return new Result(false, "user not logged in!!!");
-
-        var userId = int.Parse( user.FindFirst("Id").Value);
-
         var result = await _tripRepository.CheckTripExist(dto.TripId, cancellationToken);
         if (!result)
             return new Result(false, "Trip does not exist.");

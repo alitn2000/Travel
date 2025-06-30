@@ -19,6 +19,6 @@ public class ProfileAppService : IProfileAppService
         _profileService = profileService;
     }
 
-    public async Task<Result> UpdateProfile(UpdateProfileDto dto, CancellationToken cancellationToken)
-        => await _profileService.UpdateProfile(dto, cancellationToken);
+    public async Task<Result> UpdateProfile(UpdateProfileDto dto,int userId, CancellationToken cancellationToken)
+        => await _profileService.UpdateProfile(dto,userId, cancellationToken);
 }

@@ -26,12 +26,10 @@ public class OTPService : IOTPService
         return otp;
     }
 
-    public async Task StoreOtpAndSendEmail(string email, string otp, TimeSpan timeSpan)
+    public async Task StoreOtp(string email, string otp, TimeSpan timeSpan)
     {
         _memoryCache.Set(email, otp, timeSpan);
-        //var subject = "OTP Code registeration";
-        //var body = $"Your OTP code is: <b>{otp}</b>. It will expire in {timeSpan.TotalMinutes} minutes.";
-        //await _emailService.SendEmail(email, subject, body);
+       
        
     }
 

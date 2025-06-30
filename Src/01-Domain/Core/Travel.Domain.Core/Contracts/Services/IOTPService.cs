@@ -9,7 +9,7 @@ namespace Travel.Domain.Core.Contracts.Services
     public interface IOTPService
     {
         string GenerateOtp();
-        Task StoreOtpAndSendEmail(string email, string otp, TimeSpan timeSpan);
+        Task StoreOtp(string email, string otp, TimeSpan timeSpan);
         bool ValidateOtp(string key, string otp);
     }
 }

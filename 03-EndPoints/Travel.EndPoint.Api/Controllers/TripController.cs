@@ -5,13 +5,14 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
+using Travel.EndPoint.Api.Controllers.Base;
 
 namespace Travel.EndPoint.Api.Controllers;
 
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
-public class TripController : ControllerBase
+public class TripController : BaseController
 {
     private readonly IUserAppService _userAppService;
     private readonly ITripAppService _tripAppService;
@@ -29,11 +30,14 @@ public class TripController : ControllerBase
             return BadRequest(ModelState);
         }
 
-      
+        var userId = GetCurrentUserId();
 
-        var result = await _tripAppService.AddTrip(dto, cancellationToken );
+        if (userId == 0) 
+            return Unauthorized("User not logged in.");
 
-        if(result.Flag)
+        var result = await _tripAppService.AddTrip(dto, userId, cancellationToken);
+
+        if (result.Flag)
             return Ok("Trip added successfully.");
 
         return Ok(result.Message);
@@ -57,7 +61,11 @@ public class TripController : ControllerBase
         {
             return BadRequest(ModelState);
         }
-        var result = await _tripAppService.UpdateTrip(dto, cancellationToken);
+        var userId = GetCurrentUserId();
+        if (userId == 0) 
+            return Unauthorized("User not logged in.");
+
+        var result = await _tripAppService.UpdateTrip(dto,userId, cancellationToken);
 
         if (!result.Flag)
             return BadRequest(result.Message);
@@ -72,7 +80,12 @@ public class TripController : ControllerBase
         {
             return BadRequest(ModelState);
         }
-        var result = await _tripAppService.AddUsersToTrip(dto, cancellationToken); 
+
+        var userId = GetCurrentUserId();
+        if (userId == 0) 
+            return Unauthorized("User not logged in.");
+
+        var result = await _tripAppService.AddUsersToTrip(dto, userId, cancellationToken); 
 
         if (!result.Flag)
             return BadRequest(result.Message);

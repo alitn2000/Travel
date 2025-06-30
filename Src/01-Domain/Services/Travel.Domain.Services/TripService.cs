@@ -18,32 +18,26 @@ public class TripService : ITripService
     private readonly ITripRepository _tripRepository;
     private readonly IUserService _userService;
     private readonly ICheckListService _checkListService;
-    private readonly IHttpContextAccessor _httpContextAccessor;
+
     private readonly IUserTripRepository _userTripRepository;
     private readonly ITripJobScheduler _tripJobScheduler;
 
     public TripService(ITripRepository tripRepository,
         IUserService userService,
         ICheckListService checkListService,
-        IHttpContextAccessor httpContextAccessor,
         IUserTripRepository userTripRepository, ITripJobScheduler tripJobScheduler)
     {
         _tripRepository = tripRepository;
         _userService = userService;
         _checkListService = checkListService;
-        _httpContextAccessor = httpContextAccessor;
         _userTripRepository = userTripRepository;
         _tripJobScheduler = tripJobScheduler;
     }
 
 
-    public async Task<Result> AddTrip(AddTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> AddTrip(AddTripDto dto,int userId, CancellationToken cancellationToken)
     {
-        var user = _httpContextAccessor.HttpContext.User;
-        var userId = int.Parse(user.FindFirst("Id").Value);
-
-        if (user == null)
-            return new Result(false, "user not logged in!!!");
+        
         var trip = new Trip()
         {
             Destination = dto.Destination,
@@ -65,11 +59,9 @@ public class TripService : ITripService
 
         var userTrips = await _tripRepository.GetUsersTripsById(userId, cancellationToken);
 
-        foreach (var t in userTrips)
+        if (userTrips.Any(t => trip.Start <= t.End && trip.End >= t.Start))
         {
-
-            if (trip.Start <= t.End && trip.End >= t.Start)
-                return new Result(false, "You already have a trip at this time.");
+            return new Result(false, "You already have a trip at this time.");
         }
 
         var addResult = await _tripRepository.AddTrip(trip, cancellationToken);
@@ -97,8 +89,12 @@ public class TripService : ITripService
     public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken)
         => await _tripRepository.GetUsersTripsById(userId, cancellationToken);
 
-    public async Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateTrip(UpdateTripDto dto,int userId, CancellationToken cancellationToken)
     {
+        var isOwner = await _userTripRepository.CheckUserIsOwner(userId, dto.Id, cancellationToken);
+
+        if(!isOwner)
+            return new Result(false, "Only the trip owner can update the trip.");
         var userResult = await _userService.CheckUserExistById(dto.UserId, cancellationToken);
 
         if (!userResult.Flag)
@@ -125,20 +121,16 @@ public class TripService : ITripService
         return result;
     }
 
-    public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto,int userId, CancellationToken cancellationToken)
     {
 
         if (dto.UsersId == null || !dto.UsersId.Any())
             return new Result(false, "No users to add.");
 
-        var user = _httpContextAccessor.HttpContext.User;
-        if (user == null)
-            return new Result(false, "User not logged in.");
-
-        var ownerId = int.Parse(user.FindFirst("Id").Value);
+       
 
 
-        var isOwner = await _userTripRepository.CheckUserIsOwner(ownerId, dto.TripId, cancellationToken);
+        var isOwner = await _userTripRepository.CheckUserIsOwner(userId, dto.TripId, cancellationToken);
         if (!isOwner)
             return new Result(false, "Only the trip owner can add users.");
 
@@ -148,7 +140,7 @@ public class TripService : ITripService
 
         var addedUsers = new List<UserTrip>();
 
-        foreach (var userId in dto.UsersId.Distinct())
+        foreach (var Id in dto.UsersId.Distinct())
         {
 
             var userExists = await _userService.CheckUserExistById(userId, cancellationToken);

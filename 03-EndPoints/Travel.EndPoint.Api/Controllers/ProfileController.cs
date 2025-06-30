@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.Profile;
 using Travel.Domain.Services.AppService;
+using Travel.EndPoint.Api.Controllers.Base;
 
 namespace Travel.EndPoint.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProfileController : ControllerBase
+    public class ProfileController : BaseController
     {
         private readonly IProfileAppService _profileAppService;
 
@@ -25,7 +26,14 @@ namespace Travel.EndPoint.Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _profileAppService.UpdateProfile(dto, cancellationToken);
+
+            var userId = GetCurrentUserId();
+            if (userId == 0)
+            {
+                return Unauthorized("User not logged in.");
+            }
+
+            var result = await _profileAppService.UpdateProfile(dto, userId, cancellationToken);
 
             if (!result.Flag)
                 return BadRequest(result.Message);

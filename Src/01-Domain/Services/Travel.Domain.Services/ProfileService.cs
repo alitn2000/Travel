@@ -15,19 +15,15 @@ namespace Travel.Domain.Service;
 public class ProfileService : IProfileService
 {
     private readonly IProfileRepository _profileRepository;
-    private readonly IHttpContextAccessor _httpContextAccessor;
+ 
 
-    public ProfileService(IProfileRepository profileRepository, IHttpContextAccessor httpContextAccessor)
+    public ProfileService(IProfileRepository profileRepository)
     {
         _profileRepository = profileRepository;
-        _httpContextAccessor = httpContextAccessor;
     }
 
-    public async Task<Result> UpdateProfile(UpdateProfileDto dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateProfile(UpdateProfileDto dto,int userId, CancellationToken cancellationToken)
     {
-        var user = _httpContextAccessor.HttpContext?.User;
-        if (user == null)
-            return new Result(false, "user not logged in");
         var mainDto = new UpdateProfileDtoWithId()
         {
             Address = dto.Address,
@@ -35,7 +31,7 @@ public class ProfileService : IProfileService
             FirstName = dto.FirstName,
             LastName = dto.LastName,
             Gender = dto.Gender,
-            UserId = int.Parse(user?.FindFirst("Id")?.Value)
+            UserId = userId
         };
         return await _profileRepository.UpdateProfile(mainDto, cancellationToken);
         

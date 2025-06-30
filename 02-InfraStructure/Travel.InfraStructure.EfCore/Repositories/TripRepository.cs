@@ -26,8 +26,8 @@ public class TripRepository : ITripRepository
     {
         await _context.Trips.AddAsync(trip, cancellationToken);
        
-       var f = await _context.SaveChangesAsync(cancellationToken) ;
-        return f>0;
+       return await _context.SaveChangesAsync(cancellationToken) > 0 ;
+       
 
     }
 

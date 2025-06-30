@@ -42,4 +42,11 @@ public class EmailService : IEmailService
         await smtpClient.SendMailAsync(mailMessage);
 
     }
+
+    public async Task GenerateEmail(string otp, string email, TimeSpan timeSpan)
+    {
+        var subject = "OTP Code registeration";
+        var body = $"Your OTP code is: <b>{otp}</b>. It will expire in {timeSpan.TotalMinutes} minutes.";
+        await SendEmail(email, subject, body);
+    }
 }

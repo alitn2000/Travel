@@ -23,9 +23,9 @@ public class TripAppService : ITripAppService
         _tripJobScheduler = tripJobScheduler;
     }
 
-    public async Task<Result> AddTrip(AddTripDto trip, CancellationToken cancellationToken)
+    public async Task<Result> AddTrip(AddTripDto trip,int userId, CancellationToken cancellationToken)
     {
-        var result = await _tripService.AddTrip(trip, cancellationToken);
+        var result = await _tripService.AddTrip(trip,userId, cancellationToken);
 
         return result;
     }
@@ -34,16 +34,16 @@ public class TripAppService : ITripAppService
     public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken)
         => await _tripService.GetUsersTripsById(userId, cancellationToken);
 
-    public async Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateTrip(UpdateTripDto dto,int userId, CancellationToken cancellationToken)
     {
-
-        var result = await _tripService.UpdateTrip(dto, cancellationToken);
+        
+        var result = await _tripService.UpdateTrip(dto,userId, cancellationToken);
 
         if (result.Flag)
             await _tripJobScheduler.ScheduleTripJobsAsync(dto.Id, dto.Start, dto.End);
         return result;
     }
 
-    public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken) 
-        => await _tripService.AddUsersToTrip(dto, cancellationToken);
+    public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto,int userId, CancellationToken cancellationToken) 
+        => await _tripService.AddUsersToTrip(dto,userId, cancellationToken);
 }

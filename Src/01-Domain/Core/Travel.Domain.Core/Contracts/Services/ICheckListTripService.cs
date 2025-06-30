@@ -11,8 +11,8 @@ namespace Travel.Domain.Core.Contracts.Services;
 
 public interface ICheckListTripService
 {
-    Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken);
+    Task<Result> UpdateIsChecked(UpdateCheckListTripDto dto,int userId, CancellationToken cancellationToken);
     Task<List<CheckListTripListDto>> GetAllCheckListTrips(CancellationToken cancellationToken);
-    Task<Result> AddCheckListTrip(AddCheckListToTripDto dto, CancellationToken cancellationToken);
+    Task<Result> AddCheckListTrip(AddCheckListToTripDto dto,int userId, CancellationToken cancellationToken);
     Task<List<CheckListTripListDto>> GetAllIsCheckedLists(CancellationToken cancellationToken);
 }
