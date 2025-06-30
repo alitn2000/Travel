@@ -7,12 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\02-InfraStructure\Travel.InfraStructure.EfCore\Travel.InfraStructure.EfCore.csproj" />
     <ProjectReference Include="..\..\Core\Travel.Domain.Core\Travel.Domain.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CheckLists\Commands\" />
+    <Folder Include="CheckLists\Handlers\" />
+    <Folder Include="CheckLists\Queries\" />
+    <Folder Include="Users\Commands\" />
   </ItemGroup>
 
 </Project>

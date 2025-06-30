@@ -11,7 +11,7 @@ using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
 
-namespace Travel.Domain.Service;
+namespace Travel.Domain.Service.Trips;
 
 public class TripService : ITripService
 {
@@ -78,18 +78,18 @@ public class TripService : ITripService
         await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
 
         return new Result(true, "Trip added successfully");
-    }
+    } //done
 
     public async Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken)
-        => await _tripRepository.CheckTripExist(tripId, cancellationToken);
+        => await _tripRepository.CheckTripExist(tripId, cancellationToken); //done
 
-    public Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken)
-        => _tripRepository.CheckUsersHaveTripById(userId, tripId, cancellationToken);
+    public async Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken)
+        => await _tripRepository.CheckUsersHaveTripById(userId, tripId, cancellationToken); //done
 
-    public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken)
+    public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken) //done
         => await _tripRepository.GetUsersTripsById(userId, cancellationToken);
 
-    public async Task<Result> UpdateTrip(UpdateTripDto dto,int userId, CancellationToken cancellationToken)
+    public async Task<Result> UpdateTrip(UpdateTripDto dto,int userId, CancellationToken cancellationToken)  
     {
         var isOwner = await _userTripRepository.CheckUserIsOwner(userId, dto.Id, cancellationToken);
 
@@ -119,7 +119,7 @@ public class TripService : ITripService
         var result = await _tripRepository.UpdateTrip(dto, cancellationToken);
 
         return result;
-    }
+    } //done
 
     public async Task<Result> AddUsersToTrip(AddUsersToTripDto dto,int userId, CancellationToken cancellationToken)
     {
@@ -179,6 +179,6 @@ public class TripService : ITripService
 
 
 
-    }
+    } //done
 
 }

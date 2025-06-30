@@ -21,6 +21,8 @@ using Travel.InfraStructure.EfCore.Repositories;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Travel.EndPoint.Api.Validations;
+using Travel.Domain.Service.Trips;
+using Travel.Domain.Service.CheckLists;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,9 +65,13 @@ builder.Services.AddMemoryCache();
 builder.Services.AddHttpContextAccessor();
 
 // fluent validation
-
 builder.Services.AddScoped<IValidator<UserLoginModel>, UserLoginModelValidator>();
 
+
+//mediatR
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssemblyContaining<Program>()
+);
 
 builder.Services.AddControllers()
     .AddJsonOptions(op =>

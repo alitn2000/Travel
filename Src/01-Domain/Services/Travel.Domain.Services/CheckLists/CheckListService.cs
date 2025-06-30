@@ -10,7 +10,7 @@ using Travel.Domain.Core.DTOs.CheckListDtos;
 using Travel.Domain.Core.DTOs.CheckListTripDtos;
 using Travel.Domain.Core.Entities;
 
-namespace Travel.Domain.Service;
+namespace Travel.Domain.Service.CheckLists;
 
 public class CheckListService : ICheckListService
 {

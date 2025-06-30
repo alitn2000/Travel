@@ -47,7 +47,7 @@ public class UserService : IUserService
         }
         
         var OTP = _otpService.GenerateOtp();
-        await _otpService.StoreOtpAndSendEmail(dto.UserName, OTP, TimeSpan.FromMinutes(3));
+        await _otpService.StoreOtp(dto.UserName, OTP, TimeSpan.FromMinutes(3));
 
         return new Result(true, "Your Login Code: " + OTP);
 
