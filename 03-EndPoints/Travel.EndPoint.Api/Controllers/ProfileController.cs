@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.Profile;
+using Travel.Domain.Service.Profiles.Commands;
 using Travel.Domain.Services.AppService;
 using Travel.EndPoint.Api.Controllers.Base;
 
@@ -11,11 +13,11 @@ namespace Travel.EndPoint.Api.Controllers
     [ApiController]
     public class ProfileController : BaseController
     {
-        private readonly IProfileAppService _profileAppService;
+        private readonly IMediator _mediator;
 
-        public ProfileController(IProfileAppService profileAppService)
+        public ProfileController(IMediator mediator)
         {
-            _profileAppService = profileAppService;
+            _mediator = mediator;
         }
 
         [HttpPatch("UpdateProfile")]
@@ -33,7 +35,7 @@ namespace Travel.EndPoint.Api.Controllers
                 return Unauthorized("User not logged in.");
             }
 
-            var result = await _profileAppService.UpdateProfile(dto, userId, cancellationToken);
+            var result = await _mediator.Send(new UpdateProfileCommand(dto, userId), cancellationToken);
 
             if (!result.Flag)
                 return BadRequest(result.Message);

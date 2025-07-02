@@ -17,10 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CheckLists\Commands\" />
-    <Folder Include="CheckLists\Handlers\" />
-    <Folder Include="CheckLists\Queries\" />
-    <Folder Include="Users\Commands\" />
+    <Folder Include="Profiles\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@ using Travel.Domain.Core.DTOs.CheckListTripDtos;
 using Travel.Domain.Core.Entities;
 using Travel.InfraStructure.EfCore.Repositories;
 
-namespace Travel.Domain.Service;
+namespace Travel.Domain.Service.CheckListTrips;
 
 public class CheckListTripService : ICheckListTripService
 {

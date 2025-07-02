@@ -14,7 +14,7 @@ using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.DTOs.Login;
 using Travel.Domain.Core.Entities;
 
-namespace Travel.Domain.Service;
+namespace Travel.Domain.Service.Users;
 
 public class UserService : IUserService
 {

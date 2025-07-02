@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.Contracts.Services;
 
-namespace Travel.Domain.Service;
+namespace Travel.Domain.Service.Services;
 
 public class OTPService : IOTPService
 {

@@ -13,7 +13,6 @@ namespace Travel.Domain.Services.AppService;
 public class UserAppService : IUserAppService
 {
     private readonly IUserService _userService;
-
     public UserAppService(IUserService userService)
     {
         _userService = userService;

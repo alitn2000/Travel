@@ -1,4 +1,6 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -12,17 +14,28 @@ using Travel.Domain.Core.Contracts.Jobs;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Service;
+using Travel.Domain.Service.CheckLists;
+using Travel.Domain.Service.CheckLists.Commands;
+using Travel.Domain.Service.CheckLists.Queries;
+using Travel.Domain.Service.CheckListTrips;
+using Travel.Domain.Service.CheckListTrips.Commands;
+using Travel.Domain.Service.CheckListTrips.Queries;
+using Travel.Domain.Service.Profiles;
+using Travel.Domain.Service.Profiles.Commands;
+using Travel.Domain.Service.Services;
+using Travel.Domain.Service.Trips;
+using Travel.Domain.Service.Trips.Commands;
+using Travel.Domain.Service.Trips.Queries;
+using Travel.Domain.Service.Users;
+using Travel.Domain.Service.Users.Commands;
+using Travel.Domain.Service.Users.Queries;
 using Travel.Domain.Services.AppService;
 using Travel.EndPoint.Api.Jobs;
 using Travel.EndPoint.Api.Models.UserModels;
+using Travel.EndPoint.Api.Validations;
 using Travel.EndPoints.Jobs.TripJobs;
 using Travel.InfraStructure.EfCore.Common;
 using Travel.InfraStructure.EfCore.Repositories;
-using FluentValidation;
-using Microsoft.AspNetCore.Identity;
-using Travel.EndPoint.Api.Validations;
-using Travel.Domain.Service.Trips;
-using Travel.Domain.Service.CheckLists;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,8 +83,29 @@ builder.Services.AddScoped<IValidator<UserLoginModel>, UserLoginModelValidator>(
 
 //mediatR
 builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssemblyContaining<Program>()
-);
+{
+    cfg.RegisterServicesFromAssembly(typeof(LoginCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetTokenCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GenerateTokenCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(CheckUserExistByIdQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(AddTripCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetUsersTripsByIdQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetAllCheckListsAsyncQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(AddCheckListCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(UpdateCheckListCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(AddCheckListTripCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(CheckUsersHaveTripByIdQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(AddUsersToTripCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(UpdateTripCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(UpdateProfileCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(UpdateIsCheckedCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetAllCheckListTripsQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetAllIsCheckedListsQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetCheckListByIdCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(CheckCheckListExistQuery).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetAllCheckListsAsyncQuery).Assembly);
+    
+});
 
 builder.Services.AddControllers()
     .AddJsonOptions(op =>
