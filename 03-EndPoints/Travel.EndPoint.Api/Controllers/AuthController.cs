@@ -9,31 +9,29 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading;
+using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.Login;
-using Travel.Domain.Service.Users.Commands;
+using Travel.Domain.Service.Features.Commands.Users.GetToken;
+using Travel.Domain.Service.Features.Commands.Users.Login;
+using Travel.EndPoint.Api.Controllers.Base;
 using Travel.EndPoint.Api.Extentions;
 using Travel.EndPoint.Api.Models.UserModels;
 
 namespace Travel.EndPoint.Api.Controllers;
-[AllowAnonymous]
-[Route("api/[controller]")]
-[ApiController]
-public class AuthController : ControllerBase
+
+
+public class AuthController : BaseController
 {
-   // private readonly IUserAppService _userAppService;
     private readonly IValidator<UserLoginModel> _validator;
-    private readonly IMediator _mediator;
-    public AuthController(IValidator<UserLoginModel> validator, IMediator mediator)
+    public AuthController(IMediator mediator,IValidator<UserLoginModel> validator) : base(mediator) 
     {
-        
         _validator = validator;
-        _mediator = mediator;
     }
 
-
+    [AllowAnonymous]
     [HttpPost("Login")]
-    public async Task<IActionResult> Login([FromBody] UserLoginModel model, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> Login([FromBody] UserLoginModel model, CancellationToken cancellationToken)
     {
         var modelValidator = await _validator.ValidateAsync(model, cancellationToken);
         if (!modelValidator.IsValid)
@@ -53,9 +51,9 @@ public class AuthController : ControllerBase
 
         return Ok(new { Token = tokenResult.Message });
     }
-
+    [AllowAnonymous]
     [HttpPost("VerifyOTP")]
-    public async Task<ActionResult> VerifyOTP(GetTokenDto dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> VerifyOTP(GetTokenDto dto, CancellationToken cancellationToken)
     {
         if(!ModelState.IsValid)
         {

@@ -15,17 +15,19 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class UserTripRepository : IUserTripRepository
 {
     private readonly AppDbContext _context;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public UserTripRepository(AppDbContext cotext)
+    public UserTripRepository(AppDbContext cotext, IUnitOfWork unitOfWork)
     {
         _context = cotext;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<bool> AddUserTrip(UserTrip userTrip,CancellationToken cancellationToken)
     {
 
         await _context.UserTrips.AddAsync(userTrip, cancellationToken);
-        return await _context.SaveChangesAsync(cancellationToken)> 0;
+        return await _unitOfWork.Commit(userTrip.UserId,cancellationToken)> 0;
     }
 
     public async Task<bool> CheckUserIsOwner(int userId, int tripId,CancellationToken cancellationToken)
@@ -39,10 +41,10 @@ public class UserTripRepository : IUserTripRepository
     public async Task<bool> CheckUserTripExist(int userId, int tripId, CancellationToken cancellationToken)
         => await _context.UserTrips.AnyAsync(ut => ut.UserId == userId && ut.TripId == tripId, cancellationToken);
 
-    public async Task<bool> AddUserTrips(List<UserTrip> userTrips, CancellationToken cancellationToken)
+    public async Task<bool> AddUserTrips(List<UserTrip> userTrips,int userId, CancellationToken cancellationToken)
     {
         await _context.UserTrips.AddRangeAsync(userTrips, cancellationToken);
-        return await _context.SaveChangesAsync(cancellationToken) > 0;
+        return await _unitOfWork.Commit(userId,cancellationToken) > 0;
     }
 
     public async Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken)

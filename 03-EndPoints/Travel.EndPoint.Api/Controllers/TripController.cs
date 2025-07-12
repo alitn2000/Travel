@@ -6,24 +6,18 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.TripDtos;
 using Travel.Domain.Core.Entities;
-using Travel.Domain.Service.Trips.Commands;
-using Travel.Domain.Service.Trips.Queries;
-using Travel.Domain.Services.AppService;
+using Travel.Domain.Service.Features.Commands.Trips.AddTrip;
+using Travel.Domain.Service.Features.Commands.Trips.AddUsersToTrip;
+using Travel.Domain.Service.Features.Commands.Trips.UpdateTrip;
+using Travel.Domain.Service.Features.Queries.Trips.GetUsersTripsById;
 using Travel.EndPoint.Api.Controllers.Base;
 
 namespace Travel.EndPoint.Api.Controllers;
 
-[Authorize]
-[Route("api/[controller]")]
-[ApiController]
 public class TripController : BaseController
 {
-    private readonly IMediator _mediator;
 
-    public TripController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    public TripController(IMediator mediator) : base(mediator) { }
 
     [HttpPost("AddTrip")]
     public async Task<ActionResult<Result>> AddTrip(AddTripDto dto, CancellationToken cancellationToken)
@@ -58,7 +52,7 @@ public class TripController : BaseController
     }
 
     [HttpPatch("UpdateTrip")]
-    public async Task<ActionResult<UpdateTripDto>> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
@@ -77,7 +71,7 @@ public class TripController : BaseController
     }
 
     [HttpPatch("AddUsersToTrip")]
-    public async Task<ActionResult<AddUsersToTripDto>> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> AddUsersToTrip(AddUsersToTripDto dto, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {

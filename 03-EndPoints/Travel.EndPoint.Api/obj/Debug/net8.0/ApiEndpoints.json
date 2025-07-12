@@ -13,7 +13,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Travel.EndPoint.Api.Controllers.AuthController",
@@ -29,7 +39,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Travel.EndPoint.Api.Controllers.CheckListController",
@@ -47,7 +67,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Travel.Domain.Core.DTOs.CheckListDtos.AddCheckListDto",
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -93,7 +113,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Travel.Domain.Core.DTOs.CheckListDtos.UpdateCheckListDto",
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -119,7 +139,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Travel.Domain.Core.DTOs.CheckListTripDtos.AddCheckListToTripDto",
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -185,7 +205,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Travel.Domain.Core.DTOs.CheckListTripDtos.UpdateCheckListTripDto",
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -209,7 +229,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Travel.EndPoint.Api.Controllers.TripController",
@@ -253,7 +283,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Travel.Domain.Core.DTOs.TripDtos.AddUsersToTripDto",
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -279,7 +309,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Travel.Domain.Core.DTOs.TripDtos.UpdateTripDto",
+        "Type": "Travel.Domain.Core.BaseEntities.Result",
         "MediaTypes": [
           "text/plain",
           "application/json",

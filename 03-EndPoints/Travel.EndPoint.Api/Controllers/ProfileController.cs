@@ -1,46 +1,40 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.Profile;
-using Travel.Domain.Service.Profiles.Commands;
-using Travel.Domain.Services.AppService;
+using Travel.Domain.Service.Features.Commands.Profiles.UpdateProfile;
 using Travel.EndPoint.Api.Controllers.Base;
 
-namespace Travel.EndPoint.Api.Controllers
+namespace Travel.EndPoint.Api.Controllers;
+
+
+public class ProfileController : BaseController
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProfileController : BaseController
+
+    public ProfileController(IMediator mediator) : base(mediator) { }
+
+    [HttpPatch("UpdateProfile")]
+    public async Task<ActionResult<Result>> UpdateProfile(UpdateProfileDto dto,CancellationToken cancellationToken)
     {
-        private readonly IMediator _mediator;
-
-        public ProfileController(IMediator mediator)
+       
+        if (!ModelState.IsValid)
         {
-            _mediator = mediator;
+            return BadRequest(ModelState);
         }
 
-        [HttpPatch("UpdateProfile")]
-        public async Task<ActionResult> UpdateProfile(UpdateProfileDto dto,CancellationToken cancellationToken)
+        var userId = GetCurrentUserId();
+        if (userId == 0)
         {
-           
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var userId = GetCurrentUserId();
-            if (userId == 0)
-            {
-                return Unauthorized("User not logged in.");
-            }
-
-            var result = await _mediator.Send(new UpdateProfileCommand(dto, userId), cancellationToken);
-
-            if (!result.Flag)
-                return BadRequest(result.Message);
-
-            return Ok(result.Message);
+            return Unauthorized("User not logged in.");
         }
+
+        var result = await _mediator.Send(new UpdateProfileCommand(dto, userId), cancellationToken);
+
+        if (!result.Flag)
+            return BadRequest(result.Message);
+
+        return Ok(result.Message);
     }
 }

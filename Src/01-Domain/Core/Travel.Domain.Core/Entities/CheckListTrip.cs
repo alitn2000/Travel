@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travel.Domain.Core.BaseEntities;
 
 namespace Travel.Domain.Core.Entities;
 
-public class CheckListTrip
+public class CheckListTrip : BaseEntity
 {
     public int Id { get; set; }
     public bool IsChecked { get; set; } = false;

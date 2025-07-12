@@ -15,13 +15,15 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class ProfileRepository : IProfileRepository
 {
     private readonly AppDbContext _context;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public ProfileRepository(AppDbContext context)
+    public ProfileRepository(AppDbContext context, IUnitOfWork unitOfWork)
     {
         _context = context;
+        _unitOfWork = unitOfWork;
     }
 
-   public async Task<Result> UpdateProfile (UpdateProfileDtoWithId dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateProfile (UpdateProfileDtoWithId dto, CancellationToken cancellationToken)
     {
         var existProfile = await _context.Profiles.FirstOrDefaultAsync(p => p.Id == p.UserId, cancellationToken);
         if (existProfile == null)
@@ -33,7 +35,7 @@ public class ProfileRepository : IProfileRepository
         existProfile.Age = dto.Age;
         existProfile.Gender = dto.Gender;
 
-        await _context.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.Commit(existProfile.UserId, cancellationToken);
 
         return new Result(true, "profile updated successfully!!!");
     } 

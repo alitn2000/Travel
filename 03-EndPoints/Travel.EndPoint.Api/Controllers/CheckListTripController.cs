@@ -2,28 +2,24 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.DTOs.CheckListTripDtos;
-using Travel.Domain.Service.CheckLists.Commands;
-using Travel.Domain.Service.CheckListTrips.Commands;
-using Travel.Domain.Service.CheckListTrips.Queries;
+using Travel.Domain.Service.Features.Commands.CheckListTrips.AddCheckListTrip;
+using Travel.Domain.Service.Features.Commands.CheckListTrips.UpdateIsChecked;
+using Travel.Domain.Service.Features.Queries.CheckListTrips.GetAllCheckListTrips;
+using Travel.Domain.Service.Features.Queries.CheckListTrips.GetAllIsCheckedLists;
 using Travel.EndPoint.Api.Controllers.Base;
 
 namespace Travel.EndPoint.Api.Controllers;
-[Authorize]
-[Route("api/[controller]")]
-[ApiController]
+
 public class CheckListTripController : BaseController
 {
-    private readonly IMediator _mediator;
 
-    public CheckListTripController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    public CheckListTripController(IMediator mediator) : base(mediator) { }
 
     [HttpPatch("UpdateIsChecked")]
-    public async Task<ActionResult<UpdateCheckListTripDto>> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
@@ -52,7 +48,7 @@ public class CheckListTripController : BaseController
     }
 
     [HttpPost("AddCheckListTripToTrip")]
-    public async Task<ActionResult<AddCheckListToTripDto>> AddCheckListToTrips(AddCheckListToTripDto dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result>> AddCheckListToTrips(AddCheckListToTripDto dto, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {

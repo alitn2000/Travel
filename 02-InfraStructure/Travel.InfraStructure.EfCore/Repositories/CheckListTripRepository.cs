@@ -15,13 +15,14 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class CheckListTripRepository : ICheckListTripRepository
 {
     private readonly AppDbContext _context;
-
-    public CheckListTripRepository(AppDbContext context)
+    private readonly IUnitOfWork _unitOfWork;
+    public CheckListTripRepository(AppDbContext context, IUnitOfWork unitOfWork)
     {
         _context = context;
+        _unitOfWork = unitOfWork;
     }
 
-    public async Task<bool> UpdateIsChecked(UpdateCheckListTripDto dto, CancellationToken cancellationToken)
+    public async Task<bool> UpdateIsChecked(UpdateCheckListTripDto dto,int userId, CancellationToken cancellationToken)
     {
 
         var existingCheckLists = await _context.CheckListTrips
@@ -58,7 +59,7 @@ public class CheckListTripRepository : ICheckListTripRepository
         if (toAdd.Any())
             await _context.CheckListTrips.AddRangeAsync(toAdd, cancellationToken);
 
-        await _context.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.Commit(userId,cancellationToken);
         return true;
     }
 
@@ -70,7 +71,7 @@ public class CheckListTripRepository : ICheckListTripRepository
             CheckListId = c.CheckListId,
             IsChecked = c.IsChecked
         }).ToListAsync(cancellationToken);
-    public async Task<bool> AddCheckListTrip(AddCheckListToTripDto dto, CancellationToken cancellationToken)
+    public async Task<bool> AddCheckListTrip(AddCheckListToTripDto dto,int userId, CancellationToken cancellationToken)
     {
 
 
@@ -105,7 +106,7 @@ public class CheckListTripRepository : ICheckListTripRepository
         }).ToList();
 
         await _context.CheckListTrips.AddRangeAsync(checkListTrips, cancellationToken);
-        await _context.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.Commit(userId, cancellationToken);
         return true;
     }
 

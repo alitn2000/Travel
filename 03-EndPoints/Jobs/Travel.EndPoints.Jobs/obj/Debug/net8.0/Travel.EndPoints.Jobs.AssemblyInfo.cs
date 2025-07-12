@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Travel.EndPoints.Jobs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8272771173a8e8dc29c0bb94b6371251346d73cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf8070d6246f791258233d6c064afdb22d3c1da6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Travel.EndPoints.Jobs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Travel.EndPoints.Jobs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

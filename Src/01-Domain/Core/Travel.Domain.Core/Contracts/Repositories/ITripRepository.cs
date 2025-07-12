@@ -12,12 +12,12 @@ namespace Travel.Domain.Core.Contracts.Repositories;
 
 public interface ITripRepository
 {
-    Task<bool> AddTrip(Trip trip, CancellationToken cancellationToken);
+    Task<bool> AddTrip(Trip trip, int userId, CancellationToken cancellationToken);
     bool CheckTripTypeExist(TripEnums type);
     Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken);
     Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken);
     Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken);
-    Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken);
+    Task<Result> UpdateTrip(UpdateTripDto dto, int userId, CancellationToken cancellationToken);
     Task<Trip?> GetTripById(int tripId, CancellationToken cancellationToken);
     Task UpdateStatus(Trip trip, StatusEnum status, CancellationToken cancellationToken);
 }

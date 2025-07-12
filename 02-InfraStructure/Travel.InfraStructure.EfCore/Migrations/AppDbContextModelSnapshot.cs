@@ -34,8 +34,17 @@ namespace Travel.InfraStructure.EfCore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("TripType")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -46,31 +55,46 @@ namespace Travel.InfraStructure.EfCore.Migrations
                         {
                             Id = 1,
                             ChekListType = "A",
-                            TripType = 4
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(994),
+                            CreatedUserId = 0,
+                            TripType = 4,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(996)
                         },
                         new
                         {
                             Id = 2,
                             ChekListType = "B",
-                            TripType = 1
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(999),
+                            CreatedUserId = 0,
+                            TripType = 1,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(999)
                         },
                         new
                         {
                             Id = 3,
                             ChekListType = "C",
-                            TripType = 2
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1000),
+                            CreatedUserId = 0,
+                            TripType = 2,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1000)
                         },
                         new
                         {
                             Id = 4,
                             ChekListType = "D",
-                            TripType = 3
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1001),
+                            CreatedUserId = 0,
+                            TripType = 3,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1001)
                         },
                         new
                         {
                             Id = 5,
                             ChekListType = "F",
-                            TripType = 5
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1002),
+                            CreatedUserId = 0,
+                            TripType = 5,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1002)
                         });
                 });
 
@@ -85,11 +109,20 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("CheckListId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsChecked")
                         .HasColumnType("bit");
 
                     b.Property<int>("TripId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -114,6 +147,12 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int?>("Age")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
+
                     b.Property<string>("FirstName")
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
@@ -124,6 +163,9 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<string>("LastName")
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -141,9 +183,12 @@ namespace Travel.InfraStructure.EfCore.Migrations
                             Id = 1,
                             Address = "SomeWhere",
                             Age = 25,
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1830),
+                            CreatedUserId = 0,
                             FirstName = "Ali",
                             Gender = 1,
                             LastName = "Tahmasebinia",
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1830),
                             UserId = 1
                         },
                         new
@@ -151,9 +196,12 @@ namespace Travel.InfraStructure.EfCore.Migrations
                             Id = 2,
                             Address = "SomeWhere",
                             Age = 26,
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1834),
+                            CreatedUserId = 0,
                             FirstName = "Alireza",
                             Gender = 1,
                             LastName = "Tahmasebinia",
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1834),
                             UserId = 2
                         },
                         new
@@ -161,9 +209,12 @@ namespace Travel.InfraStructure.EfCore.Migrations
                             Id = 3,
                             Address = "SomeWhere",
                             Age = 25,
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1836),
+                            CreatedUserId = 0,
                             FirstName = "Sepide",
                             Gender = 2,
                             LastName = "Sepidei",
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1836),
                             UserId = 3
                         });
                 });
@@ -175,6 +226,12 @@ namespace Travel.InfraStructure.EfCore.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Destination")
                         .IsRequired()
@@ -193,6 +250,9 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("TripType")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Trips");
@@ -205,6 +265,15 @@ namespace Travel.InfraStructure.EfCore.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -221,18 +290,27 @@ namespace Travel.InfraStructure.EfCore.Migrations
                         new
                         {
                             Id = 1,
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(445),
+                            CreatedUserId = 0,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(448),
                             UserName = "test@gmail.com",
                             UserNameType = 0
                         },
                         new
                         {
                             Id = 2,
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(452),
+                            CreatedUserId = 0,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(452),
                             UserName = "test2@gmail.com",
                             UserNameType = 1
                         },
                         new
                         {
                             Id = 3,
+                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(454),
+                            CreatedUserId = 0,
+                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(454),
                             UserName = "alitahmasebinia@gmail.com",
                             UserNameType = 0
                         });
@@ -246,11 +324,20 @@ namespace Travel.InfraStructure.EfCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsOwner")
                         .HasColumnType("bit");
 
                     b.Property<int>("TripId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");

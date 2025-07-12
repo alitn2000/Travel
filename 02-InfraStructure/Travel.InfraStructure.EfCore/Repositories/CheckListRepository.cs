@@ -16,10 +16,12 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class CheckListRepository : ICheckListRepository
 {
     private readonly AppDbContext _context;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public CheckListRepository(AppDbContext context)
+    public CheckListRepository(AppDbContext context, IUnitOfWork unitOfWork)
     {
         _context = context;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<List<CheckListListsDto>> GetAllCheckListsAsync(CancellationToken cancellationToken)
@@ -36,10 +38,11 @@ public class CheckListRepository : ICheckListRepository
     public async Task<bool> CheckCheckListExist(int checkListId, CancellationToken cancellationToken)
        =>  await _context.CheckLists.AsNoTracking().AnyAsync(c => c.Id == checkListId, cancellationToken);
 
-    public async Task<bool> AddCheckList(CheckList checkList, CancellationToken cancellationToken)
+    public async Task<bool> AddCheckList(CheckList checkList,int userId, CancellationToken cancellationToken)
     {
         await _context.CheckLists.AddAsync(checkList, cancellationToken);
-        return await _context.SaveChangesAsync(cancellationToken) > 0;
+
+        return await _unitOfWork.Commit(userId,cancellationToken) > 0;
     }
 
     public async Task<bool> CheckTypesExists(string chListEnum, TripEnums tripEnum, CancellationToken cancellationToken)
@@ -47,7 +50,7 @@ public class CheckListRepository : ICheckListRepository
             .AsNoTracking()
             .AnyAsync(c => c.TripType == tripEnum && c.ChekListType == chListEnum);
     
-    public async Task<Result> UpdateCheckList(UpdateCheckListDto dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateCheckList(UpdateCheckListDto dto,int userId, CancellationToken cancellationToken)
     {
         var existingCheckList = await _context.CheckLists.FirstOrDefaultAsync(c => c.Id == dto.Id);
         
@@ -56,7 +59,7 @@ public class CheckListRepository : ICheckListRepository
         
         existingCheckList.TripType = dto.TripType;
         existingCheckList.ChekListType = dto.ChekListType;
-        await _context.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.Commit(userId, cancellationToken);
         return new Result(true, "checkList updated successfully!!!");
     }
 

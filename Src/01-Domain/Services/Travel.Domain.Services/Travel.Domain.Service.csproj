@@ -16,8 +16,4 @@
     <ProjectReference Include="..\..\Core\Travel.Domain.Core\Travel.Domain.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Profiles\Queries\" />
-  </ItemGroup>
-
 </Project>

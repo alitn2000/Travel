@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client.Extensibility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,16 +18,18 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class TripRepository : ITripRepository
 {
     private readonly AppDbContext _context;
-    public TripRepository(AppDbContext context)
+    private readonly IUnitOfWork _unitOfWork;
+    public TripRepository(AppDbContext context, IUnitOfWork unitOfWork)
     {
         _context = context;
+        _unitOfWork = unitOfWork;
     }
 
-    public async Task<bool> AddTrip(Trip trip, CancellationToken cancellationToken)
+    public async Task<bool> AddTrip(Trip trip,int userId, CancellationToken cancellationToken)
     {
         await _context.Trips.AddAsync(trip, cancellationToken);
        
-       return await _context.SaveChangesAsync(cancellationToken) > 0 ;
+       return await _unitOfWork.Commit(userId,cancellationToken) > 0 ;
        
 
     }
@@ -58,7 +61,7 @@ public class TripRepository : ITripRepository
         .AsNoTracking()
             .AnyAsync(c => c.UserId == userId && c.Id == tripId, cancellationToken);
 
-    public async Task<Result> UpdateTrip(UpdateTripDto dto, CancellationToken cancellationToken)
+    public async Task<Result> UpdateTrip(UpdateTripDto dto,int userId, CancellationToken cancellationToken)
     {
         var existTrip = await _context.Trips.FirstOrDefaultAsync(t => t.Id == dto.Id, cancellationToken);
 
@@ -70,7 +73,7 @@ public class TripRepository : ITripRepository
         existTrip.End = dto.End;
         existTrip.TripType = dto.TripType;
         
-        await _context.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.Commit(userId, cancellationToken);
 
         return new Result(true, "Trip updated successfully!!!");
     }
@@ -81,7 +84,7 @@ public class TripRepository : ITripRepository
    public async Task UpdateStatus(Trip trip,  StatusEnum status, CancellationToken cancellationToken)
     {
         trip.Status = status;
-        await _context.SaveChangesAsync(cancellationToken);
-       // await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
+        await _unitOfWork.Commit(trip.CreatedUserId, cancellationToken);
+        // await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
     }
 }

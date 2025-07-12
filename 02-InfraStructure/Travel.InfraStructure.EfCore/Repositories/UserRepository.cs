@@ -15,10 +15,12 @@ namespace Travel.InfraStructure.EfCore.Repositories;
 public class UserRepository : IUserRepository
 {
     private readonly AppDbContext _context;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public UserRepository(AppDbContext context)
+    public UserRepository(AppDbContext context, IUnitOfWork unitOfWork)
     {
         _context = context;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<bool> ChekUSerExistById(int userId, CancellationToken cancellationToken)
@@ -42,11 +44,14 @@ public class UserRepository : IUserRepository
         var user = new User
         {
             UserName = userName,
-            UserNameType = userNameEnum
+            UserNameType = userNameEnum,
         };
 
         await _context.Users.AddAsync(user, cancellationToken);
-        await _context.SaveChangesAsync(cancellationToken);
+       var addUserResult = await _unitOfWork.Commit(user.Id, cancellationToken);
+
+        if (addUserResult <= 0)
+            return false;
 
         var profile = new Profile
         {
@@ -55,11 +60,12 @@ public class UserRepository : IUserRepository
             LastName = null,
             Age = null,
             Address = null,
-            Gender = null
+            Gender = null,
+            CreatedUserId = user.Id,
         };
 
         await _context.Profiles.AddAsync(profile, cancellationToken);
-        return await _context.SaveChangesAsync(cancellationToken) > 0;
+        return await _unitOfWork.Commit(profile.UserId, cancellationToken) > 0;
     }
 
     public async Task<int> GetUserIdByUserName(string userName, CancellationToken cancellationToken)
