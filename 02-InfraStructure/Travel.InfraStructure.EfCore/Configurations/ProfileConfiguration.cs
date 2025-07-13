@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.UserUserManagement;
 using Travel.Domain.Core.Enums;
 
 namespace Travel.InfraStructure.EfCore.Configurations;

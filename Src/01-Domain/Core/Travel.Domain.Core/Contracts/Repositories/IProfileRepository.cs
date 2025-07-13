@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.DTOs.Profile;
+using Travel.Domain.Core.Entities.UserUserManagement;
 
 namespace Travel.Domain.Core.Contracts.Repositories;
 
 public interface IProfileRepository
 {
-    Task<Result> UpdateProfile(UpdateProfileDtoWithId dto, CancellationToken cancellationToken);
+    Task UpdateProfile(Profile profile, CancellationToken cancellationToken);
+    Task<Profile?> GetByUserIdAsync(int userId, CancellationToken cancellationToken);
 }

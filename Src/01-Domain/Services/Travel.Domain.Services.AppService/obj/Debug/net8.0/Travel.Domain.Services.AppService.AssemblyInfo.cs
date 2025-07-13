@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Travel.Domain.Services.AppService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf8070d6246f791258233d6c064afdb22d3c1da6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e24eb9c37d757ac794b44f98f331d386f66cb1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Travel.Domain.Services.AppService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Travel.Domain.Services.AppService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

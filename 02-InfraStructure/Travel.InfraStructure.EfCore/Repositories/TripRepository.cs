@@ -9,7 +9,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Jobs;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.TripDtos;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.TripManagement;
 using Travel.Domain.Core.Enums;
 using Travel.InfraStructure.EfCore.Common;
 

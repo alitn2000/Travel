@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.DTOs.CheckListDtos;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.CheckListManagement;
 using Travel.Domain.Core.Enums;
 
 namespace Travel.Domain.Core.Contracts.Repositories;

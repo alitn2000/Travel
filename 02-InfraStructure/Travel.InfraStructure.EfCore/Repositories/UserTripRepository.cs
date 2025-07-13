@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.TripDtos;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.UserUserManagement;
 using Travel.InfraStructure.EfCore.Common;
 
 namespace Travel.InfraStructure.EfCore.Repositories;

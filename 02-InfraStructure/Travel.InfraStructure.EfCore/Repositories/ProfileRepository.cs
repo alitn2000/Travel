@@ -8,6 +8,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.Profile;
 using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.UserUserManagement;
 using Travel.InfraStructure.EfCore.Common;
 
 namespace Travel.InfraStructure.EfCore.Repositories;
@@ -23,22 +24,30 @@ public class ProfileRepository : IProfileRepository
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<Result> UpdateProfile (UpdateProfileDtoWithId dto, CancellationToken cancellationToken)
+    //public async Task<Result> UpdateProfile (UpdateProfileDtoWithId dto, CancellationToken cancellationToken)
+    //{
+    //    var existProfile = await _context.Profiles.FirstOrDefaultAsync(p => p.Id == p.UserId, cancellationToken);
+    //    if (existProfile == null)
+    //        return new Result(false, "profile not found!!!");
+
+    //    existProfile.FirstName = dto.FirstName;
+    //    existProfile.LastName = dto.LastName;
+    //    existProfile.Address = dto.Address;
+    //    existProfile.Age = dto.Age;
+    //    existProfile.Gender = dto.Gender;
+
+    //    await _unitOfWork.Commit(existProfile.UserId, cancellationToken);
+
+    //    return new Result(true, "profile updated successfully!!!");
+    //}
+    public async Task UpdateProfile(Profile profile, CancellationToken cancellationToken)
     {
-        var existProfile = await _context.Profiles.FirstOrDefaultAsync(p => p.Id == p.UserId, cancellationToken);
-        if (existProfile == null)
-            return new Result(false, "profile not found!!!");
-
-        existProfile.FirstName = dto.FirstName;
-        existProfile.LastName = dto.LastName;
-        existProfile.Address = dto.Address;
-        existProfile.Age = dto.Age;
-        existProfile.Gender = dto.Gender;
-
-        await _unitOfWork.Commit(existProfile.UserId, cancellationToken);
-
-        return new Result(true, "profile updated successfully!!!");
-    } 
-
+        _context.Profiles.Update(profile);
+        await _unitOfWork.Commit(profile.UserId, cancellationToken);
+    }
+    public async Task<Profile?> GetByUserIdAsync(int userId, CancellationToken cancellationToken)
+    {
+        return await _context.Profiles.FirstOrDefaultAsync(p => p.UserId == userId, cancellationToken);
+    }
 
 }

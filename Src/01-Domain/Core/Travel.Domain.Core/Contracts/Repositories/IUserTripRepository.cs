@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.DTOs.TripDtos;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.UserUserManagement;
 
 namespace Travel.Domain.Core.Contracts.Repositories;
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.UserUserManagement;
 using Travel.Domain.Service.Features.Queries.Users.CheckUserExistById;
 
 namespace Travel.Domain.Service.Features.Commands.Trips.AddUsersToTrip;

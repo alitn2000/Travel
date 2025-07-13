@@ -3,16 +3,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.AssemblyInfoInputs.cache
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.AssemblyInfo.cs
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.csproj.CoreCompileInputs.cache
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\bin\Debug\net8.0\Travel.InfraStructure.EfCore.deps.json
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\bin\Debug\net8.0\Travel.InfraStructure.EfCore.runtimeconfig.json
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\bin\Debug\net8.0\Travel.InfraStructure.EfCore.dll
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\bin\Debug\net8.0\Travel.InfraStructure.EfCore.pdb
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\bin\Debug\net8.0\Travel.Domain.Core.dll
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\bin\Debug\net8.0\Travel.Domain.Core.pdb
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.I.634B87D6.Up2Date
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.dll
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\refint\Travel.InfraStructure.EfCore.dll
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.pdb
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.genruntimeconfig.cache
-C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\ref\Travel.InfraStructure.EfCore.dll
 C:\Users\a.tahmasebi\source\repos\Travel\02-InfraStructure\Travel.InfraStructure.EfCore\obj\Debug\net8.0\Travel.InfraStructure.EfCore.sourcelink.json

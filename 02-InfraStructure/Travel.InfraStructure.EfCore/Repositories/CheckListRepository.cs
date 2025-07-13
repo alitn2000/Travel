@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.CheckListDtos;
-using Travel.Domain.Core.Entities;
+using Travel.Domain.Core.Entities.CheckListManagement;
 using Travel.Domain.Core.Enums;
 using Travel.InfraStructure.EfCore.Common;
 
@@ -59,7 +59,9 @@ public class CheckListRepository : ICheckListRepository
         
         existingCheckList.TripType = dto.TripType;
         existingCheckList.ChekListType = dto.ChekListType;
-        await _unitOfWork.Commit(userId, cancellationToken);
+        var result = await _unitOfWork.Commit(userId, cancellationToken);
+        if( result <= 0)
+            return new Result(false, "Failed to update checkList!!!");
         return new Result(true, "checkList updated successfully!!!");
     }
 

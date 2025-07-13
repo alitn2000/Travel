@@ -22,6 +22,7 @@ public class UpdateProfileHandler : IRequestHandler<UpdateProfileCommand, Result
 
     public async Task<Result> Handle(UpdateProfileCommand request, CancellationToken cancellationToken)
     {
+
         var dto = request.Dto;
         var userId = request.UserId;
         var mainDto = new UpdateProfileDtoWithId()
@@ -33,6 +34,21 @@ public class UpdateProfileHandler : IRequestHandler<UpdateProfileCommand, Result
             Gender = dto.Gender,
             UserId = userId
         };
-        return await _profileRepository.UpdateProfile(mainDto, cancellationToken);
+        //return await _profileRepository.UpdateProfile(mainDto, cancellationToken);
+
+        var profile = await _profileRepository.GetByUserIdAsync(request.UserId, cancellationToken);
+        if (profile == null)
+            return new Result(false,"Profile not found.");
+
+        profile.UpdateInformation(
+            request.Dto.FirstName,
+            request.Dto.LastName,
+            request.Dto.Age,
+            request.Dto.Gender,
+            request.Dto.Address
+        );
+
+        await _profileRepository.UpdateProfile(profile, cancellationToken);
+        return Result();
     }
 }
