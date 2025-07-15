@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.DTOs.Profile;
-using Travel.Domain.Core.Entities.UserUserManagement;
+using Travel.Domain.Core.Entities.UserManagement;
 
 namespace Travel.Domain.Core.Contracts.Repositories;
 

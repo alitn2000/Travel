@@ -4,3 +4,15 @@ C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\Travel.EndPoints.Jobs.AssemblyInfo.cs
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\Travel.EndPoints.Jobs.csproj.CoreCompileInputs.cache
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\Travel.EndPoints.Jobs.sourcelink.json
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.EndPoints.Jobs.deps.json
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.EndPoints.Jobs.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.EndPoints.Jobs.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.Domain.Core.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.InfraStructure.EfCore.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.InfraStructure.EfCore.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\bin\Debug\net8.0\Travel.Domain.Core.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\Travel.E.55B6B796.Up2Date
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\Travel.EndPoints.Jobs.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\refint\Travel.EndPoints.Jobs.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\Travel.EndPoints.Jobs.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Jobs\Travel.EndPoints.Jobs\obj\Debug\net8.0\ref\Travel.EndPoints.Jobs.dll

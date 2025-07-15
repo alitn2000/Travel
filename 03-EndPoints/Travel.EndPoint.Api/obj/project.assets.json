@@ -2175,6 +2175,9 @@
       "Travel.Domain.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MediatR": "12.5.0"
+        },
         "compile": {
           "bin/placeholder/Travel.Domain.Core.dll": {}
         },
@@ -2231,6 +2234,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "MediatR": "12.5.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.16",
           "Travel.Domain.Core": "1.0.0"
         },

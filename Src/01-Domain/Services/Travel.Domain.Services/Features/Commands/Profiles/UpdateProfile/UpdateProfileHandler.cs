@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
@@ -14,10 +15,11 @@ namespace Travel.Domain.Service.Features.Commands.Profiles.UpdateProfile;
 public class UpdateProfileHandler : IRequestHandler<UpdateProfileCommand, Result>
 {
     private readonly IProfileRepository _profileRepository;
-
-    public UpdateProfileHandler(IProfileRepository profileRepository)
+    private readonly IUserRepository _userRepository;
+    public UpdateProfileHandler(IProfileRepository profileRepository, IUserRepository userRepository)
     {
         _profileRepository = profileRepository;
+        _userRepository = userRepository;
     }
 
     public async Task<Result> Handle(UpdateProfileCommand request, CancellationToken cancellationToken)
@@ -25,30 +27,16 @@ public class UpdateProfileHandler : IRequestHandler<UpdateProfileCommand, Result
 
         var dto = request.Dto;
         var userId = request.UserId;
-        var mainDto = new UpdateProfileDtoWithId()
-        {
-            Address = dto.Address,
-            Age = dto.Age,
-            FirstName = dto.FirstName,
-            LastName = dto.LastName,
-            Gender = dto.Gender,
-            UserId = userId
-        };
-        //return await _profileRepository.UpdateProfile(mainDto, cancellationToken);
 
-        var profile = await _profileRepository.GetByUserIdAsync(request.UserId, cancellationToken);
-        if (profile == null)
-            return new Result(false,"Profile not found.");
 
-        profile.UpdateInformation(
-            request.Dto.FirstName,
-            request.Dto.LastName,
-            request.Dto.Age,
-            request.Dto.Gender,
-            request.Dto.Address
-        );
+        var user = await _userRepository.GetUserWithProfileById(userId, cancellationToken);
+        if (user == null)
+            return new Result(false,"user not found.");
 
-        await _profileRepository.UpdateProfile(profile, cancellationToken);
-        return Result();
+        user.UpdateProfile(dto.FirstName, dto.LastName, dto.Age, dto.Gender, dto.Address);
+            
+       
+        await _userRepository.UpdateUserProfile(user, cancellationToken);
+        return new Result(true, "profile updated successfully");
     }
 }

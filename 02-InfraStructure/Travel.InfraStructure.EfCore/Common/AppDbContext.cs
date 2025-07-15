@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.Entities.CheckListManagement;
 using Travel.Domain.Core.Entities.TripManagement;
-using Travel.Domain.Core.Entities.UserUserManagement;
+using Travel.Domain.Core.Entities.UserManagement;
 using Travel.InfraStructure.EfCore.Configurations;
 
 namespace Travel.InfraStructure.EfCore.Common;

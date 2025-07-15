@@ -18,19 +18,20 @@ public class StartTripJob : IJob
 {
     private readonly AppDbContext _context;
     private readonly ILogger<StartTripJob> _logger;
+    private readonly IUnitOfWork _unitOfWork;
 
-
-    public StartTripJob(AppDbContext context, ILogger<StartTripJob> logger)
+    public StartTripJob(AppDbContext context, ILogger<StartTripJob> logger, IUnitOfWork unitOfWork)
     {
         _context = context;
         _logger = logger;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task Execute(IJobExecutionContext context)
     {
       
         var tripId = context.MergedJobDataMap.GetInt("TripId");
-
+        CancellationToken cancellationToken = context.CancellationToken;
         _logger.LogInformation($"StartTripJob with id tripId=========================================================================================>{tripId} at {DateTime.Now}");
 
         var trip = await _context.Trips.FindAsync(tripId);
@@ -39,8 +40,8 @@ public class StartTripJob : IJob
                 return;
         if (trip != null && trip.Status == StatusEnum.Pending && trip.Start <= DateTime.Now)
         {
-            trip.Status = StatusEnum.InTrip;
-            await _context.SaveChangesAsync();
+            trip.UpdateStatus(StatusEnum.InTrip);
+            await _unitOfWork.Commit(trip.CreatedUserId,cancellationToken);
         }
         
            

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Travel.Domain.Core.Entities.UserUserManagement;
+using Travel.Domain.Core.Entities.UserManagement;
 using Travel.Domain.Core.Enums;
 
 namespace Travel.InfraStructure.EfCore.Configurations;
@@ -23,12 +23,16 @@ public class ProfileConfiguration : IEntityTypeConfiguration<Profile>
         builder.Property(p => p.FirstName).HasMaxLength(15).IsRequired(false);
         builder.Property(p => p.LastName).HasMaxLength(25).IsRequired(false);
         builder.Property(p => p.Age).IsRequired(false);
-
-        builder.HasData(new List<Profile>()
+        builder.OwnsOne(p => p.PhoneNumber, pn =>
         {
-            new() { Id = 1, UserId = 1, FirstName = "Ali", LastName = "Tahmasebinia", Age = 25, Address = "SomeWhere", Gender = GenderEnum.Male},
-            new() { Id = 2, UserId = 2, FirstName = "Alireza", LastName = "Tahmasebinia", Age = 26, Address = "SomeWhere", Gender = GenderEnum.Male},
-            new() { Id = 3, UserId = 3, FirstName = "Sepide", LastName = "Sepidei", Age = 25, Address = "SomeWhere", Gender = GenderEnum.Female},
+            pn.Property(v => v.Value)
+            .HasColumnName("PhoneNumber").HasMaxLength(20);
         });
+        //builder.HasData(new List<Profile>()
+        //{
+        //    new() { Id = 1, UserId = 1, FirstName = "Ali", LastName = "Tahmasebinia", Age = 25, Address = "SomeWhere", Gender = GenderEnum.Male},
+        //    new() { Id = 2, UserId = 2, FirstName = "Alireza", LastName = "Tahmasebinia", Age = 26, Address = "SomeWhere", Gender = GenderEnum.Male},
+        //    new() { Id = 3, UserId = 3, FirstName = "Sepide", LastName = "Sepidei", Age = 25, Address = "SomeWhere", Gender = GenderEnum.Female},
+        //});
     }
 }

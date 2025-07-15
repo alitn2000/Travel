@@ -12,13 +12,13 @@ namespace Travel.Domain.Service.Features.Queries.Trips.GetUsersTripsById;
 
 public class GetUsersTripsByIdHandler : IRequestHandler<GetUsersTripsByIdQuery, List<GetUsersTripDto>>
 {
-    private readonly ITripRepository _tripRepository;
+    private readonly IUserRepository _userRepository;
 
-    public GetUsersTripsByIdHandler(ITripRepository tripRepository)
+    public GetUsersTripsByIdHandler(IUserRepository userRepository)
     {
-        _tripRepository = tripRepository;
+        _userRepository = userRepository;
     }
 
     public async Task<List<GetUsersTripDto>> Handle(GetUsersTripsByIdQuery request, CancellationToken cancellationToken)
-    => await _tripRepository.GetUsersTripsById(request.UserId, cancellationToken);
+    => await _userRepository.GetUsersTripsByUserId(request.UserId, cancellationToken);
 }

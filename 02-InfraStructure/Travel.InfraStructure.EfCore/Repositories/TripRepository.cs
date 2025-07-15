@@ -25,22 +25,19 @@ public class TripRepository : ITripRepository
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<bool> AddTrip(Trip trip,int userId, CancellationToken cancellationToken)
+    public async Task<bool> AddTrip(Trip trip, int userId, CancellationToken cancellationToken)
     {
         await _context.Trips.AddAsync(trip, cancellationToken);
-       
-       return await _unitOfWork.Commit(userId,cancellationToken) > 0 ;
-       
+
+        return await _unitOfWork.Commit(userId, cancellationToken) > 0;
+
 
     }
 
-    public bool CheckTripTypeExist(TripEnums type)
-    {
-        return Enum.IsDefined(typeof(TripEnums), type);     //jasho avaz kon
-    }
 
-    public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId,CancellationToken cancellationToken)
-        => await _context.UserTrips
+
+    public async Task<List<GetUsersTripDto>> GetUsersTripsById(int userId, CancellationToken cancellationToken)
+       => await _context.UserTrips
     .Where(t => t.UserId == userId)
     .Include(t => t.Trip)
     .Select(t => new GetUsersTripDto
@@ -56,35 +53,45 @@ public class TripRepository : ITripRepository
     public async Task<bool> CheckTripExist(int tripId, CancellationToken cancellationToken)
         => await _context.Trips.AsNoTracking().AnyAsync(t => t.Id == tripId, cancellationToken);
 
-    public async Task<bool> CheckUsersHaveTripById(int userId, int tripId ,CancellationToken cancellationToken)
+    public async Task<bool> CheckUsersHaveTripById(int userId, int tripId, CancellationToken cancellationToken)
         => await _context.UserTrips
         .AsNoTracking()
             .AnyAsync(c => c.UserId == userId && c.Id == tripId, cancellationToken);
 
-    public async Task<Result> UpdateTrip(UpdateTripDto dto,int userId, CancellationToken cancellationToken)
+    public async Task<Result> UpdateTrip(Trip trip, int userId, CancellationToken cancellationToken)
     {
-        var existTrip = await _context.Trips.FirstOrDefaultAsync(t => t.Id == dto.Id, cancellationToken);
+        _context.Trips.Update(trip);
 
-        if (existTrip == null)
-            return new Result(false, "Trip not found!!!");
-
-        existTrip.Destination = dto.Destination;
-        existTrip.Start = dto.Start;
-        existTrip.End = dto.End;
-        existTrip.TripType = dto.TripType;
-        
         await _unitOfWork.Commit(userId, cancellationToken);
 
         return new Result(true, "Trip updated successfully!!!");
     }
 
     public async Task<Trip?> GetTripById(int tripId, CancellationToken cancellationToken)
-        =>await _context.Trips.FirstOrDefaultAsync(t => t.Id == tripId, cancellationToken); 
+        => await _context.Trips.FirstOrDefaultAsync(t => t.Id == tripId, cancellationToken);
 
-   public async Task UpdateStatus(Trip trip,  StatusEnum status, CancellationToken cancellationToken)
+    public async Task<Result> CheckUserTripDateConflict(int userId, DateTime start, DateTime end, CancellationToken cancellationToken)
     {
-        trip.Status = status;
-        await _unitOfWork.Commit(trip.CreatedUserId, cancellationToken);
-        // await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
+        var userTrips = await _context.UserTrips
+            .Where(ut => ut.UserId == userId)
+            .Select(ut => ut.Trip)
+            .ToListAsync(cancellationToken);
+
+        if (userTrips.Any(trip => start <= trip.End && end >= trip.Start))
+        {
+            return new Result(false, "You already have a trip during this time.");
+        }
+
+        return new Result(true, "No conflicting trips found.");
     }
+
+
+    //public async Task UpdateStatus(Trip trip,  StatusEnum status, CancellationToken cancellationToken)
+    // {
+    //     trip.Status = status;
+    //     await _unitOfWork.Commit(trip.CreatedUserId, cancellationToken);
+    //     // await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
+    // }
+
+
 }

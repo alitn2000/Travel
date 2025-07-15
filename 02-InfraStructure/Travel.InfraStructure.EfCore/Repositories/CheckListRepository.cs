@@ -50,15 +50,10 @@ public class CheckListRepository : ICheckListRepository
             .AsNoTracking()
             .AnyAsync(c => c.TripType == tripEnum && c.ChekListType == chListEnum);
     
-    public async Task<Result> UpdateCheckList(UpdateCheckListDto dto,int userId, CancellationToken cancellationToken)
+    public async Task<Result> UpdateCheckList(CheckList checkList,int userId, CancellationToken cancellationToken)
     {
-        var existingCheckList = await _context.CheckLists.FirstOrDefaultAsync(c => c.Id == dto.Id);
-        
-        if (existingCheckList == null)
-            return new Result(false, "checkList not found!!!");
-        
-        existingCheckList.TripType = dto.TripType;
-        existingCheckList.ChekListType = dto.ChekListType;
+        _context.Update(checkList);
+
         var result = await _unitOfWork.Commit(userId, cancellationToken);
         if( result <= 0)
             return new Result(false, "Failed to update checkList!!!");

@@ -20,10 +20,10 @@ public class CheckListController : BaseController
     public CheckListController(IMediator mediator) : base(mediator) { }
 
     [HttpGet("GetAllCheckLists")]
-     public async Task<ActionResult<List<CheckListListsDto>>> GetAllCheckLists(CancellationToken cancellationToken)
+    public async Task<ActionResult<List<CheckListListsDto>>> GetAllCheckLists(CancellationToken cancellationToken)
     {
-        var checkLists = await _mediator.Send(new GetAllCheckListsAsyncQuery(),cancellationToken);
-        if(checkLists is null)
+        var checkLists = await _mediator.Send(new GetAllCheckListsAsyncQuery(), cancellationToken);
+        if (checkLists is null)
         {
             return NotFound("No checklists found.");
         }
@@ -41,7 +41,7 @@ public class CheckListController : BaseController
         {
             return Unauthorized("User not authenticated.");
         }
-        var result = await _mediator.Send(new AddCheckListCommand(dto,userId),cancellationToken);
+        var result = await _mediator.Send(new AddCheckListCommand(dto, userId), cancellationToken);
         if (!result.Flag)
         {
             return BadRequest(result.Message);
@@ -61,7 +61,7 @@ public class CheckListController : BaseController
         {
             return Unauthorized("User not authenticated.");
         }
-        var result = await _mediator.Send(new UpdateCheckListCommand(dto,userId),cancellationToken);
+        var result = await _mediator.Send(new UpdateCheckListCommand(dto, userId), cancellationToken);
         if (!result.Flag)
         {
             return BadRequest(result.Message);

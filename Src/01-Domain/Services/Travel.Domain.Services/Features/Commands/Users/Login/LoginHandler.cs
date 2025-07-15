@@ -8,6 +8,8 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.DTOs.Login;
+using Travel.Domain.Core.Entities.UserManagement;
+using Travel.Domain.Core.Enums;
 
 namespace Travel.Domain.Service.Features.Commands.Users.Login
 {
@@ -26,7 +28,11 @@ namespace Travel.Domain.Service.Features.Commands.Users.Login
             var dto = request.Dto;
             if (!await _userRepository.CheckUserExistByUserName(dto, cancellationToken))
             {
-                if (!await _userRepository.RegisterUser(dto.UserName, dto.UserNameType, cancellationToken))
+                var newUser = new User(dto.UserName, dto.UserNameType);
+
+                
+
+                if (!await _userRepository.RegisterUser(newUser, cancellationToken))
                     return new Result(false, "User Registration Failed");
             }
 

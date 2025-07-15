@@ -22,7 +22,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckList", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckListManagement.CheckList", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,62 +43,15 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("TripType")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.ToTable("CheckLists");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ChekListType = "A",
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(994),
-                            CreatedUserId = 0,
-                            TripType = 4,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(996)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ChekListType = "B",
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(999),
-                            CreatedUserId = 0,
-                            TripType = 1,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(999)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ChekListType = "C",
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1000),
-                            CreatedUserId = 0,
-                            TripType = 2,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1000)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ChekListType = "D",
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1001),
-                            CreatedUserId = 0,
-                            TripType = 3,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1001)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ChekListType = "F",
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1002),
-                            CreatedUserId = 0,
-                            TripType = 5,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1002)
-                        });
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckListTrip", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckListManagement.CheckListTrip", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -121,7 +74,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("TripId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -133,93 +86,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.ToTable("CheckListTrips");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.Profile", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CreatedUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FirstName")
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.Property<int?>("Gender")
-                        .HasColumnType("int");
-
-                    b.Property<string>("LastName")
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
-
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("Profiles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "SomeWhere",
-                            Age = 25,
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1830),
-                            CreatedUserId = 0,
-                            FirstName = "Ali",
-                            Gender = 1,
-                            LastName = "Tahmasebinia",
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1830),
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "SomeWhere",
-                            Age = 26,
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1834),
-                            CreatedUserId = 0,
-                            FirstName = "Alireza",
-                            Gender = 1,
-                            LastName = "Tahmasebinia",
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1834),
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "SomeWhere",
-                            Age = 25,
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1836),
-                            CreatedUserId = 0,
-                            FirstName = "Sepide",
-                            Gender = 2,
-                            LastName = "Sepidei",
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(1836),
-                            UserId = 3
-                        });
-                });
-
-            modelBuilder.Entity("Travel.Domain.Core.Entities.Trip", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.TripManagement.Trip", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -250,7 +117,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("TripType")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -258,7 +125,52 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.ToTable("Trips");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.User", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.UserManagement.Profile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<int?>("Gender")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LastName")
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Profiles");
+                });
+
+            modelBuilder.Entity("Travel.Domain.Core.Entities.UserManagement.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -272,7 +184,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("CreatedUserId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
@@ -285,38 +197,9 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(445),
-                            CreatedUserId = 0,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(448),
-                            UserName = "test@gmail.com",
-                            UserNameType = 0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(452),
-                            CreatedUserId = 0,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(452),
-                            UserName = "test2@gmail.com",
-                            UserNameType = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(454),
-                            CreatedUserId = 0,
-                            UpdateDate = new DateTime(2025, 7, 12, 11, 50, 43, 341, DateTimeKind.Utc).AddTicks(454),
-                            UserName = "alitahmasebinia@gmail.com",
-                            UserNameType = 0
-                        });
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.UserTrip", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.UserManagement.UserTrip", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -336,7 +219,7 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Property<int>("TripId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
@@ -351,15 +234,15 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.ToTable("UserTrips");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckListTrip", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckListManagement.CheckListTrip", b =>
                 {
-                    b.HasOne("Travel.Domain.Core.Entities.CheckList", "CheckList")
+                    b.HasOne("Travel.Domain.Core.Entities.CheckListManagement.CheckList", "CheckList")
                         .WithMany("CheckListTrips")
                         .HasForeignKey("CheckListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Travel.Domain.Core.Entities.Trip", "Trip")
+                    b.HasOne("Travel.Domain.Core.Entities.TripManagement.Trip", "Trip")
                         .WithMany("CheckListTrips")
                         .HasForeignKey("TripId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -370,27 +253,48 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Navigation("Trip");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.Profile", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.UserManagement.Profile", b =>
                 {
-                    b.HasOne("Travel.Domain.Core.Entities.User", "User")
+                    b.HasOne("Travel.Domain.Core.Entities.UserManagement.User", "User")
                         .WithOne("Profile")
-                        .HasForeignKey("Travel.Domain.Core.Entities.Profile", "UserId")
+                        .HasForeignKey("Travel.Domain.Core.Entities.UserManagement.Profile", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.OwnsOne("Travel.Domain.Core.Entities.UserManagement.ValueObjects.PhoneNumber", "PhoneNumber", b1 =>
+                        {
+                            b1.Property<int>("ProfileId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Value")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("PhoneNumber");
+
+                            b1.HasKey("ProfileId");
+
+                            b1.ToTable("Profiles");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ProfileId");
+                        });
+
+                    b.Navigation("PhoneNumber");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.UserTrip", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.UserManagement.UserTrip", b =>
                 {
-                    b.HasOne("Travel.Domain.Core.Entities.Trip", "Trip")
+                    b.HasOne("Travel.Domain.Core.Entities.TripManagement.Trip", "Trip")
                         .WithMany("USerTrips")
                         .HasForeignKey("TripId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Travel.Domain.Core.Entities.User", "User")
-                        .WithMany()
+                    b.HasOne("Travel.Domain.Core.Entities.UserManagement.User", "User")
+                        .WithMany("UserTrips")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -400,22 +304,24 @@ namespace Travel.InfraStructure.EfCore.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckList", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.CheckListManagement.CheckList", b =>
                 {
                     b.Navigation("CheckListTrips");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.Trip", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.TripManagement.Trip", b =>
                 {
                     b.Navigation("CheckListTrips");
 
                     b.Navigation("USerTrips");
                 });
 
-            modelBuilder.Entity("Travel.Domain.Core.Entities.User", b =>
+            modelBuilder.Entity("Travel.Domain.Core.Entities.UserManagement.User", b =>
                 {
                     b.Navigation("Profile")
                         .IsRequired();
+
+                    b.Navigation("UserTrips");
                 });
 #pragma warning restore 612, 618
         }

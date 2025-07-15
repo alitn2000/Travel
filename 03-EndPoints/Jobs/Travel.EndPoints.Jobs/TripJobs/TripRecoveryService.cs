@@ -33,14 +33,16 @@ public class TripRecoveryService : IHostedService
             .Where(t => t.Status == StatusEnum.Pending && t.Start <= now).ToListAsync(cancellationToken);
 
         foreach (var trip in toStart)
-            trip.Status = StatusEnum.InTrip;
+            trip.UpdateStatus(StatusEnum.InTrip);
+            
 
         var toEnd = await _context.Trips
             .Where(t => t.Status == StatusEnum.InTrip && t.End <= now)
             .ToListAsync();
 
         foreach (var trip in toEnd)
-            trip.Status = StatusEnum.Ended;
+            trip.UpdateStatus(StatusEnum.Ended);
+       
 
         await _context.SaveChangesAsync(cancellationToken);
 

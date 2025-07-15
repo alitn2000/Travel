@@ -20,7 +20,16 @@ public class UpdateCheckListHandler : IRequestHandler<UpdateCheckListCommand, Re
 
     public async Task<Result> Handle(UpdateCheckListCommand request, CancellationToken cancellationToken)
     {
-        var result = await _checkListRepository.UpdateCheckList(request.Dto,request.UserId, cancellationToken);
-        return result;
+        var dto = request.Dto;
+        var userId = request.UserId;
+
+        var checkList = await _checkListRepository.GetCheckListById(dto.Id, cancellationToken);
+
+        if (checkList == null)
+            return new Result(false, "Check list not found.");
+
+        checkList.UpdateCheckList(dto.ChekListType, dto.TripType);
+        return await _checkListRepository.UpdateCheckList(checkList, userId, cancellationToken);
+       
     }
 }

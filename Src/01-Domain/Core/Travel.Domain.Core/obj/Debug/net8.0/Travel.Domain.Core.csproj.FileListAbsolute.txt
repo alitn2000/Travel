@@ -1,5 +1,13 @@
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.csproj.AssemblyReference.cache
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.AssemblyInfoInputs.cache
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.AssemblyInfo.cs
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.csproj.CoreCompileInputs.cache
 C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.sourcelink.json
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\bin\Debug\net8.0\Travel.Domain.Core.deps.json
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\bin\Debug\net8.0\Travel.Domain.Core.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\bin\Debug\net8.0\Travel.Domain.Core.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\refint\Travel.Domain.Core.dll
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\Travel.Domain.Core.pdb
+C:\Users\a.tahmasebi\source\repos\Travel\Src\01-Domain\Core\Travel.Domain.Core\obj\Debug\net8.0\ref\Travel.Domain.Core.dll

@@ -15,4 +15,6 @@ public class GetUsersTripsByIdQuery : IRequest<List<GetUsersTripDto>>
     {
         UserId = userId;
     }
+
+
 }

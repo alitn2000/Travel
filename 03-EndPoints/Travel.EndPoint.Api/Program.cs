@@ -13,6 +13,7 @@ using Travel.Domain.Core.Contracts.AppServices;
 using Travel.Domain.Core.Contracts.Jobs;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
+using Travel.Domain.Core.Events;
 using Travel.Domain.Service.Features.Commands.CheckLists.AddCheckList;
 using Travel.Domain.Service.Features.Commands.CheckLists.GetCheckListById;
 using Travel.Domain.Service.Features.Commands.CheckLists.UpdateCheckList;
@@ -108,7 +109,7 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(GetCheckListByIdCommand).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(CheckCheckListExistQuery).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(GetAllCheckListsAsyncQuery).Assembly);
-    
+    cfg.RegisterServicesFromAssembly(typeof(RegisterUserEvent).Assembly);
 });
 
 builder.Services.AddControllers()

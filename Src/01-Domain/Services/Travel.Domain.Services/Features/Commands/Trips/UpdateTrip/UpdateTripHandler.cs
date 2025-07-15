@@ -29,6 +29,8 @@ public class UpdateTripHandler : IRequestHandler<UpdateTripCommand, Result>
         var dto = request.Dto;
         var userId = request.UserId;
 
+
+
         var isOwner = await _userTripRepository.CheckUserIsOwner(userId, dto.Id, cancellationToken);
 
         if (!isOwner)
@@ -38,23 +40,21 @@ public class UpdateTripHandler : IRequestHandler<UpdateTripCommand, Result>
         if (!userResult.Flag)
             return userResult;
 
-        var typeResult = _tripRepository.CheckTripTypeExist(dto.TripType);
-
-        if (!typeResult)
-            return new Result(false, "Trip type does not exist.");
-
         var userCheckResult = await _tripRepository.CheckUsersHaveTripById(dto.UserId, dto.Id, cancellationToken);
 
         if (!userCheckResult)
             return new Result(false, "User does not have this trip.");
 
-        if (dto.Start < DateTime.UtcNow)
-            return new Result(false, "start date is in the past!!!");
+        var trip = await _tripRepository.GetTripById(dto.Id, cancellationToken);
+        if (trip == null)
+            return new Result(false, "Trip not found.");
 
-        if (dto.Start >= dto.End)
-            return new Result(false, "start date most be befor end date!!!");
+        var updateResult = trip.UpdateTrip(dto.Destination, dto.Start, dto.End, dto.TripType);
 
-        var result = await _tripRepository.UpdateTrip(dto,userId, cancellationToken);
+        if (!updateResult.Flag)
+            return updateResult;
+
+        var result = await _tripRepository.UpdateTrip(trip, userId, cancellationToken);
 
         return result;
     }
