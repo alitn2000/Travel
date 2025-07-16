@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Entities;
+using Travel.Domain.Service.Exceptions;
 
 namespace Travel.Domain.Service.Features.Commands.CheckListTrips.AddCheckListTrip;
 
@@ -29,16 +30,16 @@ public class AddCheckListTripHandler : IRequestHandler<AddCheckListTripCommand, 
         var userId = request.UserId;
         var result = await _tripRepository.CheckTripExist(dto.TripId, cancellationToken);
         if (!result)
-            return new Result(false, "Trip does not exist.");
+            throw new CommandValidationException("Trip does not exist.");
 
         var ownerCheck = await _userTripRepository.CheckUserIsOwner(userId, dto.TripId, cancellationToken);
 
         if (!ownerCheck)
-            return new Result(false, "only the owner of trip can add check lists!!!");
+             throw new CommandValidationException("only the owner of trip can add check lists!!!");
 
         var addResult = await _checkListTripRepository.AddCheckListTrip(dto,userId, cancellationToken);
         if (!addResult)
-            return new Result(false, "one or more check list id is not correct!!!");
+            throw new CommandValidationException("one or more check list id is not correct!!!");
 
         return new Result(true, "CheckListTrip added successfully!!!");
 

@@ -8,6 +8,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Entities;
 using Travel.Domain.Core.Entities.CheckListManagement;
+using Travel.Domain.Service.Exceptions;
 
 namespace Travel.Domain.Service.Features.Commands.CheckLists.AddCheckList
 {
@@ -28,14 +29,14 @@ namespace Travel.Domain.Service.Features.Commands.CheckLists.AddCheckList
 
 
             if (result)
-                return new Result(false, "check list with this types is exists!!!");
+                throw new CommandValidationException("check list with this types is exists!!!");    //return new Result(false, "check list with this types is exists!!!");
 
             var checkList = new CheckList(dto.ChekListType, dto.TripType);
 
             if (await _checkListRepository.AddCheckList(checkList, userId, cancellationToken))
                 return new Result(true, "check list added successfully!!!");
 
-            return new Result(false, "check list not added!!!");
+            throw new CommandValidationException("check list not added!!!");              //return new Result(false, "check list not added!!!");
         }
     }
 }

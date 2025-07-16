@@ -35,6 +35,7 @@ using Travel.Domain.Service.Features.Queries.Trips.GetUsersTripsById;
 using Travel.Domain.Service.Features.Queries.Users.CheckUserExistById;
 using Travel.Domain.Service.NewFolder;
 using Travel.EndPoint.Api.Jobs;
+using Travel.EndPoint.Api.Middlewares;
 using Travel.EndPoint.Api.Models.UserModels;
 using Travel.EndPoint.Api.Validations;
 using Travel.EndPoints.Jobs.TripJobs;
@@ -193,6 +194,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthentication();   //baraye jwt
 

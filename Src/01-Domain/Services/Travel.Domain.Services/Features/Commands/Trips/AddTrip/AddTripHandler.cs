@@ -13,6 +13,7 @@ using Travel.Domain.Core.Entities;
 using Travel.Domain.Core.Entities.TripManagement;
 using Travel.Domain.Core.Entities.UserManagement;
 using Travel.Domain.Core.Enums;
+using Travel.Domain.Service.Exceptions;
 using Travel.Domain.Service.Features.Queries.Users.CheckUserExistById;
 
 namespace Travel.Domain.Service.Features.Commands.Trips.AddTrip;
@@ -50,13 +51,13 @@ public class AddTripHandler : IRequestHandler<AddTripCommand, Result>
             return overLapResult;
 
         if (dto.Start < DateTime.UtcNow)
-            return new Result(false, "Start date cannot be in the past.");     //performance ya khanayi?
+            throw new CommandValidationException("Start date cannot be in the past.");     //performance ya khanayi?
 
         if (dto.Start >= dto.End)
-            return new Result(false, "Start date must be before end date.");
+            throw new CommandValidationException("Start date must be before end date.");
 
         if (!Enum.IsDefined(typeof(TripEnums), dto.TripType))
-            return new Result(false, "Invalid trip type.");
+            throw new CommandValidationException("Invalid trip type.");
 
         var trip = new Trip(dto.Destination, dto.Start, dto.End, dto.TripType);
         
@@ -83,7 +84,7 @@ public class AddTripHandler : IRequestHandler<AddTripCommand, Result>
 
         var userTripResult = await _userTripRepository.AddUserTrip(userTrip, cancellationToken);
         if (!userTripResult)
-            return new Result(false, "Trip not added!!!");
+            throw new CommandValidationException("Trip not added!!!");
 
         await _tripJobScheduler.ScheduleTripJobsAsync(trip.Id, trip.Start, trip.End);
 

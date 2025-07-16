@@ -9,6 +9,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.Profile;
 using Travel.Domain.Core.Entities;
+using Travel.Domain.Service.Exceptions;
 
 namespace Travel.Domain.Service.Features.Commands.Profiles.UpdateProfile;
 
@@ -31,7 +32,7 @@ public class UpdateProfileHandler : IRequestHandler<UpdateProfileCommand, Result
 
         var user = await _userRepository.GetUserWithProfileById(userId, cancellationToken);
         if (user == null)
-            return new Result(false,"user not found.");
+            throw new CommandValidationException("user not found.");
 
         user.UpdateProfile(dto.FirstName, dto.LastName, dto.Age, dto.Gender, dto.Address);
             

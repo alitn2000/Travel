@@ -10,6 +10,7 @@ using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.DTOs.Login;
 using Travel.Domain.Core.Entities.UserManagement;
 using Travel.Domain.Core.Enums;
+using Travel.Domain.Service.Exceptions;
 
 namespace Travel.Domain.Service.Features.Commands.Users.Login
 {
@@ -33,7 +34,7 @@ namespace Travel.Domain.Service.Features.Commands.Users.Login
                 
 
                 if (!await _userRepository.RegisterUser(newUser, cancellationToken))
-                    return new Result(false, "User Registration Failed");
+                    throw new CommandValidationException("User Registration Failed");
             }
 
             var OTP = _otpService.GenerateOtp();

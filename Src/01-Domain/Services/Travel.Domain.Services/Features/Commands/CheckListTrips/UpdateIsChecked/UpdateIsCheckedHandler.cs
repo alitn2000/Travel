@@ -8,6 +8,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.DTOs.CheckListTripDtos;
 using Travel.Domain.Core.Entities;
+using Travel.Domain.Service.Exceptions;
 
 namespace Travel.Domain.Service.Features.Commands.CheckListTrips.UpdateIsChecked;
 
@@ -27,11 +28,11 @@ public UpdateIsCheckedHandler(IUserTripRepository userTripRepository, ICheckList
         var dto = request.Dto;
         var tripResult = await _userTripRepository.CheckUsersHaveTripById(userId, dto.TripId, cancellationToken);
         if (!tripResult)
-            return new Result(false, "Trip does not exist.");
+            throw new CommandValidationException("Trip does not exist.");
 
         var res = await _checkListTripRepository.UpdateIsChecked(dto,userId, cancellationToken);
         if (!res)
-            return new Result(false, "ChekListTrip not found!!!");
+            throw new CommandValidationException("ChekListTrip not found!!!");
 
         return new Result(true, "ChekListTrip updated successfully!!!");
     }

@@ -40,4 +40,6 @@ public class CheckList : BaseEntity, IAggrigateRoot
             return new Result(false, "Invalid trip type.");
         return new Result(true, "Validation successful.");
     }
+
+   
 }

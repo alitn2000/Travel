@@ -8,6 +8,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.Entities.UserManagement;
+using Travel.Domain.Service.Exceptions;
 using Travel.Domain.Service.Features.Queries.Users.CheckUserExistById;
 
 namespace Travel.Domain.Service.Features.Commands.Trips.AddUsersToTrip;
@@ -30,18 +31,18 @@ public class AddUsersToTripHandler : IRequestHandler<AddUsersToTripCommand, Resu
         var dto = request.Dto;
         var userId = request.UserId;
         if (dto.UsersId == null || !dto.UsersId.Any())
-            return new Result(false, "No users to add.");
+            throw new CommandValidationException("No users to add.");
 
 
 
 
         var isOwner = await _userTripRepository.CheckUserIsOwner(userId, dto.TripId, cancellationToken);
         if (!isOwner)
-            return new Result(false, "Only the trip owner can add users.");
+            throw new CommandValidationException("Only the trip owner can add users.");
 
         var trip = await _tripRepository.GetTripById(dto.TripId, cancellationToken);
         if (trip == null)
-            return new Result(false, "Trip not found.");
+            throw new CommandValidationException("Trip not found.");
 
         var addedUsers = new List<UserTrip>();
 
@@ -73,12 +74,12 @@ public class AddUsersToTripHandler : IRequestHandler<AddUsersToTripCommand, Resu
         }
 
         if (!addedUsers.Any())
-            return new Result(false, "none of the users can be added beacause of validations.");
+            throw new CommandValidationException("none of the users can be added beacause of validations.");
 
         var addResult = await _userTripRepository.AddUserTrips(addedUsers,userId, cancellationToken);
 
         if (!addResult)
-            return new Result(false, "Error while adding users to trip.");
+            throw new CommandValidationException("Error while adding users to trip.");
 
         return new Result(true, $"{addedUsers.Count} users added successfully to trip.");
 

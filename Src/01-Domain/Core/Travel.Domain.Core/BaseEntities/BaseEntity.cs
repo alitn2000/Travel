@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Travel.Domain.Core.Common;
 using Travel.Domain.Core.Contracts.BaseContracts;
+using Travel.Domain.Core.Exceptions;
 
 namespace Travel.Domain.Core.BaseEntities;
 
@@ -35,7 +36,7 @@ public abstract class BaseEntity
     { 
         if (rule.IsBroken())
         {
-            throw new ArgumentException(rule.Message);
+            throw new BuisnessRuleException(rule.Message);
         }
     }
 }

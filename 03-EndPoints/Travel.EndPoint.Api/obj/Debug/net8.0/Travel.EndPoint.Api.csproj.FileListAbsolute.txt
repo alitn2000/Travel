@@ -189,3 +189,4 @@ C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\obj\De
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\obj\Debug\net8.0\Travel.EndPoint.Api.pdb
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\obj\Debug\net8.0\Travel.EndPoint.Api.genruntimeconfig.cache
 C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\obj\Debug\net8.0\ref\Travel.EndPoint.Api.dll
+C:\Users\a.tahmasebi\source\repos\Travel\03-EndPoints\Travel.EndPoint.Api\obj\Debug\net8.0\Travel.EndPoint.Api.MvcApplicationPartsAssemblyInfo.cs

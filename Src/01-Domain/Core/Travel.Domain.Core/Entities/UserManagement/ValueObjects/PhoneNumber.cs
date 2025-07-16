@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Travel.Domain.Core.Common;
 using Travel.Domain.Core.Entities.UserManagement.Rules;
+using Travel.Domain.Core.Exceptions;
 
 namespace Travel.Domain.Core.Entities.UserManagement.ValueObjects;
 
@@ -24,7 +25,7 @@ public class PhoneNumber
     private void CheckRule(IBuisnessRule rule)
     {
         if (rule.IsBroken())
-            throw new ArgumentException(rule.Message);
+            throw new BuisnessRuleException(rule.Message);
     }
 
     private string Normalize(string value)

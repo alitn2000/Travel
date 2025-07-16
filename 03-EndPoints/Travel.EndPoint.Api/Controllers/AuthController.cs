@@ -33,6 +33,8 @@ public class AuthController : BaseController
     [HttpPost("Login")]
     public async Task<ActionResult<Result>> Login([FromBody] UserLoginModel model, CancellationToken cancellationToken)
     {
+
+       
         var modelValidator = await _validator.ValidateAsync(model, cancellationToken);
         if (!modelValidator.IsValid)
         {

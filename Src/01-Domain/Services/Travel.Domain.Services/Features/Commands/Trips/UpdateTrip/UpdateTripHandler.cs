@@ -8,6 +8,7 @@ using Travel.Domain.Core.BaseEntities;
 using Travel.Domain.Core.Contracts.Repositories;
 using Travel.Domain.Core.Contracts.Services;
 using Travel.Domain.Core.Entities;
+using Travel.Domain.Service.Exceptions;
 using Travel.Domain.Service.Features.Queries.Users.CheckUserExistById;
 
 namespace Travel.Domain.Service.Features.Commands.Trips.UpdateTrip;
@@ -34,7 +35,7 @@ public class UpdateTripHandler : IRequestHandler<UpdateTripCommand, Result>
         var isOwner = await _userTripRepository.CheckUserIsOwner(userId, dto.Id, cancellationToken);
 
         if (!isOwner)
-            return new Result(false, "Only the trip owner can update the trip.");
+            throw new CommandValidationException("Only the trip owner can update the trip.");
         var userResult = await _mediator.Send(new CheckUserExistByIdQuery(userId), cancellationToken);
 
         if (!userResult.Flag)
@@ -43,11 +44,11 @@ public class UpdateTripHandler : IRequestHandler<UpdateTripCommand, Result>
         var userCheckResult = await _tripRepository.CheckUsersHaveTripById(dto.UserId, dto.Id, cancellationToken);
 
         if (!userCheckResult)
-            return new Result(false, "User does not have this trip.");
+            throw new CommandValidationException("User does not have this trip.");
 
         var trip = await _tripRepository.GetTripById(dto.Id, cancellationToken);
         if (trip == null)
-            return new Result(false, "Trip not found.");
+            throw new CommandValidationException("Trip not found.");
 
         var updateResult = trip.UpdateTrip(dto.Destination, dto.Start, dto.End, dto.TripType);
 
